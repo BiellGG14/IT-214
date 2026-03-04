@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atividades — IT-214 | ITA</title>
+  <meta name="description" content="Lista das 10 atividades da disciplina IT-214 — Mobilidade Aérea Urbana do ITA." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── Navbar ──────────────────────────────────────────────── -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar__brand">
+      <span class="navbar__logo">ITA</span>
+      IT-214
+    </a>
+    <ul class="navbar__nav">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="atividades.html">Atividades</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <!-- ── Page header ───────────────────────────────────────── -->
+    <header class="activities-header">
+      <div class="container">
+        <div class="activities-header__title">Atividades</div>
+        <div class="activities-header__sub">Mobilidade Aérea Urbana — IT-214 · ITA</div>
+      </div>
+    </header>
+
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Início</a>
+        <span class="breadcrumb__sep" aria-hidden="true">›</span>
+        <span aria-current="page">Atividades</span>
+      </nav>
+
+      <!-- Activities grid — populated by JS -->
+      <div class="activities-grid" id="activities-grid" role="list" aria-label="Lista de atividades">
+        <!-- Cards injected by JS -->
+      </div>
+
+    </div>
+
+    <footer>
+      <strong>IT-214 — Mobilidade Aérea Urbana</strong> &nbsp;·&nbsp;
+      Instituto Tecnológico de Aeronáutica &nbsp;·&nbsp;
+      Jaqueline Rodrigues · Luiz Tozi · Tariq Lopes · Gabriel Rufino
+    </footer>
+
+  </div><!-- /.page-wrapper -->
+
+  <script src="js/main.js"></script>
+  <script src="js/render.js"></script>
+  <script>
+    (function () {
+      const grid = document.getElementById('activities-grid');
+      const base = getBasePath();
+      const TOTAL = 10;
+
+      /**
+       * Build the card element for a given activity number.
+       * Status starts as "Em breve" and is updated once the availability
+       * check resolves.
+       */
+      function buildCard(num) {
+        const id = String(num).padStart(2, '0');
+        const card = document.createElement('a');
+        card.href = `atividade.html?id=${id}`;
+        card.className = 'activity-card';
+        card.setAttribute('role', 'listitem');
+        card.setAttribute('aria-label', `Atividade ${id}`);
+
+        const badge = document.createElement('span');
+        badge.className = 'badge badge--soon';
+        badge.textContent = 'Em breve';
+        badge.setAttribute('data-badge', id);
+
+        card.innerHTML = `
+          <div class="activity-card__number">${id}</div>
+          <div class="activity-card__title">Atividade ${id}</div>
+          <div class="activity-card__sub">Clique para acessar o conteúdo</div>
+        `;
+        card.appendChild(badge);
+        return { card, badge };
+      }
+
+      // Render all cards immediately, then check availability asynchronously
+      for (let i = 1; i <= TOTAL; i++) {
+        const { card, badge } = buildCard(i);
+        grid.appendChild(card);
+
+        // Check if the corresponding .md file has content
+        const id = String(i).padStart(2, '0');
+        const mdPath = `${base}/docs/Atividade${id}.md`;
+
+        checkAvailability(mdPath, (available) => {
+          if (available) {
+            badge.className = 'badge badge--available';
+            badge.textContent = 'Disponível';
+          }
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>
