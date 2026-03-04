@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atividade — IT-214 | ITA</title>
+  <meta name="description" content="Visualização de atividade da disciplina IT-214 — Mobilidade Aérea Urbana do ITA." />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- highlight.js for code blocks -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css" />
+</head>
+<body>
+
+  <!-- ── Navbar ──────────────────────────────────────────────── -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar__brand">
+      <span class="navbar__logo">ITA</span>
+      IT-214
+    </a>
+    <ul class="navbar__nav">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="atividades.html">Atividades</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrapper">
+
+    <!-- ── Page header ───────────────────────────────────────── -->
+    <header class="activity-page-header" id="page-header">
+      <div class="container">
+        <div class="activity-page-header__label">IT-214 · ITA</div>
+        <h1 class="activity-page-header__title" id="page-title">Carregando…</h1>
+      </div>
+    </header>
+
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb" id="breadcrumb">
+        <a href="index.html">Início</a>
+        <span class="breadcrumb__sep" aria-hidden="true">›</span>
+        <a href="atividades.html">Atividades</a>
+        <span class="breadcrumb__sep" aria-hidden="true">›</span>
+        <span id="breadcrumb-current" aria-current="page">…</span>
+      </nav>
+
+      <!-- Markdown content -->
+      <div id="content"></div>
+
+      <!-- Navigation buttons -->
+      <nav class="activity-nav" aria-label="Navegação entre atividades" id="activity-nav">
+        <a id="btn-prev" href="#" class="btn btn--outline btn--sm">← Atividade Anterior</a>
+        <a id="btn-next" href="#" class="btn btn--outline btn--sm">Próxima Atividade →</a>
+      </nav>
+
+    </div>
+
+    <footer>
+      <strong>IT-214 — Mobilidade Aérea Urbana</strong> &nbsp;·&nbsp;
+      Instituto Tecnológico de Aeronáutica &nbsp;·&nbsp;
+      Jaqueline Rodrigues · Luiz Tozi · Tariq Lopes · Gabriel Rufino
+    </footer>
+
+  </div><!-- /.page-wrapper -->
+
+  <!-- marked.js for Markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- highlight.js -->
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/highlight.min.js"></script>
+
+  <script src="js/main.js"></script>
+  <script src="js/render.js"></script>
+  <script>
+    (function () {
+      const TOTAL = 10;
+
+      // Parse ?id= from URL
+      const params = new URLSearchParams(location.search);
+      const rawId = params.get('id') || '01';
+      const num = Math.max(1, Math.min(TOTAL, parseInt(rawId, 10) || 1));
+      const id = String(num).padStart(2, '0');
+
+      // Update page title and breadcrumb
+      document.title = `Atividade ${id} — IT-214 | ITA`;
+      document.getElementById('page-title').textContent = `Atividade ${id}`;
+      document.getElementById('breadcrumb-current').textContent = `Atividade ${id}`;
+
+      // Navigation buttons
+      const btnPrev = document.getElementById('btn-prev');
+      const btnNext = document.getElementById('btn-next');
+      const prevNum = num - 1;
+      const nextNum = num + 1;
+
+      if (prevNum >= 1) {
+        const prevId = String(prevNum).padStart(2, '0');
+        btnPrev.href = `atividade.html?id=${prevId}`;
+        btnPrev.textContent = `← Atividade ${prevId}`;
+      } else {
+        btnPrev.href = 'atividades.html';
+        btnPrev.textContent = '← Voltar às Atividades';
+      }
+
+      if (nextNum <= TOTAL) {
+        const nextId = String(nextNum).padStart(2, '0');
+        btnNext.href = `atividade.html?id=${nextId}`;
+        btnNext.textContent = `Atividade ${nextId} →`;
+      } else {
+        btnNext.href = 'atividades.html';
+        btnNext.textContent = 'Ver todas as Atividades →';
+      }
+
+      // Fetch and render the Markdown
+      const base = getBasePath();
+      const mdPath = `${base}/docs/Atividade${id}.md`;
+      const contentEl = document.getElementById('content');
+
+      renderMarkdown(mdPath, contentEl);
+    })();
+  </script>
+
+</body>
+</html>
