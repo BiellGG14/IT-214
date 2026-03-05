@@ -4,7 +4,7 @@
 **Instituto:** Instituto Tecnológico de Aeronáutica (ITA)  
 **Grupo:** Jaqueline Rodrigues · Luiz Tozi · Tariq Lopes · Gabriel Rufino  
 
----
+--
 
 ## Objetivos
 
