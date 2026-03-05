@@ -67,21 +67,9 @@ img { max-width: 100%; display: block; }
 .navbar__brand:hover { text-decoration: none; }
 
 .navbar__logo {
-  width: 40px; height: 40px;
-  border-radius: 50%;
-  background: var(--color-accent);
-  display: flex; align-items: center; justify-content: center;
-  font-weight: 700;
-  font-size: .8rem;
-  color: #fff;
+  height: 40px;
   flex-shrink: 0;
-  letter-spacing: .02em;
-}
-.navbar__logo-img {
-  width: 100%;
-  height: 100%;
   object-fit: contain;
-  padding: 4px;
 }
 
 .navbar__nav {
