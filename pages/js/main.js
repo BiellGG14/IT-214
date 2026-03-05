@@ -26,10 +26,15 @@ function setActiveNav() {
  */
 function getBasePath() {
   const path = location.pathname;
-  // Count how many segments we need to go up from current file to repo root.
-  // All HTML files live inside /pages/ so we always go up one level.
-  const segments = path.replace(/\/[^/]*$/, ''); // remove filename
-  // If served from /pages/ we need to go up one directory.
+  // Detect GitHub Pages: contains "/IT-214/"
+  if (path.includes('/IT-214/')) {
+    // Extract the repo root path
+    const match = path.match(/^(.*?\/IT-214)/);
+    if (match) {
+      return match[1]; // Returns "/IT-214" or similar
+    }
+  }
+  // For local development, pages are in /pages/ so go up one level
   return '..';
 }
 
