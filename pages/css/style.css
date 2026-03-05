@@ -205,6 +205,10 @@ img { max-width: 100%; display: block; }
   margin-top: 1.5rem;
 }
 
+.section__title--spaced {
+  margin-top: 2.5rem;
+}
+
 .team-card {
   background: var(--color-surface);
   border-radius: var(--radius-lg);
