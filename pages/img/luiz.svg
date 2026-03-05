@@ -1,0 +1,20 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="300" height="300" fill="#1a2e4a"/>
+  
+  <!-- Head -->
+  <circle cx="150" cy="100" r="45" fill="#d4af37"/>
+  
+  <!-- Torso -->
+  <rect x="110" y="145" width="80" height="100" rx="20" fill="#d4af37"/>
+  
+  <!-- Suit jacket -->
+  <rect x="100" y="140" width="100" height="120" fill="#1f1f1f" opacity="0.8"/>
+  <line x1="150" y1="140" x2="150" y2="260" stroke="white" stroke-width="3" opacity="0.5"/>
+  
+  <!-- Tie -->
+  <polygon points="150,160 140,180 160,180" fill="#e8601c"/>
+  
+  <!-- Text placeholder -->
+  <text x="150" y="280" font-size="16" fill="white" text-anchor="middle" font-family="Arial">Luiz Henrique Tozi</text>
+</svg>
