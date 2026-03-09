@@ -1,12 +1,10 @@
-# Atividade 01 — Introdução à Mobilidade Aérea Avançada (AAM)
+# Atividade 1 (UAM) - Seleção de Cidade-Base para Vertiporto Conceitual
 
 **Disciplina:** Mobilidade Aérea Urbana — IT-214  
 **Instituto:** Instituto Tecnológico de Aeronáutica (ITA)  
 **Grupo:** Jaqueline Rodrigues · Luiz Tozi · Tariq Lopes · Gabriel Rufino  
 
 ---
-
-# Atividade 1 (UAM) - Seleção de Cidade-Base para Vertiporto Conceitual
 
 ## Apresentação do Trabalho
 
