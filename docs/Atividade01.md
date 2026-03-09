@@ -134,7 +134,7 @@ A seleção de Brasília foi fundamentada por um **método multicritério qualit
 ## ICE 2023 - Análise Comparativa: Ranking Geral e por Determinante
 
 | Determinante | Pontuação Brasília | Posição Brasília | Pontuação Curitiba | Posição Curitiba |
-|---|---:|---|---:|---|
+|---|---:|---:|---:|---:|
 | **ICE Geral 2023** | **7,96** | **4º** | **7,78** | **7º** |
 | Ambiente Regulatório | 6,12 | 47º | 6,63 | 23º |
 | Infraestrutura | 7,87 | 3º | 7,06 | 18º |
@@ -144,7 +144,7 @@ A seleção de Brasília foi fundamentada por um **método multicritério qualit
 | Capital Humano | 6,29 | 40º | 6,57 | 30º |
 | Cultura Empreendedora | 7,98 | 4º | 6,45 | 27º |
 
-![Gráfico Atividade 01](../pages/img/grafico_atv01.png)
+![](../pages/img/grafico_atv01.png)
 
 ---
 
