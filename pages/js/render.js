@@ -42,6 +42,25 @@ async function renderMarkdown(mdPath, target, opts = {}) {
     });
 
     target.innerHTML = marked.parse(text);
+
+    // Resolve relative URLs using the Markdown file location as base.
+    const mdUrl = new URL(mdPath, window.location.href);
+    const isRelativeUrl = (value) => value && !/^(?:[a-z]+:|\/\/|#|\/)/i.test(value);
+
+    target.querySelectorAll('img').forEach((img) => {
+      const src = img.getAttribute('src');
+      if (isRelativeUrl(src)) {
+        img.src = new URL(src, mdUrl).href;
+      }
+    });
+
+    target.querySelectorAll('a').forEach((anchor) => {
+      const href = anchor.getAttribute('href');
+      if (isRelativeUrl(href)) {
+        anchor.href = new URL(href, mdUrl).href;
+      }
+    });
+
     target.classList.add('markdown-body');
 
     // Apply highlight.js if available
