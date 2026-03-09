@@ -144,7 +144,7 @@ A seleção de Brasília foi fundamentada por um **método multicritério qualit
 | Capital Humano | 6,29 | 40º | 6,57 | 30º |
 | Cultura Empreendedora | 7,98 | 4º | 6,45 | 27º |
 
-![](../pages/img/grafico_atv01.png)
+![](../img/grafico_atv01.png)
 
 ---
 
