@@ -1,4 +1,4 @@
-# Atividade 01 — Introdução à Mobilidade Aérea Avançada (AAM)
+# Atividade 01 — Comparativo Brasília (DF) vs Curitiba (PR) para seleção de cidade-base de vertiporto conceitual
 
 **Disciplina:** Mobilidade Aérea Urbana — IT-214  
 **Instituto:** Instituto Tecnológico de Aeronáutica (ITA)  
@@ -6,60 +6,120 @@
 
 ---
 
-## Objetivos
+## Objetivo e decisão
+O objetivo deste documento é comparar Brasília (DF) e Curitiba (PR) com base em dados oficiais (IBGE) e no Índice de Cidades Empreendedoras (ICE 2023), para justificar a escolha da cidade em que será desenvolvido um vertiporto conceitual ao final da disciplina.
 
-> Compreender o ecossistema da Mobilidade Aérea Avançada (AAM), incluindo sua taxonomia, estrutura regulatória e as aeronaves eVTOL (electric Vertical Take-Off and Landing). Identificar os principais atores do setor — NASA, FAA, EASA e ANAC — e o papel da academia e do mercado no desenvolvimento desta tecnologia emergente.
+A decisão adotada para a disciplina é desenvolver o vertiporto conceitual em Brasília, usando Curitiba como cidade de contraste (benchmark), por apresentarem perfis complementares no ICE: Brasília se destaca mais em Infraestrutura, Mercado e Cultura Empreendedora, enquanto Curitiba se destaca mais em Inovação e Acesso a Capital.
 
-## Desenvolvimento
+## Bases de dados (fontes)
+- ICE 2023 (ENAP + Endeavor): ranking geral e por determinante, construído para as 101 cidades mais populosas do país, com determinantes (pilares) e indicadores numéricos.
+- Anexo de indicadores do ICE 2023 (planilha “Indicadores 2023.xlsx”): valores (por cidade) dos indicadores e índices intermediários (subdeterminantes), utilizados para sustentar a análise “por pilar”.
+- IBGE — Cidades e Estados: dados demográficos e socioeconômicos básicos de Curitiba e do Distrito Federal (onde se localiza Brasília).
+- PIB (recortes complementares): PIB-DF 2021 e PIB per capita do DF (fonte técnica local com base no cálculo do IBGE) e PIB municipal de Curitiba (com referência ao IBGE). Para DF, a referência é o PIB do Distrito Federal; para Curitiba, o PIB é municipal.
 
-### Modalidades de Serviço da UAM
+## Leitura do ICE e metodologia (critérios)
 
-A Mobilidade Aérea Urbana se organiza em quatro modalidades de serviço principais:
+### Como interpretar os “pilares” do ICE
+O ICE 2023 avalia o ecossistema empreendedor por meio de determinantes (pilares) e subdeterminantes compostos por indicadores objetivos, a partir de bases abertas, públicas e oficiais.
 
-1. **Sub-Urban-Commuter (Pendular Suburbano):** Voltado para deslocamentos regulares entre o subúrbio e o centro das cidades, substituindo ou complementando o transporte terrestre convencional em trajetos de média distância.
+A metodologia do ICE 2023 envolve padronização dos indicadores e calibração de pesos por análise fatorial (componentes principais), para reduzir sobreposições entre determinantes e gerar um índice agregado comparável entre municípios.
 
-2. **Intra-City (Táxi Aéreo):** Serviço sob demanda dentro do perímetro urbano, semelhante ao modelo de aplicativos de táxi, mas realizado por aeronaves eVTOL. Oferece rapidez e flexibilidade de rota.
+### Critérios de decisão para a cidade do vertiporto (proposta de método)
+Para uma disciplina de Mobilidade Aérea Urbana (UAM), o vertiporto conceitual tende a ser mais viável onde a cidade apresente simultaneamente: (i) ambiente institucional e de mercado favorável, (ii) infraestrutura urbana e conectividade adequadas, e (iii) condições para inovação e adoção (capital humano e cultura), sem ignorar a viabilidade de articulação regulatória.
 
-3. **Airport-Shuttle:** Conexão entre pontos da cidade e os aeroportos convencionais, visando reduzir o congestionamento nas vias terrestres e o tempo de deslocamento dos passageiros.
+Assim, a seleção de Brasília foi fundamentada por um método multicritério qualitativo guiado por evidências, combinando:
+- Critério A — “Prontidão de ecossistema” (ICE 2023): desempenho no ranking geral e nos pilares mais relacionados à implantação de um vertiporto e ao surgimento de operadores/serviços (Infraestrutura, Mercado, Acesso a Capital, Inovação, Capital Humano e Cultura).
+- Critério B — “Escala urbana e demanda potencial” (IBGE/PIB): população, densidade e indicadores de atividade econômica (PIB/PIB per capita) para avaliar massa crítica de demanda e capacidade de pagamento (ainda que UAM inicialmente seja um serviço premium). Para DF, usa-se o recorte do Distrito Federal (Brasília como capital).
+- Critério C — “Capacidade de articulação aeronáutica-regulatória”: proximidade institucional (ex.: sede da ANAC em Brasília) e evidências de relevância operacional do ambiente aeronáutico local (ex.: organização de serviços e informação de voo na FIR Brasília), fatores que costumam acelerar pilotos, sandboxes e alinhamentos interinstitucionais.
 
-4. **Inter-City:** Ligação entre cidades próximas, cobrindo distâncias que vão além do perímetro urbano mas que não justificam o uso de aviação comercial tradicional.
+## Panorama IBGE (perfil urbano e socioeconômico)
+A comparação a seguir usa dados do IBGE (Cidades e Estados) para Curitiba e para o Distrito Federal (unidade federativa de Brasília).
 
-### Subsistemas da AAM
+### Indicadores básicos (IBGE)
+- População no Censo 2022
+  - Brasília (DF): 2.817.381 habitantes
+  - Curitiba (PR): 1.773.718 habitantes
 
-O ecossistema da Mobilidade Aérea Avançada é composto por três subsistemas complementares:
+- Densidade demográfica (hab/km²)
+  - Brasília (DF): 489,06
+  - Curitiba (PR): 4.078,53
 
-- **UAM (Urban Air Mobility):** Focado no transporte urbano, suburbano e exurbano, utilizando vertiportos como infraestrutura de pouso e decolagem. É o subsistema mais estudado e com maior desenvolvimento tecnológico atual.
+- Área territorial (km²)
+  - Brasília/DF: 5.760,783
+  - Curitiba: 435,277
 
-- **Rural Air Mobility:** Voltado para regiões pouco povoadas, onde a infraestrutura terrestre é precária. Oferece acesso a serviços essenciais como saúde, correios e transporte de pessoas em áreas remotas.
+- População estimada (2025)
+  - Brasília (DF): 2.996.899 habitantes (estimativa)
+  - Curitiba (PR): 1.830.795 habitantes (estimativa)
 
-- **RAM (Regional Air Mobility):** Cobre médias distâncias, entre 80 e 800 km, conectando cidades de porte médio sem a necessidade de grandes aeroportos. Preenche a lacuna entre o transporte urbano e a aviação regional convencional.
+### PIB per capita (2023)
+- Brasília (DF): R$ 129.790,44
+- Curitiba (PR): R$ 67.691,30
 
-### Configurações de Aeronaves eVTOL
+Leitura para UAM: Curitiba tem densidade muito maior (cidade mais compacta), enquanto Brasília (DF) tem densidade bem menor e grande área territorial, o que tende a elevar distâncias de deslocamento — um contexto em que UAM pode gerar ganhos relativos de tempo em viagens “média distância” intraurbanas/metropolitanas.
 
-As aeronaves eVTOL são projetadas para decolagem e pouso verticais utilizando propulsão elétrica. As principais configurações são:
+## ICE 2023 — ranking geral e por pilar (7 determinantes)
 
-- **Lift+Cruise:** Utiliza rotores dedicados exclusivamente para o voo vertical (decolagem e pouso) e uma asa fixa com propulsão separada para o voo de cruzeiro horizontal. Exemplos: Joby Aviation S4, Archer Midnight.
+- Brasília (DF)
+  - ICE 2023 (geral): 4º lugar — nota 7,96
+  - Ambiente Regulatório: 47º — 6,12
+  - Infraestrutura: 3º — 7,87
+  - Mercado: 3º — 8,42
+  - Acesso a Capital: 9º — 6,62
+  - Inovação: 35º — 6,37
+  - Capital Humano: 40º — 6,29
+  - Cultura Empreendedora: 4º — 7,98
 
-- **QSMR (Quadrotor with Stopped Motor Rotors):** Configuração que combina múltiplos rotores para o voo vertical, com alguns rotores parando durante o cruzeiro para reduzir a resistência aerodinâmica. Maximiza eficiência em diferentes fases do voo.
+- Curitiba (PR)
+  - ICE 2023 (geral): 7º lugar — nota 7,78
+  - Ambiente Regulatório: 23º — 6,63
+  - Infraestrutura: 18º — 7,06
+  - Mercado: 17º — 6,94
+  - Acesso a Capital: 3º — 9,26
+  - Inovação: 10º — 7,58
+  - Capital Humano: 30º — 6,57
+  - Cultura Empreendedora: 27º — 6,45
 
-### Estrutura Regulatória
+### Pilar 1 — Ambiente Regulatório
+No ICE 2023, Curitiba supera Brasília no pilar de Ambiente Regulatório (23º vs 47º), indicando maior competitividade relativa em aspectos agregados de tempo de processos, tributação e complexidade burocrática.
 
-O desenvolvimento da AAM envolve uma série de agências reguladoras em diferentes níveis:
+Nos indicadores do anexo, Curitiba apresenta menor tempo de viabilidade de localização (2,9588 h vs 12,3169 h em Brasília) e menor tempo de registro/cadastro/viabilidade de nome (17,6797 h vs 25,7542 h), que são métricas diretamente relacionadas a burocracia e abertura de empresas (subdeterminante “Tempo de Processos”).
 
-| Agência | Jurisdição | Papel |
-|---------|-----------|-------|
-| NASA | EUA | Pesquisa e desenvolvimento tecnológico |
-| FAA | EUA | Certificação e regulação operacional |
-| EASA | Europa | Certificação e regulação no espaço europeu |
-| ANAC | Brasil | Regulação e certificação nacional |
+### Pilar 2 — Infraestrutura
+Brasília aparece com desempenho significativamente superior no pilar Infraestrutura (3º) quando comparada a Curitiba (18º), sugerindo vantagens relativas na combinação de conectividade interurbana e condições urbanas — elementos que influenciam diretamente a viabilidade de redes de vertiportos e integração modal com o solo.
 
-## Conclusão
+### Pilar 3 — Mercado
+No pilar Mercado, Brasília (3º) supera Curitiba (17º), o que, para UAM, é relevante porque a implantação inicial de vertiportos tende a depender de uma combinação de renda/atividade econômica, clientes potenciais e compras públicas, além de maior concentração de serviços e centros decisórios.
 
-> A Mobilidade Aérea Avançada representa uma transformação significativa no conceito de transporte urbano e regional. A convergência de tecnologias elétricas, autonomia embarcada e novas infraestruturas (vertiportos) abre caminho para um ecossistema de transporte mais eficiente, sustentável e acessível. O sucesso dessa transição depende, contudo, da colaboração entre agências reguladoras, indústria e academia, bem como da aceitação social e da adaptação das cidades.
+### Pilar 4 — Acesso a Capital
+Curitiba se destaca fortemente em Acesso a Capital (3º), enquanto Brasília aparece na 9ª posição, o que pode favorecer — na comparação — a atração de investimentos e instrumentos financeiros para startups, operadores e fornecedores de tecnologia ligados a UAM.
 
-## Referências
+### Pilar 5 — Inovação
+Curitiba apresenta desempenho superior em Inovação (10º) frente a Brasília (35º), o que é um diferencial importante para UAM por envolver capacidade de P&D, densidade de talentos técnicos e produção tecnológica (por exemplo, patentes, economia criativa, TIC e indústria inovadora).
 
-> - NASA. (2020). *Advanced Air Mobility Mission Overview*. National Aeronautics and Space Administration.  
-> - Pak, H., et al. (2024). *Urban Air Mobility: Technological and Operational Challenges*. Journal of Aerospace Engineering.  
-> - Cohen, A., et al. (2024). *eVTOL Aircraft Certification and Safety Framework*. Transportation Research Part C.  
-> - McKinsey & Company. (2018). *Urban Air Mobility: The Rise of a New Mode of Transportation*. McKinsey Center for Future Mobility.
+### Pilar 6 — Capital Humano
+Curitiba apresenta posição um pouco superior em Capital Humano (30º) em relação a Brasília (40º), o que é relevante para UAM porque a implantação e operação de vertiportos e eVTOLs exige força de trabalho em diferentes níveis.
+
+### Pilar 7 — Cultura Empreendedora
+Brasília tem forte destaque em Cultura Empreendedora (4º), enquanto Curitiba aparece na 27ª posição, o que sugere maior “tracionamento” e interesse local (população e instituições) por temas de empreendedorismo e formalização.
+
+## Justificativa para desenvolver o vertiporto em Brasília
+
+### Fundamentos principais (baseados nos critérios A–C)
+1. Alta performance geral no ICE e nos pilares mais “operacionais” para UAM: Brasília é 4ª colocada no ICE 2023 e se destaca em Infraestrutura (3º), Mercado (3º) e Cultura (4º), pilares que, em conjunto, favorecem a implantação de infraestrutura urbana-aeronáutica, integração com transportes e demanda inicial por serviços premium de mobilidade.
+
+2. Escala econômica e capacidade de pagamento: o DF tem PIB per capita de 92.732,27 (2021), acima do valor municipal de Curitiba (49.907,02), o que é um sinal importante para fases iniciais (UAM “premium”), em que a elasticidade-preço tende a ser um fator crítico para sustentação de rotas e para viabilizar investimentos em infraestrutura (mesmo em projeto conceitual).
+
+3. Ambiente institucional/regulatório aeronáutico favorável à articulação: a sede da ANAC está em Brasília, o que é um elemento prático para alinhamentos (mesmo conceituais) sobre certificação, regulação operacional e interfaces institucionais de uma nova infraestrutura como vertiportos.
+
+4. Relevância operacional do espaço aéreo local: a FIR Brasília e estruturas associadas (por exemplo, CINDACTA I) aparecem em publicações do DECEA sobre evolução de serviços aeronáuticos na região, o que reforça a pertinência de considerar Brasília como um laboratório para discussões de integração UAM–ATM/UTM (ainda que o projeto da disciplina não envolva a implementação real desses serviços).
+
+### Por que Curitiba é um bom “benchmark” para comparação
+Curitiba é 7ª no ICE 2023 e se diferencia por desempenho muito forte em Acesso a Capital (3º) e Inovação (10º), atributos relevantes para desenvolver fornecedores e soluções tecnológicas para UAM.
+
+Além disso, Curitiba é uma cidade com alta densidade urbana (4.078,53 hab/km²), oferecendo um perfil urbano contrastante ao do DF, útil para comparar trade-offs de implantação de vertiportos.
+
+## Referências:
+- IBGE – Instituto Brasileiro de Geografia e Estatística – Disponível em: https://www.ibge.gov.br/estatisticas/sociais/populacao/9103-estimativas-de-populacao.html, acesso em: 06 mar 2026.
+- IBGE – Instituto Brasileiro de Geografia e Estatística – Disponível em: https://cidades.ibge.gov.br/brasil/df/brasilia/panorama, acesso em: 06 mar 2026.
+- IBGE – Instituto Brasileiro de Geografia e Estatística – Disponível em: https://cidades.ibge.gov.br/brasil/pr/curitiba/panorama, acesso em: 06 mar 2026.
