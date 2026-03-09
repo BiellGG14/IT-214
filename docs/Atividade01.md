@@ -2,11 +2,7 @@
 
 **Disciplina:** Mobilidade Aérea Urbana — IT-214  
 **Instituto:** Instituto Tecnológico de Aeronáutica (ITA)  
-**Grupo:** 
-- Jaqueline Rodrigues
-- Luiz Tozi
-- Tariq Lopes Sousa — Graduando em Engenharia Civil Aeronáutica • [LinkedIn](https://www.linkedin.com/in/tariq-lopes-sousa-avila-da-silva-cardoso-b2b436186/)
-- Gabriel Rufino  
+**Grupo:** Jaqueline Rodrigues · Luiz Tozi · Tariq Lopes · Gabriel Rufino  
 
 ---
 
