@@ -206,7 +206,7 @@ Curitiba é 7ª no ICE 2023 e se diferencia por desempenho muito forte em **Aces
 
 ## Nota sobre o Produto Final
 
-O resultado desta etapa é um **racional metodológico e comparativo** que sustenta a escolha da cidade-base para o vertiporto conceitual. O foco é a seleção estruturada de sítio em nível de cidade, com transparência dos critérios e das evidências, servindo como base para as próximas entregas da disciplina (desenvolvimento conceitual do vertiporto e integração ao contexto UAM).
+O resultado desta etapa é uma **justificativa comparativa**, baseada em critérios e dados, que sustenta a escolha da cidade-base para o vertiporto conceitual. O foco é a seleção estruturada do sítio em nível de cidade, com transparência dos critérios e das evidências, servindo de base para as próximas entregas da disciplina.
 
 ---
 
