@@ -45,13 +45,30 @@ async function renderMarkdown(mdPath, target, opts = {}) {
 
     // Resolve relative URLs using the Markdown file location as base.
     const mdUrl = new URL(mdPath, window.location.href);
+    const basePath = (typeof getBasePath === 'function') ? getBasePath() : '';
     const isRelativeUrl = (value) => value && !/^(?:[a-z]+:|\/\/|#|\/)/i.test(value);
 
     target.querySelectorAll('img').forEach((img) => {
       const src = img.getAttribute('src');
-      if (isRelativeUrl(src)) {
+      if (!src) {
+        return;
+      }
+
+      if (src.startsWith('../pages/img/')) {
+        const fileName = src.split('/').pop();
+        img.src = `${basePath}/pages/img/${fileName}`;
+      } else if (isRelativeUrl(src)) {
         img.src = new URL(src, mdUrl).href;
       }
+
+      // Fallback when a relative image still fails to load in GitHub Pages.
+      img.addEventListener('error', () => {
+        const current = img.getAttribute('src') || '';
+        const fileName = current.split('/').pop();
+        if (fileName) {
+          img.src = `${basePath}/pages/img/${fileName}`;
+        }
+      }, { once: true });
     });
 
     target.querySelectorAll('a').forEach((anchor) => {
