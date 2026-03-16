@@ -48,6 +48,8 @@ async function renderMarkdown(mdPath, target, opts = {}) {
     const basePath = (typeof getBasePath === 'function') ? getBasePath() : '';
     const isRelativeUrl = (value) => value && !/^(?:[a-z]+:|\/\/|#|\/)/i.test(value);
 
+    const isGitHubPagesHost = /github\.io$/i.test(window.location.hostname);
+
     target.querySelectorAll('img').forEach((img) => {
       const src = img.getAttribute('src');
       if (!src) {
@@ -56,7 +58,9 @@ async function renderMarkdown(mdPath, target, opts = {}) {
 
       if (src.startsWith('../pages/img/')) {
         const fileName = src.split('/').pop();
-        img.src = `${basePath}/pages/img/${fileName}`;
+        img.src = isGitHubPagesHost
+          ? `${basePath}/img/${fileName}`
+          : `${basePath}/pages/img/${fileName}`;
       } else if (isRelativeUrl(src)) {
         img.src = new URL(src, mdUrl).href;
       }
@@ -66,7 +70,11 @@ async function renderMarkdown(mdPath, target, opts = {}) {
         const current = img.getAttribute('src') || '';
         const fileName = current.split('/').pop();
         if (fileName) {
-          img.src = `${basePath}/pages/img/${fileName}`;
+          if (current.includes('/pages/img/')) {
+            img.src = `${basePath}/img/${fileName}`;
+          } else {
+            img.src = `${basePath}/pages/img/${fileName}`;
+          }
         }
       }, { once: true });
     });
