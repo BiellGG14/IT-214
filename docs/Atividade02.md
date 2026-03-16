@@ -553,7 +553,7 @@ Um modelo inicial pode ser estruturado em um triângulo logístico conectando:
 
 **Interpretação:** trajeto entre o Aeroporto Internacional de Brasília (A) e o Plano Piloto/SCS (B).
 
-![Rota Aeroporto para Plano Piloto](../pages/img/SCSaero.jpeg)
+![Rota Aeroporto para Plano Piloto](../img/SCSaero.jpeg)
 
 *Figura 1 — Rota Aeroporto → Plano Piloto.*
 
@@ -561,7 +561,7 @@ Um modelo inicial pode ser estruturado em um triângulo logístico conectando:
 
 **Interpretação:** trajeto entre o Plano Piloto/SCS (A) e Águas Claras (B).
 
-![Rota Plano Piloto para Águas Claras](../pages/img/SCSaguas.jpeg)
+![Rota Plano Piloto para Águas Claras](../img/SCSaguas.jpeg)
 
 *Figura 2 — Rota Plano Piloto → Águas Claras.*
 
@@ -569,7 +569,7 @@ Um modelo inicial pode ser estruturado em um triângulo logístico conectando:
 
 **Interpretação:** trajeto direto entre o Aeroporto Internacional de Brasília (A) e Águas Claras (B).
 
-![Rota Aeroporto para Águas Claras](../pages/img/aeroAguas.jpeg)
+![Rota Aeroporto para Águas Claras](../img/aeroAguas.jpeg)
 
 *Figura 3 — Rota Aeroporto → Águas Claras.*
 
