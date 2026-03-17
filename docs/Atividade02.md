@@ -1,4 +1,4 @@
-# Atividade 02 — Síntese Técnica, Operacional e Regulatória da UAM/AAM
+﻿# Atividade 02 — Síntese Técnica, Operacional e Regulatória da UAM/AAM
 
 **Disciplina:** Mobilidade Aérea Urbana — IT-214
 **Instituto:** Instituto Tecnológico de Aeronáutica (ITA)
@@ -15,62 +15,62 @@
 
 ### 1) Fundamentação e Análise Crítica (Bloco 1)
 
-A viabilização da **Advanced Air Mobility (AAM)** e da **Urban Air Mobility (UAM)** exige maturação simultânea de propulsão, energia, gestão de tráfego, infraestrutura, regulação e aceitação social [cite: 3]. O ecossistema é sociotécnico e interdependente [cite: 4].
+A viabilização da **Advanced Air Mobility (AAM)** e da **Urban Air Mobility (UAM)** exige maturação simultânea de propulsão, energia, gestão de tráfego, infraestrutura, regulação e aceitação social. O ecossistema é sociotécnico e interdependente.
 
 **Convergências técnicas**
 
-- Avanços em baterias, propulsão elétrica distribuída e autonomia impulsionam a nova geração de aeronaves [cite: 7].
-- Tendência de menor ruído, maior segurança operacional e potencial redução de custo frente a helicópteros convencionais [cite: 8].
-- O ATM tradicional não absorve o volume on-demand esperado, demandando **UTM/U-space** [cite: 10, 11].
-- A expansão da operação depende de vertiportos com alto throughput, recarga rápida e conectividade digital (ex.: 5G/6G) [cite: 14, 15].
+- Avanços em baterias, propulsão elétrica distribuída e autonomia impulsionam a nova geração de aeronaves.
+- Tendência de menor ruído, maior segurança operacional e potencial redução de custo frente a helicópteros convencionais.
+- O ATM tradicional não absorve o volume on-demand esperado, demandando **UTM/U-space**.
+- A expansão da operação depende de vertiportos com alto throughput, recarga rápida e conectividade digital (ex.: 5G/6G).
 
 **Divergências e limitações**
 
-- A adoção inicial tende a nichos premium, com dúvidas sobre escalabilidade imediata como transporte de massa [cite: 18, 19].
-- O principal gargalo é a **densidade energética das baterias**, limitando alcance, carga útil e robustez econômica [cite: 22, 35, 36, 37, 40].
+- A adoção inicial tende a nichos premium, com dúvidas sobre escalabilidade imediata como transporte de massa.
+- O principal gargalo é a **densidade energética das baterias**, limitando alcance, carga útil e robustez econômica.
 
 ### 2) Aplicação Operacional e Infraestrutura (Bloco 2)
 
-As arquiteturas aeronáuticas alteram diretamente procedimentos operacionais e dimensionamento da infraestrutura [cite: 44].
+As arquiteturas aeronáuticas alteram diretamente procedimentos operacionais e dimensionamento da infraestrutura.
 
 **Dimensionamento de vertiportos**
 
-- **Asa rotativa:** menor footprint e maior adaptação a áreas confinadas [cite: 48].
-- **Lift+Cruise / Tilt-wing:** maior área e envelopes laterais amplos por conta das superfícies alares [cite: 50].
-- **Tail-sitter:** ocupa menos área em solo, mas exige pé-direito e estabilização específicos [cite: 52].
+- **Asa rotativa:** menor footprint e maior adaptação a áreas confinadas.
+- **Lift+Cruise / Tilt-wing:** maior área e envelopes laterais amplos por conta das superfícies alares.
+- **Tail-sitter:** ocupa menos área em solo, mas exige pé-direito e estabilização específicos.
 
 **Procedimentos e energia**
 
-- Perfil de operação (hover, transição, cruzeiro) impacta consumo, turnaround e exigência de recarga [cite: 56, 67].
-- Configurações mais eficientes em cruzeiro favorecem rotas de média distância, com menor penalidade energética fora do hover [cite: 64].
+- Perfil de operação (hover, transição, cruzeiro) impacta consumo, turnaround e exigência de recarga.
+- Configurações mais eficientes em cruzeiro favorecem rotas de média distância, com menor penalidade energética fora do hover.
 
 **Gestão do espaço aéreo**
 
-- A heterogeneidade de aeronaves eleva a complexidade de separação e sequenciamento [cite: 73].
-- O UTM deve considerar o modo de voo para melhor previsão de conflito e coordenação tática [cite: 82, 84].
+- A heterogeneidade de aeronaves eleva a complexidade de separação e sequenciamento.
+- O UTM deve considerar o modo de voo para melhor previsão de conflito e coordenação tática.
 
 ### 3) Estrutura Regulatória e Planejamento (Bloco 3)
 
 **Facilitadores regulatórios**
 
-- Evolução para requisitos baseados em desempenho [cite: 101].
-- Uso de sandboxes regulatórios para validação gradual de conceitos e operações [cite: 103].
+- Evolução para requisitos baseados em desempenho.
+- Uso de sandboxes regulatórios para validação gradual de conceitos e operações.
 
 **Limitadores atuais**
 
-- Dependência de piloto a bordo em muitos cenários [cite: 105].
-- Ausência de protocolos consolidados para alto volume de voos UAM integrado ao ATM tradicional [cite: 107].
+- Dependência de piloto a bordo em muitos cenários.
+- Ausência de protocolos consolidados para alto volume de voos UAM integrado ao ATM tradicional.
 
 **Riscos comunitários críticos**
 
-- Ruído e assinatura sonora como vetores centrais de aceitação pública [cite: 111, 112].
-- Preocupações com privacidade e vigilância em áreas residenciais [cite: 113].
-- Risco distributivo ("gentrificação aérea"): benefícios concentrados e externalidades distribuídas [cite: 114].
+- Ruído e assinatura sonora como vetores centrais de aceitação pública.
+- Preocupações com privacidade e vigilância em áreas residenciais.
+- Risco distributivo ("gentrificação aérea"): benefícios concentrados e externalidades distribuídas.
 
 **UAM x AAM**
 
-- **UAM:** foco urbano denso, alta complexidade operacional e regulatória [cite: 129].
-- **AAM:** conceito guarda-chuva (urbano, regional, rural e carga), com maior viabilidade inicial em áreas menos congestionadas [cite: 130, 131, 126].
+- **UAM:** foco urbano denso, alta complexidade operacional e regulatória.
+- **AAM:** conceito guarda-chuva (urbano, regional, rural e carga), com maior viabilidade inicial em áreas menos congestionadas.
 
 ### 4) Estudo Técnico Comparativo de Categorias (Bloco 4)
 
@@ -256,19 +256,19 @@ As arquiteturas aeronáuticas alteram diretamente procedimentos operacionais e d
 
 **Desafios urbanos críticos**
 
-- Infraestrutura física (vertiportos e interfaces com modais terrestres) [cite: 136, 137].
-- Gerenciamento de tráfego de baixa altitude (UTM robusto e interoperável) [cite: 138, 139].
-- Aceitação social (ruído, segurança e percepção de benefício coletivo) [cite: 140, 141].
+- Infraestrutura física (vertiportos e interfaces com modais terrestres).
+- Gerenciamento de tráfego de baixa altitude (UTM robusto e interoperável).
+- Aceitação social (ruído, segurança e percepção de benefício coletivo).
 
 **Infraestruturas indispensáveis**
 
-- Vertiportos (operação, manutenção e turnaround) [cite: 161, 162].
-- Sistemas UTM para planejamento e monitoramento em tempo real [cite: 163, 164].
-- Rede energética de alta potência para recarga rápida e previsível [cite: 165, 166].
+- Vertiportos (operação, manutenção e turnaround).
+- Sistemas UTM para planejamento e monitoramento em tempo real.
+- Rede energética de alta potência para recarga rápida e previsível.
 
 **Implicação estratégica**
 
-- O sucesso da UAM depende de implantação faseada, governança regulatória adaptativa e alinhamento entre tecnologia, infraestrutura e política pública [cite: 168, 170, 173].
+- O sucesso da UAM depende de implantação faseada, governança regulatória adaptativa e alinhamento entre tecnologia, infraestrutura e política pública.
 
 ## Conclusão
 
@@ -288,6 +288,8 @@ A análise consolidada indica que a UAM é tecnicamente promissora, porém condi
 Brasília é uma cidade única, projetada para ser a capital funcional e monumental do Brasil. Para compreender a dinâmica urbana em 2026, é necessário analisar simultaneamente seu traçado urbanístico icônico e os desafios de mobilidade de uma metrópole moderna.
 
 Viver no Distrito Federal em 2026 representa um cenário de contrastes. Embora Brasília possua uma das maiores rendas per capita do país, o custo de vida acompanha esse nível de renda e frequentemente se aproxima dos patamares de São Paulo e Rio de Janeiro. A compreensão dessa dinâmica exige observar a relação estrutural entre o Plano Piloto e as Cidades Satélites, além dos fatores que compõem o orçamento cotidiano da população.
+
+![Planalto](../img/planalto.jpeg)
 
 ## Highlights
 
@@ -337,11 +339,11 @@ Dois edifícios se destacam:
 
 # Brasilia visto de cima
 
-![Brasília vista de cima 1](../img/brcima1.jpeg)
+![ ](../img/brcima1.jpeg)
 
-![Brasília vista de cima 2](../img/brcima2.jpeg)
+![ ](../img/brcima2.jpeg)
 
-![Brasília vista de cima 3](../img/brcima3.jpeg)
+![ ](../img/brcima3.jpeg)
 
 ---
 
