@@ -335,6 +335,16 @@ Dois edifícios se destacam:
 
 ---
 
+# Brasilia visto de cima
+
+![Brasília vista de cima 1](../img/brcima1.jpeg)
+
+![Brasília vista de cima 2](../img/brcima2.jpeg)
+
+![Brasília vista de cima 3](../img/brcima3.jpeg)
+
+---
+
 # O Aeroporto Internacional de Brasília
 
 O Aeroporto Internacional de Brasília – Presidente Juscelino Kubitschek constitui um dos principais hubs aeroportuários da América Latina.
