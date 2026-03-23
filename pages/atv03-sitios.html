@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atividade 03 - Sítios UAM Brasília</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+
+  <style>
+    :root {
+      --bg: #eef4f8;
+      --panel: #ffffff;
+      --ink: #1d2a3a;
+      --muted: #5b6b7c;
+      --line: #d6e0ea;
+      --accent: #ff7a1a;
+      --accent-2: #0e7490;
+      --site-a: #d62828;
+      --site-b: #1d4ed8;
+      --site-c: #15803d;
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(17, 38, 65, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Barlow", system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(14, 116, 144, 0.12), transparent 30%),
+        radial-gradient(circle at 90% 20%, rgba(255, 122, 26, 0.12), transparent 28%),
+        var(--bg);
+    }
+
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 22px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .hero {
+      border-radius: var(--radius);
+      color: #fff;
+      background:
+        linear-gradient(120deg, rgba(9, 36, 66, 0.95), rgba(14, 116, 144, 0.9)),
+        linear-gradient(45deg, rgba(255, 122, 26, 0.2), transparent);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+      letter-spacing: 0.01em;
+    }
+
+    .hero p {
+      margin: 0;
+      opacity: 0.92;
+      font-size: 1rem;
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(120px, 1fr));
+      gap: 10px;
+    }
+
+    .kpi {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+      box-shadow: 0 3px 10px rgba(20, 50, 80, 0.08);
+    }
+
+    .kpi .label { color: var(--muted); font-size: 0.82rem; }
+    .kpi .value {
+      margin-top: 2px;
+      font-weight: 700;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.2rem;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 14px;
+    }
+
+    .panel h2 {
+      margin: 0 0 10px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.08rem;
+    }
+
+    #map {
+      width: 100%;
+      height: 460px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+    }
+
+    .legend {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .kml-status {
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #f7fafc;
+      color: #1e3a5f;
+      font-weight: 600;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 6px;
+    }
+
+    .layout-2 {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #0f2742;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) td { background: #f7fafc; }
+
+    .bars {
+      display: grid;
+      gap: 10px;
+      margin-top: 2px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 172px 1fr 70px;
+      gap: 8px;
+      align-items: center;
+      font-size: 0.88rem;
+    }
+
+    .track {
+      width: 100%;
+      height: 14px;
+      border-radius: 99px;
+      background: #e8eef5;
+      overflow: hidden;
+      border: 1px solid #d4dfea;
+    }
+
+    .fill {
+      height: 100%;
+      border-radius: 99px;
+      background: linear-gradient(90deg, #1d4ed8, #0e7490);
+      width: 0;
+      animation: grow 900ms ease forwards;
+    }
+
+    @keyframes grow { from { width: 0; } }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .shot {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fbfdff;
+    }
+
+    .shot img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      display: block;
+      background: linear-gradient(135deg, #dce7f3, #f8fbff);
+    }
+
+    .shot figcaption {
+      padding: 8px;
+      font-size: 0.88rem;
+      color: #334155;
+    }
+
+    .note {
+      margin-top: 8px;
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 950px) {
+      .kpi-grid { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+      .layout-2 { grid-template-columns: 1fr; }
+      .gallery { grid-template-columns: 1fr; }
+      .bar-row { grid-template-columns: 1fr; gap: 4px; }
+      #map { height: 390px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>Rede inicial de vertiportos - Brasilia (Atividade 03)</h1>
+      <p>Visualizacao dos tres sitios priorizados: Aeroporto JK, Plano Piloto (SCS) e Aguas Claras.</p>
+    </section>
+
+    <section class="kpi-grid" aria-label="Indicadores-chave">
+      <article class="kpi"><div class="label">Sitios analisados</div><div class="value">3</div></article>
+      <article class="kpi"><div class="label">Corredores principais</div><div class="value">3</div></article>
+      <article class="kpi"><div class="label">Tempo eVTOL medio</div><div class="value">8 min</div></article>
+      <article class="kpi"><div class="label">Tempo carro (pico) medio</div><div class="value">46 min</div></article>
+    </section>
+
+    <section class="panel">
+      <h2>Mapa de Análise: Vertiportos e Proteção Acústica</h2>
+      <p style="margin-bottom: 12px; color: #5b6b7c; font-size: 0.92rem;">
+        Visualização dos sítios candidatos, pontos críticos (escolas e hospitais) e zonas de proteção acústica (400 m e 600 m).
+      </p>
+      <div id="map" role="img" aria-label="Mapa com os tres sitios de Brasilia e buffers de ruido"></div>
+      <div class="legend">
+        <span><i class="dot" style="background:var(--site-a)"></i>Sítio A - Aeroporto JK</span>
+        <span><i class="dot" style="background:var(--site-b)"></i>Sítio B - Plano Piloto (SCS)</span>
+        <span><i class="dot" style="background:var(--site-c)"></i>Sítio C - Águas Claras</span>
+        <span><i class="dot" style="background:#111827"></i>Pontos críticos</span>
+        <span><i class="dot" style="background:#7c3aed"></i>Zona de 400 m</span>
+        <span><i class="dot" style="background:#f59e0b"></i>Zona de 600 m</span>
+      </div>
+    </section>
+
+    <section class="layout-2">
+      <article class="panel">
+        <h2>Tabela resumida dos sitios</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Sitio</th>
+              <th>Papel operacional</th>
+              <th>Integracao modal</th>
+              <th>Status de prioridade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A - Aeroporto JK</td>
+              <td>Conexao aeroporto-cidade</td>
+              <td>Terminal aeroportuario e vias arteriais</td>
+              <td>Fase 1</td>
+            </tr>
+            <tr>
+              <td>B - Plano Piloto (SCS)</td>
+              <td>Centro administrativo e corporativo</td>
+              <td>Eixos de onibus e centralidade urbana</td>
+              <td>Fase 1 condicionada</td>
+            </tr>
+            <tr>
+              <td>C - Aguas Claras</td>
+              <td>Polo residencial-comercial pendular</td>
+              <td>Metro + EPTG + conexoes locais</td>
+              <td>Fase 1</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="panel">
+        <h2>Comparativo visual de tempo por rota</h2>
+        <div class="bars" id="bars"></div>
+        <p class="note">Escala normalizada (maior barra = maior tempo de carro no pico).</p>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>Galeria dos locais especificos (substituir pelas imagens do Google Earth)</h2>
+      <div class="gallery">
+        <figure class="shot">
+          <img src="../docs/image/Atividade03/sitio-a-aeroporto.jpg" alt="Sitio A - Aeroporto JK" loading="lazy" />
+          <figcaption>Aeroporto Internacional de Brasilia (sitio A).</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../docs/image/Atividade03/sitio-b-plano-piloto.jpg" alt="Sitio B - Plano Piloto" loading="lazy" />
+          <figcaption>Plano Piloto, eixo SCS (sitio B).</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../docs/image/Atividade03/sitio-c-aguas-claras.jpg" alt="Sitio C - Aguas Claras" loading="lazy" />
+          <figcaption>Aguas Claras e conexao com eixo metroviario (sitio C).</figcaption>
+        </figure>
+      </div>
+      <p class="note">Dica: exporte imagens em 16:9 para manter o layout uniforme.</p>
+    </section>
+  </main>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+  <script src="https://unpkg.com/@mapbox/togeojson@0.16.0/togeojson.js"></script>
+
+  <script>
+    const sites = [
+      {
+        id: "A",
+        name: "Aeroporto Internacional de Brasilia (BSB)",
+        coords: [-15.8711, -47.9186],
+        color: getComputedStyle(document.documentElement).getPropertyValue("--site-a").trim(),
+        note: "Hub aeroportuario e ponto de entrada/saida nacional."
+      },
+      {
+        id: "B",
+        name: "Plano Piloto (SCS)",
+        coords: [-15.7939, -47.8828],
+        color: getComputedStyle(document.documentElement).getPropertyValue("--site-b").trim(),
+        note: "Alta concentracao de destinos administrativos e corporativos."
+      },
+      {
+        id: "C",
+        name: "Aguas Claras",
+        coords: [-15.8372, -48.0193],
+        color: getComputedStyle(document.documentElement).getPropertyValue("--site-c").trim(),
+        note: "Polo pendular com forte conexao por metro e vias arteriais."
+      }
+    ];
+
+    const routes = [
+      { name: "Aeroporto -> Plano Piloto", evtol: 7, carroPico: 35 },
+      { name: "Aeroporto -> Aguas Claras", evtol: 8, carroPico: 48 },
+      { name: "Plano Piloto -> Aguas Claras", evtol: 9, carroPico: 55 }
+    ];
+
+    const map = L.map("map", {
+      zoomControl: true,
+      preferCanvas: true
+    }).setView([-15.82, -47.94], 11);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const siteLayer = L.layerGroup();
+    const routeLayer = L.layerGroup();
+    const kmlLayer = L.geoJSON(null, {
+      style: {
+        color: "#0f766e",
+        weight: 2,
+        fillColor: "#2dd4bf",
+        fillOpacity: 0.2
+      },
+      onEachFeature: (feature, layer) => {
+        const name = (feature.properties && feature.properties.name) || "Poligono KML";
+        layer.bindPopup(`<strong>${name}</strong><br/>Area candidata no KML exportado.`);
+      }
+    });
+
+    const criticalLayer = L.layerGroup();
+    const buffer400Layer = L.layerGroup();
+    const buffer600Layer = L.layerGroup();
+
+    sites.forEach((site) => {
+      const marker = L.circleMarker(site.coords, {
+        radius: 8,
+        color: site.color,
+        fillColor: site.color,
+        fillOpacity: 0.85,
+        weight: 2
+      }).addTo(siteLayer);
+
+      marker.bindPopup(`
+        <strong>Sitio ${site.id}</strong><br/>
+        ${site.name}<br/>
+        <small>${site.note}</small>
+      `);
+    });
+
+    const routePairs = [
+      [sites[0].coords, sites[1].coords],
+      [sites[0].coords, sites[2].coords],
+      [sites[1].coords, sites[2].coords]
+    ];
+
+    routePairs.forEach((coords) => {
+      L.polyline(coords, {
+        color: "#0e7490",
+        weight: 3,
+        opacity: 0.75,
+        dashArray: "8 8"
+      }).addTo(routeLayer);
+    });
+
+    siteLayer.addTo(map);
+    routeLayer.addTo(map);
+
+    const layerControl = L.control.layers(null, {
+      "Poligonos KML": kmlLayer,
+      "Sitios selecionados": siteLayer,
+      "Corredores propostos": routeLayer,
+      "Pontos criticos": criticalLayer,
+      "Buffer 400 m": buffer400Layer,
+      "Buffer 600 m": buffer600Layer
+    }, { collapsed: false }).addTo(map);
+
+    function parseCSV(text) {
+      const lines = text.trim().split('\n');
+      const headers = lines[0].split(',');
+      const data = [];
+      for (let i = 1; i < lines.length; i++) {
+        const obj = {};
+        const currentLine = lines[i].split(',');
+        for (let j = 0; j < headers.length; j++) {
+          obj[headers[j].trim()] = currentLine[j] ? currentLine[j].trim() : '';
+        }
+        data.push(obj);
+      }
+      return data;
+    }
+
+    fetch('data/critical_points.csv')
+      .then((res) => res.text())
+      .then((text) => {
+        const points = parseCSV(text);
+        points.forEach((point) => {
+          const lat = parseFloat(point.latitude);
+          const lon = parseFloat(point.longitude);
+
+          if (isNaN(lat) || isNaN(lon)) return;
+
+          const iconColor = point.type === 'Hospital' ? '#dc2626' : '#2563eb';
+          const marker = L.circleMarker([lat, lon], {
+            radius: 5,
+            color: '#111827',
+            fillColor: iconColor,
+            fillOpacity: 0.85,
+            weight: 1.5
+          }).bindPopup(`<strong>${point.name}</strong><br/>Tipo: ${point.type}<br/><small>${point.description}</small>`);
+
+          marker.addTo(criticalLayer);
+
+          L.circle([lat, lon], {
+            radius: 400,
+            color: '#7c3aed',
+            fillColor: '#7c3aed',
+            fillOpacity: 0.08,
+            weight: 2
+          }).addTo(buffer400Layer);
+
+          L.circle([lat, lon], {
+            radius: 600,
+            color: '#f59e0b',
+            fillColor: '#f59e0b',
+            fillOpacity: 0.04,
+            weight: 2,
+            dashArray: '6 6'
+          }).addTo(buffer600Layer);
+        });
+
+        criticalLayer.addTo(map);
+        buffer400Layer.addTo(map);
+        buffer600Layer.addTo(map);
+      })
+      .catch(() => {
+        // Fallback se CSV não carregar
+      });
+
+    const kmlPath = "../docs/extras/Atividade03/Mapa%20sem%20t%C3%ADtulo.kml";
+
+    fetch(kmlPath)
+      .then((res) => {
+        if (!res.ok) throw new Error("KML não encontrado");
+        return res.text();
+      })
+      .then((kmlText) => {
+        const kmlDom = new DOMParser().parseFromString(kmlText, "text/xml");
+        const geojson = toGeoJSON.kml(kmlDom);
+        kmlLayer.addData(geojson).addTo(map);
+
+        if (kmlLayer.getLayers().length > 0) {
+          map.fitBounds(kmlLayer.getBounds().pad(0.15));
+        }
+      })
+      .catch(() => {
+        // Silenciosamente ignorar se KML não carregar
+      });
+
+    const maxValue = Math.max(...routes.map((r) => r.carroPico));
+    const bars = document.getElementById("bars");
+
+    routes.forEach((route) => {
+      const pctCarro = Math.round((route.carroPico / maxValue) * 100);
+      const pctEvtol = Math.round((route.evtol / maxValue) * 100);
+
+      const rowCarro = document.createElement("div");
+      rowCarro.className = "bar-row";
+      rowCarro.innerHTML = `
+        <div>${route.name} (carro)</div>
+        <div class="track"><div class="fill" style="width:${pctCarro}%; background:linear-gradient(90deg,#d97706,#f97316);"></div></div>
+        <strong>${route.carroPico} min</strong>
+      `;
+
+      const rowEvtol = document.createElement("div");
+      rowEvtol.className = "bar-row";
+      rowEvtol.innerHTML = `
+        <div>${route.name} (eVTOL)</div>
+        <div class="track"><div class="fill" style="width:${pctEvtol}%; background:linear-gradient(90deg,#1d4ed8,#0e7490);"></div></div>
+        <strong>${route.evtol} min</strong>
+      `;
+
+      bars.appendChild(rowCarro);
+      bars.appendChild(rowEvtol);
+    });
+
+    document.querySelectorAll(".shot img").forEach((img) => {
+      img.addEventListener("error", () => {
+        img.alt = "Imagem pendente - inserir captura do Google Earth";
+        img.src = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(
+          `<svg xmlns='http://www.w3.org/2000/svg' width='1280' height='720'>
+             <defs>
+               <linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
+                 <stop stop-color='#dbeafe' offset='0'/>
+                 <stop stop-color='#f8fafc' offset='1'/>
+               </linearGradient>
+             </defs>
+             <rect width='100%' height='100%' fill='url(#g)'/>
+             <text x='50%' y='46%' dominant-baseline='middle' text-anchor='middle' fill='#1e3a8a' font-size='38' font-family='Arial'>Imagem pendente</text>
+             <text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' fill='#334155' font-size='26' font-family='Arial'>Substitua pela captura do Google Earth</text>
+           </svg>`
+        );
+      }, { once: true });
+    });
+  </script>
+</body>
+</html>
