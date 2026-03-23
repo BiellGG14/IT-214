@@ -355,6 +355,13 @@
       "Sítio D - Águas Claras (eixo rodoviário)"
     ];
 
+    const siteColors = [
+      { borderColor: "#d62828", fillColor: "#ef4444", label: "Alternativa inicial" },
+      { borderColor: "#1d4ed8", fillColor: "#3b82f6", label: "Sítio B" },
+      { borderColor: "#a855f7", fillColor: "#c084fc", label: "Sítio C" },
+      { borderColor: "#f59e0b", fillColor: "#fbbf24", label: "Sítio D" }
+    ];
+
     const sitios = [];
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -363,11 +370,15 @@
     }).addTo(map);
 
     const kmlLayer = L.geoJSON(null, {
-      style: {
-        color: "#0f766e",
-        weight: 2.5,
-        fillColor: "#2dd4bf",
-        fillOpacity: 0.12
+      style: (feature) => {
+        const idx = sitios.length;
+        const colorSet = siteColors[idx] || { borderColor: "#0f766e", fillColor: "#2dd4bf" };
+        return {
+          color: colorSet.borderColor,
+          weight: 2.5,
+          fillColor: colorSet.fillColor,
+          fillOpacity: 0.18
+        };
       },
       onEachFeature: (feature, layer) => {
         const idx = sitios.length;
