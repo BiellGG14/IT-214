@@ -111,6 +111,34 @@
       font-size: 1.08rem;
     }
 
+    .map-actions {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-map {
+      border: 1px solid #0f766e;
+      background: #ecfeff;
+      color: #115e59;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-map:hover {
+      background: #ccfbf1;
+    }
+
+    .btn-map:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+    }
+
     #map {
       width: 100%;
       height: 620px;
@@ -215,6 +243,9 @@
       <p style="margin-bottom: 12px; color: #5b6b7c; font-size: 0.92rem;">
         Os sítios selecionados são os polígonos do KML. Os pontos críticos foram considerados com base no artigo de impacto acústico em UAM, aplicando buffers de 400 m e 600 m.
       </p>
+      <div class="map-actions">
+        <button id="btn-zoom-kml" class="btn-map" type="button" disabled>Zoom nos Sítios (KML)</button>
+      </div>
       <div id="map" role="img" aria-label="Mapa com os tres sitios de Brasilia e buffers de ruido"></div>
       <div class="legend">
         <span><i class="dot" style="background:#0f766e"></i>Sítios selecionados (KML)</span>
@@ -295,6 +326,7 @@
     const kmlPath = `${repoBase}/docs/extras/Atividade03/Mapa%20sem%20t%C3%ADtulo.kml`;
     const criticalCsvPath = `${repoBase}/docs/extras/Atividade03/pontos_criticos_DF.csv`;
     const imageBase = `${repoBase}/docs/image/Atividade03`;
+    const btnZoomKml = document.getElementById("btn-zoom-kml");
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
@@ -437,11 +469,18 @@
 
         if (kmlLayer.getLayers().length > 0) {
           map.fitBounds(kmlLayer.getBounds().pad(0.15));
+          btnZoomKml.disabled = false;
         }
       })
       .catch(() => {
         // Silenciosamente ignorar se KML não carregar
       });
+
+    btnZoomKml.addEventListener("click", () => {
+      if (kmlLayer.getLayers().length > 0) {
+        map.fitBounds(kmlLayer.getBounds().pad(0.15));
+      }
+    });
 
     document.querySelectorAll(".shot img").forEach((img) => {
       const fileName = img.getAttribute("data-file");
