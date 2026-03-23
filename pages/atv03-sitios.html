@@ -233,7 +233,7 @@
     </section>
 
     <section class="kpi-grid" aria-label="Indicadores-chave">
-      <article class="kpi"><div class="label">Sítios (polígonos KML)</div><div class="value" id="kpi-kml">-</div></article>
+      <article class="kpi"><div class="label">Sítios selecionados</div><div class="value" id="kpi-kml">-</div></article>
       <article class="kpi"><div class="label">Pontos críticos (CSV)</div><div class="value" id="kpi-critical">-</div></article>
       <article class="kpi"><div class="label">Faixas de ruído aplicadas</div><div class="value">400 m e 600 m</div></article>
     </section>
@@ -241,14 +241,16 @@
     <section class="panel">
       <h2>Mapa de Análise: Vertiportos e Proteção Acústica</h2>
       <p style="margin-bottom: 12px; color: #5b6b7c; font-size: 0.92rem;">
-        Os sítios selecionados são os polígonos do KML. Os pontos críticos foram considerados com base no artigo de impacto acústico em UAM, aplicando buffers de 400 m e 600 m.
+        Os sítios selecionados estão destacados no mapa. Os pontos críticos foram considerados com base no artigo de impacto acústico em UAM, aplicando buffers de 400 m e 600 m.
       </p>
       <div class="map-actions">
-        <button id="btn-zoom-kml" class="btn-map" type="button" disabled>Zoom nos Sítios (KML)</button>
+        <button id="btn-zoom-sitio-1" class="btn-map" type="button" disabled>Zoom Sítio A</button>
+        <button id="btn-zoom-sitio-2" class="btn-map" type="button" disabled>Zoom Sítio B</button>
+        <button id="btn-zoom-sitio-3" class="btn-map" type="button" disabled>Zoom Sítio C</button>
       </div>
       <div id="map" role="img" aria-label="Mapa com os tres sitios de Brasilia e buffers de ruido"></div>
       <div class="legend">
-        <span><i class="dot" style="background:#0f766e"></i>Sítios selecionados (KML)</span>
+        <span><i class="dot" style="background:#0f766e"></i>Sítios selecionados</span>
         <span><i class="dot" style="background:#111827"></i>Pontos críticos</span>
         <span><i class="dot" style="background:#7c3aed"></i>Zona de 400 m</span>
         <span><i class="dot" style="background:#f59e0b"></i>Zona de 600 m</span>
@@ -256,7 +258,7 @@
     </section>
 
     <section class="panel">
-      <h2>Tabela resumida dos sítios (KML)</h2>
+      <h2>Tabela resumida dos sítios selecionados</h2>
       <table>
         <thead>
           <tr>
@@ -326,7 +328,14 @@
     const kmlPath = `${repoBase}/docs/extras/Atividade03/Mapa%20sem%20t%C3%ADtulo.kml`;
     const criticalCsvPath = `${repoBase}/docs/extras/Atividade03/pontos_criticos_DF.csv`;
     const imageBase = `${repoBase}/docs/image/Atividade03`;
-    const btnZoomKml = document.getElementById("btn-zoom-kml");
+    
+    const btnZoomSitio = [
+      document.getElementById("btn-zoom-sitio-1"),
+      document.getElementById("btn-zoom-sitio-2"),
+      document.getElementById("btn-zoom-sitio-3")
+    ];
+
+    const sitios = [];
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
@@ -341,8 +350,9 @@
         fillOpacity: 0.12
       },
       onEachFeature: (feature, layer) => {
-        const name = (feature.properties && feature.properties.name) || "Poligono KML";
-        layer.bindPopup(`<strong>${name}</strong><br/>Sítio selecionado no KML do Google Earth.`);
+        const name = (feature.properties && feature.properties.name) || "Sítio";
+        layer.bindPopup(`<strong>${name}</strong><br/>Sítio selecionado.`);
+        sitios.push(layer);
       }
     });
 
@@ -351,8 +361,8 @@
     const buffer600Layer = L.layerGroup();
 
     const layerControl = L.control.layers(null, {
-      "Poligonos KML": kmlLayer,
-      "Pontos criticos": criticalLayer,
+      "Sítios selecionados": kmlLayer,
+      "Pontos críticos": criticalLayer,
       "Buffer 400 m": buffer400Layer,
       "Buffer 600 m": buffer600Layer
     }, { collapsed: false }).addTo(map);
@@ -469,18 +479,38 @@
 
         if (kmlLayer.getLayers().length > 0) {
           map.fitBounds(kmlLayer.getBounds().pad(0.15));
-          btnZoomKml.disabled = false;
+          
+          // Habilitar botões de zoom
+          btnZoomSitio.forEach((btn, idx) => {
+            if (idx < sitios.length) {
+              btn.disabled = false;
+            }
+          });
+          
+          // Adicionar listeners aos botões
+          btnZoomSitio.forEach((btn, idx) => {
+            btn.addEventListener("click", () => {
+              if (idx < sitios.length) {
+                const sitioBounds = L.latLngBounds([]);
+                const layer = sitios[idx];
+                
+                if (layer.getBounds) {
+                  sitioBounds.extend(layer.getBounds());
+                } else if (layer.getLatLng) {
+                  sitioBounds.extend(layer.getLatLng());
+                }
+                
+                if (sitioBounds.isValid()) {
+                  map.fitBounds(sitioBounds.pad(0.15));
+                }
+              }
+            });
+          });
         }
       })
       .catch(() => {
         // Silenciosamente ignorar se KML não carregar
       });
-
-    btnZoomKml.addEventListener("click", () => {
-      if (kmlLayer.getLayers().length > 0) {
-        map.fitBounds(kmlLayer.getBounds().pad(0.15));
-      }
-    });
 
     document.querySelectorAll(".shot img").forEach((img) => {
       const fileName = img.getAttribute("data-file");

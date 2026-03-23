@@ -17,7 +17,7 @@
 <iframe
 	src="atv03-sitios.html"
 	title="Atividade 03 - Sítios UAM Brasília"
-	style="width:100%; height:1800px; border:1px solid #dde3ec; border-radius:12px; background:#fff;"
+	style="width:100%; height:2200px; border:1px solid #dde3ec; border-radius:12px; background:#fff;"
 	loading="lazy"
 ></iframe>
 
@@ -61,7 +61,7 @@ O mapa interativo acima exibe uma camada de análise com:
 - **Buffer de 400 m** (zona sensível — em roxo);
 - **Buffer de 600 m** (limite de cautela — em laranja).
 
-Essa análise visual permite identificar espacialmente quais vertiportos guardam distâncias adequadas de receptores sensíveis, alinhado com as recomendações do artigo.
+Essa análise visual permite identificar espacialmente quais sítios guardam distâncias adequadas de receptores sensíveis, alinhado com as recomendações do artigo.
 
 ## Próximos passos
 
