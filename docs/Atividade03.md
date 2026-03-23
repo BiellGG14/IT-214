@@ -41,11 +41,11 @@ Essa configuração final forma uma rede logística de curta/média distância c
 ### Sítio B — Aeroporto Internacional de Brasília (BSB)
 ![Aeroporto de Brasília](/docs/image/Atividade03/sitio-a-aeroporto.jpg)
 
+### Sítio C — Asa Norte (SCS/Eixo Central)
+![Asa Norte](/docs/image/Atividade03/sitio-b-plano-piloto.jpg)
+
 ### Sítio D — Águas Claras (eixo rodoviário)
 ![Águas Claras - Eixo Rodoviário](/docs/image/Atividade03/sitio-d-aguas-claras-rodoviario.jpg)
-
-### Sítio C — Asa Norte (SCS/Eixo Central)
-![Asa Norte](/docs/image/Atividade03/sitio-c-asa-norte.jpg)
 
 ## Critérios resumidos de avaliação
 
