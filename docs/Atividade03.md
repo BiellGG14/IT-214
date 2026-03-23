@@ -33,18 +33,19 @@ O **Águas Claras (eixo metroviário)** foi um sítio inicial de estudo, mas foi
 
 Essa configuração final forma uma rede logística de curta/média distância com alto potencial de ganho de tempo em horários de pico.
 
-## Galeria dos locais específicos (Google Earth)
+## Galeria dos locais específicos 
 
-> Inserir aqui as imagens exportadas/capturadas do projeto Google Earth para cada local.
+### Alternativa inicial — Águas Claras (eixo metroviário)
+![Águas Claras - Eixo Metroviário](/docs/image/Atividade03/sitio-c-aguas-claras.jpg)
 
-| Sítio | Arquivo esperado em `docs/image/Atividade03/` |
-|---|---|
-| Alternativa inicial — Águas Claras (eixo metroviário) | `sitio-a-aeroporto.jpg` |
-| Sítio B — Aeroporto Internacional de Brasília (BSB) | `sitio-b-plano-piloto.jpg` |
-| Sítio C — Asa Norte (SCS/Eixo Central) | `sitio-c-aguas-claras.jpg` |
-| Sítio D — Águas Claras (eixo rodoviário) | `sitio-d-aguas-claras-rodoviario.jpg` |
+### Sítio B — Aeroporto Internacional de Brasília (BSB)
+![Aeroporto de Brasília](/docs/image/Atividade03/sitio-a-aeroporto.jpg)
 
-As imagens aparecem automaticamente no painel interativo acima assim que esses arquivos forem adicionados ao repositório.
+### Sítio D — Águas Claras (eixo rodoviário)
+![Águas Claras - Eixo Rodoviário](/docs/image/Atividade03/sitio-d-aguas-claras-rodoviario.jpg)
+
+### Sítio C — Asa Norte (SCS/Eixo Central)
+![Asa Norte](/docs/image/Atividade03/sitio-c-asa-norte.jpg)
 
 ## Critérios resumidos de avaliação
 
