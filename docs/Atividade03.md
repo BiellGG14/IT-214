@@ -21,7 +21,7 @@
 	loading="lazy"
 ></iframe>
 
-## Síntese da seleção (texto mínimo)
+## Síntese da seleção 
 
 Os três sítios foram selecionados por complementaridade operacional na malha inicial de UAM em Brasília:
 
