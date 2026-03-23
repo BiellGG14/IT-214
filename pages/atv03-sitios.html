@@ -187,7 +187,7 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 10px;
     }
 
@@ -233,9 +233,9 @@
     </section>
 
     <section class="kpi-grid" aria-label="Indicadores-chave">
-      <article class="kpi"><div class="label">Sítios selecionados</div><div class="value" id="kpi-kml">-</div></article>
+      <article class="kpi"><div class="label">Sítios avaliados</div><div class="value" id="kpi-kml">-</div></article>
       <article class="kpi"><div class="label">Escolas/Hospitais</div><div class="value" id="kpi-critical">-</div></article>
-      <article class="kpi"><div class="label">Faixas de ruído aplicadas</div><div class="value">400 m e 600 m</div></article>
+      <article class="kpi"><div class="label">Seleção final</div><div class="value">3 sítios</div></article>
     </section>
 
     <section class="panel">
@@ -243,8 +243,11 @@
       <p style="margin-bottom: 12px; color: #5b6b7c; font-size: 0.92rem;">
         Os sítios selecionados estão destacados no mapa. Escolas e hospitais foram considerados com base no artigo de impacto acústico em UAM, aplicando buffers de 400 m e 600 m.
       </p>
+      <p style="margin: 0 0 12px; color: #5b6b7c; font-size: 0.92rem;">
+        Observação: o sítio em Águas Claras (eixo metroviário) foi uma alternativa inicial e foi substituído por Águas Claras (eixo rodoviário), por apresentar melhor afastamento das áreas próximas a escolas e hospitais.
+      </p>
       <div class="map-actions">
-        <button id="btn-zoom-sitio-1" class="btn-map" type="button" disabled>Sítio A - Águas Claras (eixo metroviário)</button>
+        <button id="btn-zoom-sitio-1" class="btn-map" type="button" disabled>Alternativa inicial - Águas Claras (eixo metroviário)</button>
         <button id="btn-zoom-sitio-2" class="btn-map" type="button" disabled>Sítio B - Aeroporto Internacional de Brasília (BSB)</button>
         <button id="btn-zoom-sitio-3" class="btn-map" type="button" disabled>Sítio C - Asa Norte (SCS/Eixo Central)</button>
         <button id="btn-zoom-sitio-4" class="btn-map" type="button" disabled>Sítio D - Águas Claras (eixo rodoviário)</button>
@@ -270,9 +273,9 @@
         </thead>
         <tbody>
           <tr>
-            <td>Sítio A - Águas Claras (eixo metroviário)</td>
+            <td>Alternativa inicial - Águas Claras (eixo metroviário)</td>
             <td>Google Earth (projeto do grupo)</td>
-            <td>Verificação de proximidade com escolas e hospitais via buffers 400 m / 600 m</td>
+            <td>Substituído por maior proximidade de escolas e hospitais</td>
           </tr>
           <tr>
             <td>Sítio B - Aeroporto Internacional de Brasília (BSB)</td>
@@ -298,7 +301,7 @@
       <div class="gallery">
         <figure class="shot">
           <img data-file="sitio-a-aeroporto.jpg" alt="Sitio A - Aeroporto JK" loading="lazy" />
-          <figcaption>Águas Claras (eixo metroviário) - sítio A.</figcaption>
+          <figcaption>Águas Claras (eixo metroviário) - alternativa inicial (substituída).</figcaption>
         </figure>
         <figure class="shot">
           <img data-file="sitio-b-plano-piloto.jpg" alt="Sitio B - Plano Piloto" loading="lazy" />
@@ -307,6 +310,10 @@
         <figure class="shot">
           <img data-file="sitio-c-aguas-claras.jpg" alt="Sitio C - Aguas Claras" loading="lazy" />
           <figcaption>Asa Norte (SCS/Eixo Central) - sítio C.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img data-file="sitio-d-aguas-claras-rodoviario.jpg" alt="Sitio D - Aguas Claras eixo rodoviario" loading="lazy" />
+          <figcaption>Águas Claras (eixo rodoviário) - sítio D (selecionado).</figcaption>
         </figure>
       </div>
       <p class="note">Dica: exporte imagens em 16:9 para manter o layout uniforme.</p>

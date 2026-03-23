@@ -1,4 +1,4 @@
-# Atividade 03 — Seleção de quatro Sítios
+# Atividade 03 — Seleção de três Sítios
 
 **Disciplina:** Mobilidade Aérea Urbana — IT-214  
 **Instituto:** Instituto Tecnológico de Aeronáutica (ITA)  
@@ -8,7 +8,7 @@
 
 ## Objetivos
 
-- Consolidar os 4 sítios priorizados em Brasília para implantação inicial de vertiportos.
+- Consolidar os 3 sítios priorizados em Brasília para implantação inicial de vertiportos.
 - Exibir o resultado de forma visual e interativa (mapa, tabela e gráfico).
 - Documentar, de forma mínima, o racional de escolha de cada região.
 
@@ -23,14 +23,15 @@
 
 ## Síntese da seleção 
 
-Os quatro sítios foram selecionados por complementaridade operacional na malha inicial de UAM em Brasília:
+Foram avaliados quatro sítios por complementaridade operacional na malha inicial de UAM em Brasília. A seleção final considera três sítios:
 
-- **Sítio A — Águas Claras (eixo metroviário):** polo residencial-comercial com forte fluxo pendular diário.
 - **Sítio B — Aeroporto Internacional de Brasília (BSB):** concentração de demanda aeroportuária e conexão nacional.
 - **Sítio C — Asa Norte (SCS/Eixo Central):** alta densidade de destinos administrativos, corporativos e hoteleiros.
 - **Sítio D — Águas Claras (eixo rodoviário):** alternativa complementar de acesso terrestre e distribuição de demanda local.
 
-Essa configuração forma uma rede logística de curta/média distância com alto potencial de ganho de tempo em horários de pico.
+O **Águas Claras (eixo metroviário)** foi um sítio inicial de estudo, mas foi **substituído** pelo **Águas Claras (eixo rodoviário)** por apresentar melhor afastamento das áreas próximas a escolas e hospitais na análise com buffer de 400 m.
+
+Essa configuração final forma uma rede logística de curta/média distância com alto potencial de ganho de tempo em horários de pico.
 
 ## Galeria dos locais específicos (Google Earth)
 
@@ -38,7 +39,7 @@ Essa configuração forma uma rede logística de curta/média distância com alt
 
 | Sítio | Arquivo esperado em `docs/image/Atividade03/` |
 |---|---|
-| Sítio A — Águas Claras (eixo metroviário) | `sitio-a-aeroporto.jpg` |
+| Alternativa inicial — Águas Claras (eixo metroviário) | `sitio-a-aeroporto.jpg` |
 | Sítio B — Aeroporto Internacional de Brasília (BSB) | `sitio-b-plano-piloto.jpg` |
 | Sítio C — Asa Norte (SCS/Eixo Central) | `sitio-c-aguas-claras.jpg` |
 | Sítio D — Águas Claras (eixo rodoviário) | `sitio-d-aguas-claras-rodoviario.jpg` |
@@ -47,10 +48,11 @@ As imagens aparecem automaticamente no painel interativo acima assim que esses a
 
 ## Critérios resumidos de avaliação
 
-| Critério | Sítio A (Águas Claras metroviário) | Sítio B (BSB) | Sítio C (Asa Norte) | Sítio D (Águas Claras rodoviário) |
+| Critério | Alternativa inicial (Águas Claras metroviário) | Sítio B (BSB) | Sítio C (Asa Norte) | Sítio D (Águas Claras rodoviário) |
 |---|---|---|---|---|
 | Demanda potencial | Alta (pendular) | Alta (aeroporto/hub) | Alta (serviços/governo) | Média-Alta (distribuição local) |
 | Integração modal | Alta (metrô + vias arteriais) | Alta (terminal/rodoviário) | Média-Alta (ônibus/eixos centrais) | Alta (eixo rodoviário) |
+| Proximidade de escolas/hospitais (400 m) | Menor conformidade | Conformidade adequada | Conformidade adequada | Conformidade adequada |
 | Restrição urbanística | Média | Média | Alta | Média |
 
 ## Critério de ruído e proteção de receptores sensíveis
@@ -75,7 +77,7 @@ Essa análise visual permite identificar espacialmente quais sítios guardam dis
 
 ## Conclusão
 
-A seleção dos quatro sítios prioriza equilíbrio entre **demanda real**, **integração com modais existentes** e **viabilidade de implantação em fases**. O modelo em rede (Águas Claras metroviário - BSB - Asa Norte - Águas Claras rodoviário) sustenta uma operação inicial com boa cobertura e capacidade de expansão.
+A seleção final de três sítios prioriza equilíbrio entre **demanda real**, **integração com modais existentes** e **viabilidade de implantação em fases**. O modelo em rede (BSB - Asa Norte - Águas Claras rodoviário) sustenta uma operação inicial com boa cobertura e capacidade de expansão, com decisão explícita de substituição do eixo metroviário pelo eixo rodoviário por critério acústico e afastamento de receptores sensíveis.
 
 ## Referências
 
