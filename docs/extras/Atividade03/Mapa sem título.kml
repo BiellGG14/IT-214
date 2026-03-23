@@ -306,28 +306,5 @@
 			</outerBoundaryIs>
 		</Polygon>
 	</Placemark>
-	<Placemark id="0C1F7E20D84E51FD2B7C">
-		<name>Sitio 04 - Sambadrome</name>
-		<LookAt>
-			<longitude>-47.89246,-15.80156</longitude>
-			<latitude>-15.80156</latitude>
-			<altitude>1100</altitude>
-			<heading>0</heading>
-			<tilt>0</tilt>
-			<gx:fovy>35</gx:fovy>
-			<range>600</range>
-			<altitudeMode>absolute</altitudeMode>
-		</LookAt>
-		<styleUrl>#__managed_style_0086D4C1183E50EC2A0C</styleUrl>
-		<Polygon>
-			<outerBoundaryIs>
-				<LinearRing>
-					<coordinates>
-						-47.89150,-15.80050,0 -47.89180,-15.80080,0 -47.89250,-15.80100,0 -47.89220,-15.80130,0 -47.89150,-15.80110,0 -47.89150,-15.80050,0 
-					</coordinates>
-				</LinearRing>
-			</outerBoundaryIs>
-		</Polygon>
-	</Placemark>
 </Document>
 </kml>

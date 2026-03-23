@@ -229,29 +229,30 @@
   <main class="wrap">
     <section class="hero">
       <h1>Rede inicial de vertiportos - Brasilia (Atividade 03)</h1>
-      <p>Sítios selecionados pelos polígonos KML do Google Earth e avaliação de buffers acústicos (400 m e 600 m) sobre pontos críticos.</p>
+      <p>Sítios selecionados no Google Earth e avaliação de buffers acústicos (400 m e 600 m) sobre escolas e hospitais.</p>
     </section>
 
     <section class="kpi-grid" aria-label="Indicadores-chave">
       <article class="kpi"><div class="label">Sítios selecionados</div><div class="value" id="kpi-kml">-</div></article>
-      <article class="kpi"><div class="label">Pontos críticos (CSV)</div><div class="value" id="kpi-critical">-</div></article>
+      <article class="kpi"><div class="label">Escolas/Hospitais</div><div class="value" id="kpi-critical">-</div></article>
       <article class="kpi"><div class="label">Faixas de ruído aplicadas</div><div class="value">400 m e 600 m</div></article>
     </section>
 
     <section class="panel">
       <h2>Mapa de Análise: Vertiportos e Proteção Acústica</h2>
       <p style="margin-bottom: 12px; color: #5b6b7c; font-size: 0.92rem;">
-        Os sítios selecionados estão destacados no mapa. Os pontos críticos foram considerados com base no artigo de impacto acústico em UAM, aplicando buffers de 400 m e 600 m.
+        Os sítios selecionados estão destacados no mapa. Escolas e hospitais foram considerados com base no artigo de impacto acústico em UAM, aplicando buffers de 400 m e 600 m.
       </p>
       <div class="map-actions">
-        <button id="btn-zoom-sitio-1" class="btn-map" type="button" disabled>Zoom Sítio A</button>
-        <button id="btn-zoom-sitio-2" class="btn-map" type="button" disabled>Zoom Sítio B</button>
-        <button id="btn-zoom-sitio-3" class="btn-map" type="button" disabled>Zoom Sítio C</button>
+        <button id="btn-zoom-sitio-1" class="btn-map" type="button" disabled>Sítio A - Águas Claras (eixo metroviário)</button>
+        <button id="btn-zoom-sitio-2" class="btn-map" type="button" disabled>Sítio B - Aeroporto Internacional de Brasília (BSB)</button>
+        <button id="btn-zoom-sitio-3" class="btn-map" type="button" disabled>Sítio C - Asa Norte (SCS/Eixo Central)</button>
+        <button id="btn-zoom-sitio-4" class="btn-map" type="button" disabled>Sítio D - Águas Claras (eixo rodoviário)</button>
       </div>
-      <div id="map" role="img" aria-label="Mapa com os tres sitios de Brasilia e buffers de ruido"></div>
+      <div id="map" role="img" aria-label="Mapa com os quatro sitios de Brasilia e buffers de ruido"></div>
       <div class="legend">
         <span><i class="dot" style="background:#0f766e"></i>Sítios selecionados</span>
-        <span><i class="dot" style="background:#111827"></i>Pontos críticos</span>
+        <span><i class="dot" style="background:#111827"></i>Escolas/Hospitais</span>
         <span><i class="dot" style="background:#7c3aed"></i>Zona de 400 m</span>
         <span><i class="dot" style="background:#f59e0b"></i>Zona de 600 m</span>
       </div>
@@ -269,19 +270,24 @@
         </thead>
         <tbody>
           <tr>
-            <td>Polígono KML 1</td>
+            <td>Sítio A - Águas Claras (eixo metroviário)</td>
             <td>Google Earth (projeto do grupo)</td>
-            <td>Verificação de proximidade com pontos críticos via buffers 400 m / 600 m</td>
+            <td>Verificação de proximidade com escolas e hospitais via buffers 400 m / 600 m</td>
           </tr>
           <tr>
-            <td>Polígono KML 2</td>
+            <td>Sítio B - Aeroporto Internacional de Brasília (BSB)</td>
             <td>Google Earth (projeto do grupo)</td>
-            <td>Verificação de proximidade com pontos críticos via buffers 400 m / 600 m</td>
+            <td>Verificação de proximidade com escolas e hospitais via buffers 400 m / 600 m</td>
           </tr>
           <tr>
-            <td>Polígono KML 3</td>
+            <td>Sítio C - Asa Norte (SCS/Eixo Central)</td>
             <td>Google Earth (projeto do grupo)</td>
-            <td>Verificação de proximidade com pontos críticos via buffers 400 m / 600 m</td>
+            <td>Verificação de proximidade com escolas e hospitais via buffers 400 m / 600 m</td>
+          </tr>
+          <tr>
+            <td>Sítio D - Águas Claras (eixo rodoviário)</td>
+            <td>Google Earth (projeto do grupo)</td>
+            <td>Verificação de proximidade com escolas e hospitais via buffers 400 m / 600 m</td>
           </tr>
         </tbody>
       </table>
@@ -292,15 +298,15 @@
       <div class="gallery">
         <figure class="shot">
           <img data-file="sitio-a-aeroporto.jpg" alt="Sitio A - Aeroporto JK" loading="lazy" />
-          <figcaption>Aeroporto Internacional de Brasilia (sitio A).</figcaption>
+          <figcaption>Águas Claras (eixo metroviário) - sítio A.</figcaption>
         </figure>
         <figure class="shot">
           <img data-file="sitio-b-plano-piloto.jpg" alt="Sitio B - Plano Piloto" loading="lazy" />
-          <figcaption>Plano Piloto, eixo SCS (sitio B).</figcaption>
+          <figcaption>Aeroporto Internacional de Brasília (BSB) - sítio B.</figcaption>
         </figure>
         <figure class="shot">
           <img data-file="sitio-c-aguas-claras.jpg" alt="Sitio C - Aguas Claras" loading="lazy" />
-          <figcaption>Aguas Claras e conexao com eixo metroviario (sitio C).</figcaption>
+          <figcaption>Asa Norte (SCS/Eixo Central) - sítio C.</figcaption>
         </figure>
       </div>
       <p class="note">Dica: exporte imagens em 16:9 para manter o layout uniforme.</p>
@@ -332,7 +338,15 @@
     const btnZoomSitio = [
       document.getElementById("btn-zoom-sitio-1"),
       document.getElementById("btn-zoom-sitio-2"),
-      document.getElementById("btn-zoom-sitio-3")
+      document.getElementById("btn-zoom-sitio-3"),
+      document.getElementById("btn-zoom-sitio-4")
+    ];
+
+    const siteNames = [
+      "Sítio A - Águas Claras (eixo metroviário)",
+      "Sítio B - Aeroporto Internacional de Brasília (BSB)",
+      "Sítio C - Asa Norte (SCS/Eixo Central)",
+      "Sítio D - Águas Claras (eixo rodoviário)"
     ];
 
     const sitios = [];
@@ -350,7 +364,8 @@
         fillOpacity: 0.12
       },
       onEachFeature: (feature, layer) => {
-        const name = (feature.properties && feature.properties.name) || "Sítio";
+        const idx = sitios.length;
+        const name = siteNames[idx] || (feature.properties && feature.properties.name) || "Sítio";
         layer.bindPopup(`<strong>${name}</strong><br/>Sítio selecionado.`);
         sitios.push(layer);
       }
@@ -362,7 +377,7 @@
 
     const layerControl = L.control.layers(null, {
       "Sítios selecionados": kmlLayer,
-      "Pontos críticos": criticalLayer,
+      "Escolas/Hospitais": criticalLayer,
       "Buffer 400 m": buffer400Layer,
       "Buffer 600 m": buffer600Layer
     }, { collapsed: false }).addTo(map);
