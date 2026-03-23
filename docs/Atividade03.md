@@ -17,7 +17,7 @@
 <iframe
 	src="atv03-sitios.html"
 	title="Atividade 03 - Sítios UAM Brasília"
-	style="width:100%; height:2200px; border:1px solid #dde3ec; border-radius:12px; background:#fff;"
+	style="width:100%; height:1800px; border:1px solid #dde3ec; border-radius:12px; background:#fff;"
 	loading="lazy"
 ></iframe>
 
@@ -49,8 +49,7 @@ As imagens aparecem automaticamente no painel interativo acima assim que esses a
 |---|---|---|---|
 | Demanda potencial | Alta (aeroporto/hub) | Alta (serviços/governo) | Alta (pendular) |
 | Integração modal | Alta (terminal/rodoviário) | Média-Alta (ônibus/eixos centrais) | Alta (metrô + vias arteriais) |
-| Restrição urbanística | Média | Alta (área tombada) | Média |
-| Implantação fase 1 | Muito aderente | Aderente com condicionantes | Muito aderente |
+| Restrição urbanística | Média | Alta | Média |
 
 ## Critério de ruído e proteção de receptores sensíveis
 

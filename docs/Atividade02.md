@@ -289,7 +289,7 @@ Brasília é uma cidade única, projetada para ser a capital funcional e monumen
 
 Viver no Distrito Federal em 2026 representa um cenário de contrastes. Embora Brasília possua uma das maiores rendas per capita do país, o custo de vida acompanha esse nível de renda e frequentemente se aproxima dos patamares de São Paulo e Rio de Janeiro. A compreensão dessa dinâmica exige observar a relação estrutural entre o Plano Piloto e as Cidades Satélites, além dos fatores que compõem o orçamento cotidiano da população.
 
-![Planalto](../img/planalto.jpeg)
+![Planalto](image/Atividade02/planalto.jpeg)
 
 ## Highlights
 
@@ -339,11 +339,11 @@ Dois edifícios se destacam:
 
 # Brasilia visto de cima
 
-![ ](../img/brcima1.jpeg)
+![ ](image/Atividade02/brcima1.jpeg)
 
-![ ](../img/brcima2.jpeg)
+![ ](image/Atividade02/brcima2.jpeg)
 
-![ ](../img/brcima3.jpeg)
+![ ](image/Atividade02/brcima3.jpeg)
 
 ---
 
@@ -565,7 +565,7 @@ Um modelo inicial pode ser estruturado em um triângulo logístico conectando:
 
 **Interpretação:** trajeto entre o Aeroporto Internacional de Brasília (A) e o Plano Piloto/SCS (B).
 
-![Rota Aeroporto para Plano Piloto](../img/SCSaero.jpeg)
+![Rota Aeroporto para Plano Piloto](image/Atividade02/SCSaero.jpeg)
 
 *Figura 1 — Rota Aeroporto → Plano Piloto.*
 
@@ -573,7 +573,7 @@ Um modelo inicial pode ser estruturado em um triângulo logístico conectando:
 
 **Interpretação:** trajeto entre o Plano Piloto/SCS (A) e Águas Claras (B).
 
-![Rota Plano Piloto para Águas Claras](../img/SCSaguas.jpeg)
+![Rota Plano Piloto para Águas Claras](image/Atividade02/SCSaguas.jpeg)
 
 *Figura 2 — Rota Plano Piloto → Águas Claras.*
 
@@ -581,7 +581,7 @@ Um modelo inicial pode ser estruturado em um triângulo logístico conectando:
 
 **Interpretação:** trajeto direto entre o Aeroporto Internacional de Brasília (A) e Águas Claras (B).
 
-![Rota Aeroporto para Águas Claras](../img/aeroAguas.jpeg)
+![Rota Aeroporto para Águas Claras](image/Atividade02/aeroAguas.jpeg)
 
 *Figura 3 — Rota Aeroporto → Águas Claras.*
 
