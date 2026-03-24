@@ -36,16 +36,16 @@ Essa configuração final forma uma rede logística de curta/média distância c
 ## Galeria dos locais específicos 
 
 ### Alternativa inicial — Águas Claras (eixo metroviário)
-![Águas Claras - Eixo Metroviário](/docs/image/Atividade03/sitio-c-aguas-claras.jpg)
+![Águas Claras - Eixo Metroviário](image/Atividade03/sitio-c-aguas-claras.jpg)
 
 ### Sítio B — Aeroporto Internacional de Brasília (BSB)
-![Aeroporto de Brasília](/docs/image/Atividade03/sitio-a-aeroporto.jpg)
+![Aeroporto de Brasília](image/Atividade03/sitio-a-aeroporto.jpg)
 
 ### Sítio C — Asa Norte (SCS/Eixo Central)
-![Asa Norte](/docs/image/Atividade03/sitio-b-plano-piloto.jpg)
+![Asa Norte](image/Atividade03/sitio-b-plano-piloto.jpg)
 
 ### Sítio D — Águas Claras (eixo rodoviário)
-![Águas Claras - Eixo Rodoviário](/docs/image/Atividade03/sitio-d-aguas-claras-rodoviario.jpg)
+![Águas Claras - Eixo Rodoviário](image/Atividade03/sitio-d-aguas-claras-rodoviario.jpg)
 
 ## Síntese comparativa dos três sítios vertiportuários
 
