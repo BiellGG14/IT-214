@@ -26,7 +26,7 @@
 Foram avaliados quatro sítios por complementaridade operacional na malha inicial de UAM em Brasília. A seleção final considera três sítios:
 
 - **Sítio B — Aeroporto Internacional de Brasília (BSB):** concentração de demanda aeroportuária e conexão nacional.
-- **Sítio C — Asa Norte (SCS/Eixo Central):** alta densidade de destinos administrativos, corporativos e hoteleiros.
+- **Sítio C — Asa Norte (Autódromo):** alta densidade de destinos administrativos, corporativos e hoteleiros.
 - **Sítio D — Águas Claras (eixo rodoviário):** alternativa complementar de acesso terrestre e distribuição de demanda local.
 
 O **Águas Claras (eixo metroviário)** foi um sítio inicial de estudo, mas foi **substituído** pelo **Águas Claras (eixo rodoviário)** por apresentar melhor afastamento das áreas próximas a escolas e hospitais na análise com buffer de 400 m.
@@ -51,26 +51,18 @@ Essa configuração final forma uma rede logística de curta/média distância c
 
 Referência para apresentação oral. Priorização do **Asa Norte / Autódromo Internacional de Brasília** como sítio de referência.
 
-| Critério | S2. Asa Norte / Autódromo (1ª referência) | S3. Terminal SBBR (2ª alternativa) | S1. Águas Claras (3ª alternativa) |
+| Critério | Sítio B - Terminal SBBR | Sítio C - Asa Norte / Autódromo | Sítio D - Águas Claras |
 |---|---|---|---|
-| Infraestrutura disponível | Área já urbanizada, boa disponibilidade de utilidades e implantação mais demonstrável fora do lado ar controlado. | Infraestrutura aeronáutica superior, porém com maior dependência do operador aeroportuário, acesso à rampa e compatibilização regulatória. | Boa infraestrutura urbana, mas com menor folga espacial e maior sensibilidade do entorno edificado. |
-| Ruído | Entorno urbano central, porém menos sensível que Águas Claras e com melhor margem para gestão operacional. | Ambiente já associado à atividade aeronáutica, com melhor tolerância relativa ao ruído adicional. | Maior sensibilidade acústica pela proximidade de uso residencial denso e permanência de terceiros. |
-| Acessibilidade | Melhor equilíbrio urbano. Centralidade, conexão viária e aderência à lógica porta a porta da UAM. | Boa acessibilidade regional, mas menos eficiente para o destino urbano final. | Boa acessibilidade local e demanda potencial, porém com menor capacidade de organizar fluxos de acesso dedicados. |
-| Privacidade | Entorno mais controlável que Águas Claras e sem a complexidade de áreas restritas aeroportuárias. | Maior afastamento de terceiros e melhor controle físico do acesso, embora sob regras aeroportuárias mais rígidas. | Maior exposição de terceiros, fachadas residenciais e conflitos com o uso cotidiano do entorno. |
-| Eficiência | Melhor coerência para referência acadêmica de UAM urbana, por combinar centralidade e viabilidade de acesso. | Muito forte como nó operacional, mas menos aderente à demonstração de mobilidade urbana central. | Capta demanda urbana, porém com maior custo de mitigação operacional e social. |
-| Horas de operação | Maior flexibilidade conceitual para discutir operação urbana sem depender diretamente do regime do aeroporto. | Pode enfrentar condicionantes de área controlada, coordenação operacional e rotinas aeroportuárias. | Tende a demandar mais restrições horárias por sensibilidade do entorno residencial. |
-| Impacto ambiental | Área já modificada pela ação humana, com boa possibilidade de inserção conceitual sem ampliar pressões ambientais críticas. | Área também intensamente transformada, mas com condicionantes institucionais e operacionais mais complexos. | Inserção em área urbana densa, com maior potencial de percepção negativa quanto a ruído e qualidade ambiental local. |
-| Segurança | Boa capacidade de desenho conceitual com separação de fluxos, menor fricção institucional e melhor narrativa de implantação. | Muito forte em segurança operacional, mas condicionado a requisitos aeroportuários, acesso restrito e governança complexa. | Mais crítico em conflitos pedestre–aeronave, exposição de terceiros e gestão do entorno. |
+| Infraestrutura disponível | Infraestrutura aeronáutica superior, porém com maior dependência do operador aeroportuário, acesso à rampa e compatibilização regulatória. | Área já urbanizada, boa disponibilidade de utilidades e implantação mais demonstrável fora do lado ar controlado. | Boa infraestrutura urbana, mas com menor folga espacial e maior sensibilidade do entorno edificado. |
+| Ruído | Ambiente já associado à atividade aeronáutica, com melhor tolerância relativa ao ruído adicional. | Entorno urbano central, porém menos sensível que Águas Claras e com melhor margem para gestão operacional. | Maior sensibilidade acústica pela proximidade de uso residencial denso e permanência de terceiros. |
+| Acessibilidade | Boa acessibilidade regional, mas menos eficiente para o destino urbano final. | Melhor equilíbrio urbano. Centralidade, conexão viária e aderência à lógica porta a porta da UAM. | Boa acessibilidade local e demanda potencial, porém com menor capacidade de organizar fluxos de acesso dedicados. |
+| Privacidade | Maior afastamento de terceiros e melhor controle físico do acesso, embora sob regras aeroportuárias mais rígidas. | Entorno mais controlável que Águas Claras e sem a complexidade de áreas restritas aeroportuárias. | Maior exposição de terceiros, fachadas residenciais e conflitos com o uso cotidiano do entorno. |
+| Eficiência | Muito forte como nó operacional, mas menos aderente à demonstração de mobilidade urbana central. | Melhor coerência para referência acadêmica de UAM urbana, por combinar centralidade e viabilidade de acesso. | Capta demanda urbana, porém com maior custo de mitigação operacional e social. |
+| Horas de operação | Pode enfrentar condicionantes de área controlada, coordenação operacional e rotinas aeroportuárias. | Maior flexibilidade conceitual para discutir operação urbana sem depender diretamente do regime do aeroporto. | Tende a demandar mais restrições horárias por sensibilidade do entorno residencial. |
+| Impacto ambiental | Área também intensamente transformada, mas com condicionantes institucionais e operacionais mais complexos. | Área já modificada pela ação humana, com boa possibilidade de inserção conceitual sem ampliar pressões ambientais críticas. | Inserção em área urbana densa, com maior potencial de percepção negativa quanto a ruído e qualidade ambiental local. |
+| Segurança | Muito forte em segurança operacional, mas condicionado a requisitos aeroportuários, acesso restrito e governança complexa. | Boa capacidade de desenho conceitual com separação de fluxos, menor fricção institucional e melhor narrativa de implantação. | Mais crítico em conflitos pedestre–aeronave, exposição de terceiros e gestão do entorno. |
 
-## Síntese final
-
-- **S2. Asa Norte / Autódromo**. Melhor escolha como sítio de referência do estudo. Combina centralidade urbana, implementabilidade e aderência à lógica da UAM.  
-- **S3. Terminal SBBR**. Segunda melhor alternativa. Excelente sob ótica operacional, porém com maior barreira institucional e regulatória para uso como referência.  
-- **S1. Águas Claras**. Alternativa menos favorável no comparativo, apesar da boa acessibilidade e do potencial de geração de demanda, devido à maior sensibilidade do entorno urbano quanto a ruído, privacidade e segurança operacional.
-
-**Fonte sintética para apresentação**. Elaboração própria com base nos critérios da planilha da disciplina e na comparação técnica previamente desenvolvida para S1, S2 e S3.
-
-**Observação**. Em Águas Claras houve reposicionamento do ponto inicialmente analisado, mantendo-se a mesma alternativa locacional. Ajuste realizado para melhor adequação do sítio em termos de ruído, organização espacial do entorno e compatibilidade operacional, aproveitando área já vinculada à lógica de heliponto.
+**Fonte**. Elaboração própria com base nos critérios da disciplina e na comparação técnica previamente desenvolvida para Sítio B, C e D.
 
 ## Critério de ruído e proteção de receptores sensíveis
 
@@ -86,19 +78,14 @@ Essa análise visual permite identificar espacialmente quais sítios guardam dis
 
 ## Próximos passos
 
-1. Refinamento local: validação in-loco dos sítios e levantamento de detalhes arquitetônicos preliminares.
-2. Análise multicritério com **AHP (Analytic Hierarchy Process)** para priorização final do sítio do vertiporto.
-3. Definir pesos dos critérios (demanda, integração modal, restrição urbanística, ruído e viabilidade regulatória).
-4. Matriz de comparação par-a-par e teste de consistência (CR) do AHP.
-5. Seleção do sítio final e delimitação de área candidata para anteprojeto construtivo do vertiporto.
-
-## Conclusão
-
-A seleção final de três sítios prioriza equilíbrio entre **demanda real**, **integração com modais existentes** e **viabilidade de implantação em fases**. O modelo em rede (BSB - Asa Norte - Águas Claras rodoviário) sustenta uma operação inicial com boa cobertura e capacidade de expansão, com decisão explícita de substituição do eixo metroviário pelo eixo rodoviário por critério acústico e afastamento de receptores sensíveis.
+1. Análise multicritério com **AHP (Analytic Hierarchy Process)** para priorização final do sítio do vertiporto.
+2. Definir pesos dos critérios (demanda, integração modal, restrição urbanística, ruído e viabilidade regulatória).
+3. Matriz de comparação par-a-par e teste de consistência (CR) do AHP.
+4. Seleção do sítio final e delimitação de área candidata para anteprojeto construtivo do vertiporto.
 
 ## Referências
 
 1. Projeto Google Earth do grupo (sítios em Brasília).
 2. ANAC - diretrizes e materiais sobre AAM/UAM e certificação: https://www.gov.br/anac
 3. SEMOB-DF e IPEDF - dados de mobilidade e dinâmica urbana do DF.
-4. Determination of the noise impact range of urban air mobility.
+4. Determination of the noise impact range of urban air mobility. Seung-Min Lee, Seong-Yong Wie, Won-Hak Lee e Chan-Hoon Haan. https://doi.org/10.1121/10.0042757
