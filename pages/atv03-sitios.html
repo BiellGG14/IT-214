@@ -339,7 +339,7 @@
 
     const kmlPath = `${repoBase}/docs/extras/Atividade03/Mapa%20sem%20t%C3%ADtulo.kml`;
     const criticalCsvPath = `${repoBase}/docs/extras/Atividade03/pontos_criticos_DF.csv`;
-    const imageBaseUrl = new URL("../docs/image/Atividade03/", window.location.href);
+    const imageBase = `${repoBase}/docs/image/Atividade03`;
     
     const btnZoomSitio = [
       document.getElementById("btn-zoom-sitio-1"),
@@ -547,7 +547,7 @@
     document.querySelectorAll(".shot img").forEach((img) => {
       const fileName = img.getAttribute("data-file");
       if (fileName) {
-        img.src = new URL(fileName, imageBaseUrl).toString();
+        img.src = `${imageBase}/${fileName}`;
       }
 
       img.addEventListener("error", () => {
