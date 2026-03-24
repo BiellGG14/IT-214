@@ -49,8 +49,6 @@ Essa configuração final forma uma rede logística de curta/média distância c
 
 ## Síntese comparativa dos três sítios vertiportuários
 
-Referência para apresentação oral. Priorização do **Asa Norte / Autódromo Internacional de Brasília** como sítio de referência.
-
 | Critério | Sítio B - Terminal SBBR | Sítio C - Asa Norte / Autódromo | Sítio D - Águas Claras |
 |---|---|---|---|
 | Infraestrutura disponível | Infraestrutura aeronáutica superior, porém com maior dependência do operador aeroportuário, acesso à rampa e compatibilização regulatória. | Área já urbanizada, boa disponibilidade de utilidades e implantação mais demonstrável fora do lado ar controlado. | Boa infraestrutura urbana, mas com menor folga espacial e maior sensibilidade do entorno edificado. |
