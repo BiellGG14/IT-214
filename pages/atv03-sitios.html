@@ -235,7 +235,7 @@
     <section class="kpi-grid" aria-label="Indicadores-chave">
       <article class="kpi"><div class="label">Sítios avaliados</div><div class="value" id="kpi-kml">-</div></article>
       <article class="kpi"><div class="label">Escolas/Hospitais</div><div class="value" id="kpi-critical">-</div></article>
-      <article class="kpi"><div class="label">Seleção final</div><div class="value">3 sítios</div></article>
+      <article class="kpi"><div class="label">Seleção final</div><div class="value">5 sítios +1</div></article>
     </section>
 
     <section class="panel">
@@ -248,6 +248,9 @@
         <button id="btn-zoom-sitio-2" class="btn-map" type="button" disabled>Sítio B - Aeroporto Internacional de Brasília (BSB)</button>
         <button id="btn-zoom-sitio-3" class="btn-map" type="button" disabled>Sítio C - Asa Norte (Autódromo)</button>
         <button id="btn-zoom-sitio-4" class="btn-map" type="button" disabled>Sítio D - Águas Claras (eixo rodoviário)</button>
+        <button id="btn-zoom-sitio-5" class="btn-map" type="button" disabled>Sítio E - Lagoa (Vertiporto)</button>
+        <button id="btn-zoom-sitio-6" class="btn-map" type="button" disabled>Sítio F - Sarah (Vertiporto)</button>
+        <button id="btn-zoom-sitio-7" class="btn-map" type="button" disabled>Sítio G - CBAAER (Em desenvolvimento)</button>
       </div>
       <div id="map" role="img" aria-label="Mapa com os quatro sitios de Brasilia e buffers de ruido"></div>
       <div class="legend">
@@ -289,6 +292,21 @@
             <td>Google Earth (projeto do grupo)</td>
             <td>Verificação de proximidade com escolas e hospitais via buffers 400 m / 600 m</td>
           </tr>
+          <tr>
+            <td>Sítio E - Lagoa (com vertiporto)</td>
+            <td>Google Earth (projeto do grupo)</td>
+            <td>Sítio com vertiporto definido - selecionado</td>
+          </tr>
+          <tr>
+            <td>Sítio F - Sarah (com vertiporto)</td>
+            <td>Google Earth (projeto do grupo)</td>
+            <td>Sítio com vertiporto definido - selecionado</td>
+          </tr>
+          <tr>
+            <td>Sítio G - CBAAER (em desenvolvimento)</td>
+            <td>Google Earth (projeto do grupo)</td>
+            <td>Sítio em produção - avaliação em andamento</td>
+          </tr>
         </tbody>
       </table>
     </section>
@@ -311,6 +329,26 @@
         <figure class="shot">
           <img data-file="sitio-d-aguas-claras-rodoviario.jpg.png" src="../docs/image/Atividade03/sitio-d-aguas-claras-rodoviario.jpg.png" alt="Sitio D - Aguas Claras Rodoviario" loading="lazy" />
           <figcaption>Águas Claras (eixo rodoviário) - sítio D (selecionado).</figcaption>
+        </figure>
+        <figure class="shot">
+          <img data-file="sitio-e-lagoa-2.png" src="../docs/image/Atividade03/sitio-e-lagoa-2.png" alt="Sitio E - Lagoa simples" loading="lazy" />
+          <figcaption>Lagoa - sítio E (versão simples).</figcaption>
+        </figure>
+        <figure class="shot">
+          <img data-file="sitio-e-lagoa-2-vertiporto.jpeg" src="../docs/image/Atividade03/sitio-e-lagoa-2-vertiporto.jpeg" alt="Sitio E - Lagoa com vertiporto" loading="lazy" />
+          <figcaption>Lagoa - sítio E (com vertiporto).</figcaption>
+        </figure>
+        <figure class="shot">
+          <img data-file="sitio-f-sarah-vertiporto.png" src="../docs/image/Atividade03/sitio-f-sarah-vertiporto.png" alt="Sitio F - Sarah simples" loading="lazy" />
+          <figcaption>Sarah - sítio F (versão simples).</figcaption>
+        </figure>
+        <figure class="shot">
+          <img data-file="sitio-f-sarah-vertiporto-vertiporto.jpeg" src="../docs/image/Atividade03/sitio-f-sarah-vertiporto-vertiporto.jpeg" alt="Sitio F - Sarah com vertiporto" loading="lazy" />
+          <figcaption>Sarah - sítio F (com vertiporto).</figcaption>
+        </figure>
+        <figure class="shot">
+          <img data-file="sitio-g-cbaaer.png" src="../docs/image/Atividade03/sitio-g-cbaaer.png" alt="Sitio G - CBAAER" loading="lazy" />
+          <figcaption>CBAAER - sítio G (em desenvolvimento).</figcaption>
         </figure>
       </div>
     </section>
@@ -349,14 +387,20 @@
       "Sítio A - Águas Claras (eixo metroviário)",
       "Sítio B - Aeroporto Internacional de Brasília (BSB)",
       "Sítio C - Asa Norte (Autódromo)",
-      "Sítio D - Águas Claras (eixo rodoviário)"
+      "Sítio D - Águas Claras (eixo rodoviário)",
+      "Sítio E - Lagoa (com vertiporto)",
+      "Sítio F - Sarah (com vertiporto)",
+      "Sítio G - CBAAER (em desenvolvimento)"
     ];
 
     const siteColors = [
       { borderColor: "#d62828", fillColor: "#ef4444", label: "Alternativa inicial" },
       { borderColor: "#1d4ed8", fillColor: "#3b82f6", label: "Sítio B" },
       { borderColor: "#a855f7", fillColor: "#c084fc", label: "Sítio C" },
-      { borderColor: "#f59e0b", fillColor: "#fbbf24", label: "Sítio D" }
+      { borderColor: "#f59e0b", fillColor: "#fbbf24", label: "Sítio D" },
+      { borderColor: "#059669", fillColor: "#10b981", label: "Sítio E" },
+      { borderColor: "#7c3aed", fillColor: "#a78bfa", label: "Sítio F" },
+      { borderColor: "#64748b", fillColor: "#94a3b8", label: "Sítio G" }
     ];
 
     const sitios = [];

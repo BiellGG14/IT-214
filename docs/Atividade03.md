@@ -23,15 +23,21 @@
 
 ## Síntese da seleção 
 
-Foram avaliados quatro sítios por complementaridade operacional na malha inicial de UAM em Brasília. A seleção final considera três sítios:
+Foram avaliados **sete sítios** por complementaridade operacional na malha inicial de UAM em Brasília. A seleção final considera **cinco sítios selecionados** (mais **1 em desenvolvimento**):
 
+**Sítios com vertiportos definidos:**
 - **Sítio B — Aeroporto Internacional de Brasília (BSB):** concentração de demanda aeroportuária e conexão nacional.
 - **Sítio C — Asa Norte (Autódromo):** alta densidade de destinos administrativos, corporativos e hoteleiros.
 - **Sítio D — Águas Claras (eixo rodoviário):** alternativa complementar de acesso terrestre e distribuição de demanda local.
+- **Sítio E — Lagoa:** conectividade urbana com vertiporto já dimensionado.
+- **Sítio F — Sarah:** localização estratégica de complementaridade com vertiporto definido.
+
+**Em desenvolvimento:**
+- **Sítio G — CBAAER:** avaliação em andamento para potencial futuro.
 
 O **Águas Claras (eixo metroviário)** foi um sítio inicial de estudo, mas foi **substituído** pelo **Águas Claras (eixo rodoviário)** por apresentar melhor afastamento das áreas próximas a escolas e hospitais na análise com buffer de 400 m.
 
-Essa configuração final forma uma rede logística de curta/média distância com alto potencial de ganho de tempo em horários de pico.
+Essa configuração final de cinco sítios + um em desenvolvimento forma uma rede logística de curta/média distância com estruturas de vertiportos já dimensionadas, oferecendo alto potencial de ganho de tempo em horários de pico.
 
 ## Galeria dos locais específicos 
 
@@ -47,20 +53,35 @@ Essa configuração final forma uma rede logística de curta/média distância c
 ### Sítio D — Águas Claras (eixo rodoviário)
 ![Águas Claras - Eixo Rodoviário](image/Atividade03/sitio-d-aguas-claras-rodoviario.jpg)
 
-## Síntese comparativa dos três sítios vertiportuários
+### Sítio E — Lagoa (versão simples)
+![Lagoa - Versão Simples](image/Atividade03/sitio-e-lagoa-2.png)
 
-| Critério | Sítio B - Terminal SBBR | Sítio C - Asa Norte / Autódromo | Sítio D - Águas Claras |
-|---|---|---|---|
-| Infraestrutura disponível | Infraestrutura aeronáutica superior, porém com maior dependência do operador aeroportuário, acesso à rampa e compatibilização regulatória. | Área já urbanizada, boa disponibilidade de utilidades e implantação mais demonstrável fora do lado ar controlado. | Boa infraestrutura urbana, mas com menor folga espacial e maior sensibilidade do entorno edificado. |
-| Ruído | Ambiente já associado à atividade aeronáutica, com melhor tolerância relativa ao ruído adicional. | Entorno urbano central, porém menos sensível que Águas Claras e com melhor margem para gestão operacional. | Maior sensibilidade acústica pela proximidade de uso residencial denso e permanência de terceiros. |
-| Acessibilidade | Boa acessibilidade regional, mas menos eficiente para o destino urbano final. | Melhor equilíbrio urbano. Centralidade, conexão viária e aderência à lógica porta a porta da UAM. | Boa acessibilidade local e demanda potencial, porém com menor capacidade de organizar fluxos de acesso dedicados. |
-| Privacidade | Maior afastamento de terceiros e melhor controle físico do acesso, embora sob regras aeroportuárias mais rígidas. | Entorno mais controlável que Águas Claras e sem a complexidade de áreas restritas aeroportuárias. | Maior exposição de terceiros, fachadas residenciais e conflitos com o uso cotidiano do entorno. |
-| Eficiência | Muito forte como nó operacional, mas menos aderente à demonstração de mobilidade urbana central. | Melhor coerência para referência acadêmica de UAM urbana, por combinar centralidade e viabilidade de acesso. | Capta demanda urbana, porém com maior custo de mitigação operacional e social. |
-| Horas de operação | Pode enfrentar condicionantes de área controlada, coordenação operacional e rotinas aeroportuárias. | Maior flexibilidade conceitual para discutir operação urbana sem depender diretamente do regime do aeroporto. | Tende a demandar mais restrições horárias por sensibilidade do entorno residencial. |
-| Impacto ambiental | Área também intensamente transformada, mas com condicionantes institucionais e operacionais mais complexos. | Área já modificada pela ação humana, com boa possibilidade de inserção conceitual sem ampliar pressões ambientais críticas. | Inserção em área urbana densa, com maior potencial de percepção negativa quanto a ruído e qualidade ambiental local. |
-| Segurança | Muito forte em segurança operacional, mas condicionado a requisitos aeroportuários, acesso restrito e governança complexa. | Boa capacidade de desenho conceitual com separação de fluxos, menor fricção institucional e melhor narrativa de implantação. | Mais crítico em conflitos pedestre–aeronave, exposição de terceiros e gestão do entorno. |
+### Sítio E — Lagoa (com vertiporto)
+![Lagoa - Com Vertiporto](image/Atividade03/sitio-e-lagoa-2-vertiporto.jpeg)
 
-**Fonte**. Elaboração própria com base nos critérios da disciplina e na comparação técnica previamente desenvolvida para Sítio B, C e D.
+### Sítio F — Sarah (versão simples)
+![Sarah - Versão Simples](image/Atividade03/sitio-f-sarah-vertiporto.png)
+
+### Sítio F — Sarah (com vertiporto)
+![Sarah - Com Vertiporto](image/Atividade03/sitio-f-sarah-vertiporto-vertiporto.jpeg)
+
+### Sítio G — CBAAER (em desenvolvimento)
+![CBAAER - Em Desenvolvimento](image/Atividade03/sitio-g-cbaaer.png)
+
+## Síntese comparativa dos cinco sítios vertiportuários selecionados
+
+| Critério | Sítio B - Terminal SBBR | Sítio C - Asa Norte / Autódromo | Sítio D - Águas Claras | Sítio E - Lagoa | Sítio F - Sarah |
+|---|---|---|---|---|---|
+| Infraestrutura disponível | Infraestrutura aeronáutica superior, porém com maior dependência do operador aeroportuário, acesso à rampa e compatibilização regulatória. | Área já urbanizada, boa disponibilidade de utilidades e implantação mais demonstrável fora do lado ar controlado. | Boa infraestrutura urbana, mas com menor folga espacial e maior sensibilidade do entorno edificado. | Vertiporto já dimensionado, infraestrutura compatível com operação de UAM. | Vertiporto já dimensionado, infraestrutura pré-planejada. |
+| Ruído | Ambiente já associado à atividade aeronáutica, com melhor tolerância relativa ao ruído adicional. | Entorno urbano central, porém menos sensível que Águas Claras e com melhor margem para gestão operacional. | Maior sensibilidade acústica pela proximidade de uso residencial denso e permanência de terceiros. | Sensibilidade moderada; localização adequada para buffers de proteção. | Sensibilidade moderada; distância considerada de áreas críticas. |
+| Acessibilidade | Boa acessibilidade regional, mas menos eficiente para o destino urbano final. | Melhor equilíbrio urbano. Centralidade, conexão viária e aderência à lógica porta a porta da UAM. | Boa acessibilidade local e demanda potencial, porém com menor capacidade de organizar fluxos de acesso dedicados. | Boa acessibilidade urbana, conectividade multimodal potencial. | Excelente conectividade urbana, localização chave para integração modal. |
+| Privacidade | Maior afastamento de terceiros e melhor controle físico do acesso, embora sob regras aeroportuárias mais rígidas. | Entorno mais controlável que Águas Claras e sem a complexidade de áreas restritas aeroportuárias. | Maior exposição de terceiros, fachadas residenciais e conflitos com o uso cotidiano do entorno. | Bom isolamento do entorno residencial imediato. | Bom controle de fluxo e isolamento operacional. |
+| Eficiência | Muito forte como nó operacional, mas menos aderente à demonstração de mobilidade urbana central. | Melhor coerência para referência acadêmica de UAM urbana, por combinar centralidade e viabilidade de acesso. | Capta demanda urbana, porém com maior custo de mitigação operacional e social. | Forte potencial de captura de demanda urbana com vertiporto definido. | Potencial de demonstração integrada com forte conectividade. |
+| Horas de operação | Pode enfrentar condicionantes de área controlada, coordenação operacional e rotinas aeroportuárias. | Maior flexibilidade conceitual para discutir operação urbana sem depender diretamente do regime do aeroporto. | Tende a demandar mais restrições horárias por sensibilidade do entorno residencial. | Flexibilidade operacional com restrições moderadas. | Flexibilidade operacional com boa margem de manobra. |
+| Impacto ambiental | Área também intensamente transformada, mas com condicionantes institucionais e operacionais mais complexos. | Área já modificada pela ação humana, com boa possibilidade de inserção conceitual sem ampliar pressões ambientais críticas. | Inserção em área urbana densa, com maior potencial de percepção negativa quanto a ruído e qualidade ambiental local. | Inserção adequada com mitigação planejada; área já modificada. | Inserção com baixo impacto ambiental adicional; infraestrutura compatível. |
+| Segurança | Muito forte em segurança operacional, mas condicionado a requisitos aeroportuários, acesso restrito e governança complexa. | Boa capacidade de desenho conceitual com separação de fluxos, menor fricção institucional e melhor narrativa de implantação. | Mais crítico em conflitos pedestre–aeronave, exposição de terceiros e gestão do entorno. | Segurança operacional com vertiporto já planejado; fluxos definidos. | Segurança reforçada com projeto preexistente do vertiporto. |
+
+**Fonte**. Elaboração própria com base nos critérios da disciplina e na comparação técnica de todos os sítios (B, C, D, E, F) e em avaliação de G.
 
 ## Critério de ruído e proteção de receptores sensíveis
 
