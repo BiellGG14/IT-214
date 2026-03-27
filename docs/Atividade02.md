@@ -15,264 +15,155 @@
 
 ### 1) Fundamentação e Análise Crítica (Bloco 1)
 
-A viabilização da **Advanced Air Mobility (AAM)** e da **Urban Air Mobility (UAM)** exige maturação simultânea de propulsão, energia, gestão de tráfego, infraestrutura, regulação e aceitação social. O ecossistema é sociotécnico e interdependente.
+**Contexto:** UAM/AAM exige maturação simultânea em propulsão, energia, tráfego, infraestrutura, regulação e aceitação social.
 
-**Convergências técnicas**
+### Convergências técnicas
 
-- Avanços em baterias, propulsão elétrica distribuída e autonomia impulsionam a nova geração de aeronaves.
-- Tendência de menor ruído, maior segurança operacional e potencial redução de custo frente a helicópteros convencionais.
-- O ATM tradicional não absorve o volume on-demand esperado, demandando **UTM/U-space**.
-- A expansão da operação depende de vertiportos com alto throughput, recarga rápida e conectividade digital (ex.: 5G/6G).
+- Avanços em baterias, propulsão elétrica e autonomia
+- Menor ruído e maior segurança vs. helicópteros convencionais
+- ATM tradicional insuficiente → necessidade de UTM/U-space
+- Vertiportos com alto throughput, recarga rápida, conectividade digital (5G/6G)
 
-**Divergências e limitações**
+### Divergências e limitações
 
-- A adoção inicial tende a nichos premium, com dúvidas sobre escalabilidade imediata como transporte de massa.
-- O principal gargalo é a **densidade energética das baterias**, limitando alcance, carga útil e robustez econômica.
+- Adoção inicial restrita a nichos premium
+- Gargalo crítico: densidade energética de baterias (alcance, carga útil, viabilidade econômica)
 
 ### 2) Aplicação Operacional e Infraestrutura (Bloco 2)
 
-As arquiteturas aeronáuticas alteram diretamente procedimentos operacionais e dimensionamento da infraestrutura.
+**Contexto:** Arquitetura das aeronaves determina procedimentos operacionais e dimensionamento de vertiportos.
 
-**Dimensionamento de vertiportos**
+### Dimensionamento de vertiportos
 
-- **Asa rotativa:** menor footprint e maior adaptação a áreas confinadas.
-- **Lift+Cruise / Tilt-wing:** maior área e envelopes laterais amplos por conta das superfícies alares.
-- **Tail-sitter:** ocupa menos área em solo, mas exige pé-direito e estabilização específicos.
+- **Asa rotativa:** menor footprint, áreas confinadas
+- **Lift+Cruise/Tilt-wing:** maior área, envelopes laterais amplos
+- **Tail-sitter:** menor área em solo, exige pé-direito específico
 
-**Procedimentos e energia**
+### Procedimentos e energia
 
-- Perfil de operação (hover, transição, cruzeiro) impacta consumo, turnaround e exigência de recarga.
-- Configurações mais eficientes em cruzeiro favorecem rotas de média distância, com menor penalidade energética fora do hover.
+- Perfil de operação (hover/transição/cruzeiro) impacta consumo e recarga
+- Configurações eficientes em cruzeiro favorecem rotas médias
 
-**Gestão do espaço aéreo**
+### Gestão do espaço aéreo
 
-- A heterogeneidade de aeronaves eleva a complexidade de separação e sequenciamento.
-- O UTM deve considerar o modo de voo para melhor previsão de conflito e coordenação tática.
+- Heterogeneidade de aeronaves aumenta complexidade de separação e sequenciamento
+- UTM deve considerar modo de voo para previsão de conflito e coordenação
 
 ### 3) Estrutura Regulatória e Planejamento (Bloco 3)
 
-**Facilitadores regulatórios**
+### Facilitadores regulatórios
 
-- Evolução para requisitos baseados em desempenho.
-- Uso de sandboxes regulatórios para validação gradual de conceitos e operações.
+- Requisitos baseados em desempenho
+- Sandboxes regulatórios para validação gradual
 
-**Limitadores atuais**
+### Limitadores atuais
 
-- Dependência de piloto a bordo em muitos cenários.
-- Ausência de protocolos consolidados para alto volume de voos UAM integrado ao ATM tradicional.
+- Dependência de piloto a bordo em muitos cenários
+- Ausência de protocolos consolidados para alto volume UAM integrado ao ATM
 
-**Riscos comunitários críticos**
+### Riscos comunitários críticos
 
-- Ruído e assinatura sonora como vetores centrais de aceitação pública.
-- Preocupações com privacidade e vigilância em áreas residenciais.
-- Risco distributivo ("gentrificação aérea"): benefícios concentrados e externalidades distribuídas.
+- Ruído como vetor central de aceita ção pública
+- Preocupações com privacidade e vigilância
+- Risco de "gentrificação aérea" (benefícios concentrados, externalidades distribuídas)
 
-**UAM x AAM**
+### UAM x AAM
 
-- **UAM:** foco urbano denso, alta complexidade operacional e regulatória.
-- **AAM:** conceito guarda-chuva (urbano, regional, rural e carga), com maior viabilidade inicial em áreas menos congestionadas.
+- **UAM:** urbano denso, alta complexidade operacional/regulatória
+- **AAM:** guarda-chuva (urbano, regional, rural, carga), maior viabilidade inicial em áreas menos congestionadas
 
 ### 4) Estudo Técnico Comparativo de Categorias (Bloco 4)
 
 #### 4.1 CTOL (Conventional Take-off and Landing)
 
-**Exemplo:** Cessna 208 Caravan (variante elétrica eCaravan)
+**Exemplo:** eCaravan | **Alcance:** ~160 km | **Velocidade:** 320 km/h | **Capacidade:** 9 pax
 
-**Desempenho**
-
-- Alcance: ~160 km (limitado pelas baterias atuais)
-- Velocidade: 320 km/h
-- Capacidade: 9 passageiros
-
-**Propulsão**
-
-- Motor elétrico (ex.: magni500)
-- Alimentação por baterias de íon-lítio
-
-**Ambiente operacional predominante**
-
-- Regional
-- Conexão entre cidades secundárias e hubs
-
-**Desafios regulatórios associados**
-
-- Certificação da propulsão elétrica em células existentes (Part 23)
-- Gestão do peso das baterias para manter carga útil
-
-**Implicações para infraestrutura**
-
-- Necessidade de aeródromos convencionais
-- Pistas longas
-- Infraestrutura de carregamento elétrico de alta potência (megawatts)
+- **Propulsão:** Motor elétrico + baterias íon-lítio
+- **Uso:** Conexão regional entre cidades
+- **Desafio:** Certificação elétrica (Part 23), gestão de peso de baterias
+- **Infraestrutura:** Aeródromos convencionais, pistas longas, carregamento megawatt
 
 #### 4.2 STOL (Short Take-off and Landing)
 
-**Exemplo:** Electra.aero eSTOL
+**Exemplo:** eSTOL | **Alcance:** ~800 km | **Velocidade:** 320 km/h | **Capacidade:** 9 pax
 
-**Desempenho**
-
-- Alcance: ~800 km
-- Velocidade: 320 km/h
-- Capacidade: 9 passageiros
-
-**Propulsão**
-
-- Híbrida-elétrica
-- Propulsão distribuída (sopro sobre a asa para aumentar sustentação em baixa velocidade)
-
-**Ambiente operacional predominante**
-
-- Regional
-- Urbano periférico
-
-**Possíveis locais de operação**
-
-- Pistas muito curtas
-- Estruturas adaptadas como estacionamentos ou áreas urbanas adequadas
-
-**Desafios regulatórios associados**
-
-- Definição de padrões para pistas extremamente curtas
-- Controle de ruído em decolagens com fluxo soprado sobre a asa
-
-**Implicações para infraestrutura**
-
-- Operações em STOLports
-- Infraestrutura menor que aeroportos tradicionais e maior que vertiportos
-- Necessidade de integração com zoneamento urbano
+- **Propulsão:** Híbrida-elétrica com propulsão distribuída (sopro sobre asa)
+- **Uso:** Regional, urbano periférico
+- **Desafio:** Padrões para pistas curtas, controle de ruído
+- **Infraestrutura:** STOLports, integração com zoneamento urbano
 
 #### 4.3 VTOL / eVTOL (Vertical Take-off and Landing)
 
-**Exemplo:** Joby S4 (configuração tilt-rotor)
+**Exemplo:** Joby S4 (tilt-rotor) | **Alcance:** ~240 km | **Velocidade:** 320 km/h | **Capacidade:** 1+4 pax
 
-**Desempenho**
-
-- Alcance: ~240 km
-- Velocidade: 320 km/h
-- Capacidade: 1 piloto + 4 passageiros
-
-**Propulsão**
-
-- Totalmente elétrica
-- 6 rotores basculantes (tilt-rotors)
-
-**Ambiente operacional predominante**
-
-- Urbano denso
-- Mobilidade aérea urbana (UAM)
-- Transporte executivo
-
-**Desafios regulatórios associados**
-
-- Certificação da transição entre voo vertical e horizontal
-- Sistemas Detect and Avoid para operações em baixa altitude
-
-**Implicações para infraestrutura**
-
-- Necessidade de vertiportos
-- Alta capacidade de recarga elétrica
-- Áreas de aproximação com perfis íngremes
+- **Propulsão:** Totalmente elétrica, 6 rotores basculantes
+- **Uso:** Urbano denso, UAM, transporte executivo
+- **Desafio:** Certificação da transição, Detect and Avoid em baixa altitude
+- **Infraestrutura:** Vertiportos, recarga elétrica alta, áreas de aproximação íngremes
 
 #### 4.4 Asa Rotativa (Helicóptero Convencional)
 
-**Exemplo:** Airbus H125 (Esquilo)
+**Exemplo:** Airbus H125 | **Alcance:** ~630 km | **Velocidade:** 250 km/h | **Capacidade:** 5-6 pax
 
-**Desempenho**
-
-- Alcance: ~630 km
-- Velocidade: 250 km/h
-- Capacidade: 5 a 6 passageiros
-
-**Propulsão**
-
-- Turbina a combustão
-- Turbomeca Arriel 2D
-
-**Ambiente operacional predominante**
-
-- Multimissão
-- Emergências médicas
-- Transporte VIP
-- Operações rurais
-
-**Desafios regulatórios associados**
-
-- Restrições de ruído em áreas urbanas
-- Custos elevados de manutenção
-- Pegada de carbono elevada
-
-**Implicações para infraestrutura**
-
-- Utilização de helipontos existentes
-- Base de referência para dimensionamento inicial de futuros vertiportos
+- **Propulsão:** Turbina a combustão (Turbomeca Arriel 2D)
+- **Uso:** Multimissão, emergências médicas, VIP, operações rurais
+- **Desafio:** Restrições de ruído urbano, custo de manutenção, emissões
+- **Infraestrutura:** Helipontos, referência para dimensionamento de vertiportos
 
 #### 4.5 UAS (Unmanned Aircraft Systems – Carga)
 
-**Exemplo:** EHang 216-L (logística)
+**Exemplo:** EHang 216-L | **Alcance:** ~35 km | **Velocidade:** 130 km/h | **Capacidade:** até 200 kg
 
-**Desempenho**
+- **Propulsão:** Totalmente elétrica, multirotor com 16 motores
+- **Uso:** Logística urbana, entregas última milha, operações industriais
+- **Desafio:** Segregação aérea, BVLOS, cibersegurança
+- **Infraestrutura:** Hubs logísticos automatizados, integração com UTM
 
-- Alcance: ~35 km
-- Velocidade: 130 km/h
-- Capacidade de carga: até 200 kg
+| Categoria | Exemplo | Alcance (aprox.) | Velocidade (aprox.) | Capacidade | Infraestrutura predominante | Principal desafio |
+| --- | --- | --- | --- | --- | --- | --- |
+| CTOL | eCaravan | 160 km | 320 km/h | 9 pax | Aeródromos convencionais | Peso/energia de baterias |
+| STOL | Electra eSTOL | 800 km | 320 km/h | 9 pax | STOLports/pistas curtas | Padronização operacional e ruído |
+| VTOL/eVTOL | Joby S4 | 240 km | 320 km/h | 1+4 pax | Vertiportos | Certificação da transição + DAA |
+| Asa Rotativa | Airbus H125 | 630 km | 250 km/h | 5–6 pax | Helipontos | Ruído, custo e emissões |
+| UAS (carga) | EHang 216-L | 35 km | 130 km/h | até 200 kg | Hubs logísticos automatizados | BVLOS, segregação e cibersegurança |
 
-**Propulsão**
+### Síntese técnica do comparativo
 
-- Totalmente elétrica
-- Multirotor com 16 motores
-
-**Ambiente operacional predominante**
-
-- Logística urbana
-- Entregas de última milha
-- Operações industriais
-
-**Desafios regulatórios associados**
-
-- Segregação do espaço aéreo
-- Operações BVLOS (Beyond Visual Line of Sight)
-- Cibersegurança do link de comando e controle
-
-**Implicações para infraestrutura**
-
-- Áreas de pouso automatizadas
-- Integração completa com sistemas UTM (Unmanned Traffic Management)
-
-| Categoria    | Exemplo       | Alcance (aprox.) | Velocidade (aprox.) | Capacidade  | Infraestrutura predominante    | Principal desafio                     |
-| ------------ | ------------- | ---------------: | ------------------: | ----------- | ------------------------------ | ------------------------------------- |
-| CTOL         | eCaravan      |           160 km |            320 km/h | 9 pax       | Aeródromos convencionais      | Peso/energia de baterias              |
-| STOL         | Electra eSTOL |           800 km |            320 km/h | 9 pax       | STOLports/pistas curtas        | Padronização operacional e ruído   |
-| VTOL/eVTOL   | Joby S4       |           240 km |            320 km/h | 1+4 pax     | Vertiportos                    | Certificação da transição + DAA   |
-| Asa Rotativa | Airbus H125   |           630 km |            250 km/h | 5–6 pax    | Helipontos                     | Ruído, custo e emissões             |
-| UAS (carga)  | EHang 216-L   |            35 km |            130 km/h | até 200 kg | Hubs logísticos automatizados | BVLOS, segregação e cibersegurança |
-
-**Síntese técnica do comparativo**
-
-- **CTOL/STOL** fortalecem conectividade regional, com maior dependência de pista.
-- **VTOL/eVTOL** são mais aderentes ao contexto urbano e intracity, demandando vertiportos e alta disponibilidade energética.
-- **UAS** minimizam infraestrutura física, mas trazem alto desafio de integração segura no espaço aéreo compartilhado.
+- **CTOL/STOL:** conectividade regional, alta dependência de pista
+- **VTOL/eVTOL:** aderência urbana (UAM), alta demanda por vertiportos e energia
+- **UAS:** infraestrutura mínima, desafios de integração no espaço aéreo compartilhado
 
 ### 5) Consolidação dos Pontos-Chave (Bloco 5)
 
-**Desafios urbanos críticos**
+### Desafios urbanos críticos
 
-- Infraestrutura física (vertiportos e interfaces com modais terrestres).
-- Gerenciamento de tráfego de baixa altitude (UTM robusto e interoperável).
-- Aceitação social (ruído, segurança e percepção de benefício coletivo).
+- Infraestrutura (vertiportos, interfaces com modais terrestres)
+- Gerenciamento de tráfego de baixa altitude (UTM robusto)
+- Aceitação social (ruído, segurança, benefício coletivo)
 
-**Infraestruturas indispensáveis**
+### Infraestruturas indispensáveis
 
-- Vertiportos (operação, manutenção e turnaround).
-- Sistemas UTM para planejamento e monitoramento em tempo real.
-- Rede energética de alta potência para recarga rápida e previsível.
+- Vertiportos com operação, manutenção e turnaround ótimos
+- UTM para planejamento e monitoramento em tempo real
+- Rede energética de alta potência para recarga rápida
 
-**Implicação estratégica**
+### Implicação estratégica
 
-- O sucesso da UAM depende de implantação faseada, governança regulatória adaptativa e alinhamento entre tecnologia, infraestrutura e política pública.
+Sucesso da UAM depende de: **energia**, **coordenação de espaço aéreo** e **regulação orientada a risco**. Abordagem incremental (pilotos controlados, expansão por evidência) priorizando segurança e valor público.
 
 ## Conclusão
 
-A análise consolidada indica que a UAM é tecnicamente promissora, porém condicionada por três eixos de maturidade: **energia**, **coordenação do espaço aéreo** e **regulação orientada a risco**. No curto prazo, a adoção deve ocorrer em nichos operacionais e corredores específicos; no médio prazo, a escalabilidade dependerá de ganhos de densidade energética, padronização de vertiportos e aceitação comunitária. Em termos de planejamento, recomenda-se abordagem incremental (pilotos controlados, avaliação contínua de impacto e expansão por evidência), priorizando segurança operacional e valor público.
+UAM é tecnicamente promissora condicionada por:
+
+- **Energia:** densidade de baterias
+- **Espaço aéreo:** coordenação UTM
+- **Regulação:** orientada a risco
+
+**Timelines:**
+
+- **Curto prazo:** nichos operacionais e corredores específicos
+- **Médio prazo:** escalabilidade (energia, vertiportos, aceitação)
+- **Abordagem:** incremental (pilotos, avaliação, evidência), priorizando segurança e valor público
 
 ## Referências
 
@@ -283,257 +174,119 @@ A análise consolidada indica que a UAM é tecnicamente promissora, porém condi
 
 ---
 
-# Brasília em 2026. Estrutura urbana, custo de vida e potencial para mobilidade aérea urbana
+## Brasília em 2026: Estrutura urbana, custo de vida e potencial para mobilidade aérea urbana
 
-Brasília é uma cidade única, projetada para ser a capital funcional e monumental do Brasil. Para compreender a dinâmica urbana em 2026, é necessário analisar simultaneamente seu traçado urbanístico icônico e os desafios de mobilidade de uma metrópole moderna.
-
-Viver no Distrito Federal em 2026 representa um cenário de contrastes. Embora Brasília possua uma das maiores rendas per capita do país, o custo de vida acompanha esse nível de renda e frequentemente se aproxima dos patamares de São Paulo e Rio de Janeiro. A compreensão dessa dinâmica exige observar a relação estrutural entre o Plano Piloto e as Cidades Satélites, além dos fatores que compõem o orçamento cotidiano da população.
+- Cidade única: capital funcional e monumental do Brasil
+- Renda per capita: ~R$5.400/mês (maior do país)
+- Gasto médio: ~R$4.920/mês
+- Forte desigualdade espacial de renda
+- **Desafio:** mobilidade pendular Plano Piloto ↔ Regiões Administrativas
+- **Oportunidade:** UAM como solução para gargalos viários
 
 ![Planalto](image/Atividade02/planalto.jpeg)
 
 ## Highlights
 
-- Brasília combina alto valor urbanístico e forte pressão de mobilidade pendular entre Plano Piloto e Regiões Administrativas.
-- Renda per capita média no DF em 2026: aproximadamente **R$5.400/mês**.
-- Gasto médio mensal estimado no DF em 2026: aproximadamente **R$4.920**.
-- Triângulo logístico proposto para UAM: **Aeroporto Internacional de Brasília ↔ Plano Piloto ↔ Águas Claras**.
-- Ganho potencial de tempo nas rotas analisadas: **6–10 min (eVTOL)** versus **25–70 min (carro em horário de pico)**.
-- Viabilidade depende de integração multimodal, infraestrutura de vertiportos e coordenação regulatória.
+- Alto valor urbanístico + pressão de mobilidade pendular
+- **Triângulo logístico UAM:** Aeroporto ↔ Plano Piloto ↔ Águas Claras
+- **Ganho de tempo:** 6–10 min (eVTOL) vs. 25–70 min (carro em pico)
+- Requer: integração multimodal, vertiportos, coordenação regulatória
 
 ---
 
-# Arquitetura e cultura
+## Arquitetura e cultura
 
-Brasília pode ser entendida como um museu a céu aberto. A cidade possui a maior área urbana tombada do mundo pela UNESCO. Sua identidade arquitetônica é marcada pelas curvas de Oscar Niemeyer e pelo planejamento urbano de Lúcio Costa.
+- Maior área urbana tombada do mundo (UNESCO)
+- Identidade: curvas de Oscar Niemeyer + planejamento de Lúcio Costa
 
-## Eixo Monumental
+**Eixo Monumental:** Congresso, Palácio do Planalto, STF, Palácio Itamaraty
 
-O Eixo Monumental concentra os principais edifícios institucionais da capital:
+**Museus principais:** Museu da República, Memorial JK, CCBB Brasília
 
-- Congresso Nacional
-- Palácio do Planalto
-- Supremo Tribunal Federal
-- Palácio Itamaraty
-
-## Museus
-
-Alguns dos espaços culturais mais relevantes incluem:
-
-**Museu Nacional da República**
-Reconhecido pela grande cúpula branca. Recebe exposições itinerantes nacionais e internacionais.
-
-**Memorial JK**
-Espaço dedicado à memória do fundador da cidade, Juscelino Kubitschek.
-
-**CCBB Brasília**
-Centro cultural de grande relevância nacional, com exposições, eventos e jardins projetados para grandes fluxos de visitantes.
-
-## Arquitetura religiosa
-
-Dois edifícios se destacam:
-
-- **Catedral Metropolitana de Brasília**, conhecida pelos anjos suspensos no interior.
-- **Santuário Dom Bosco**, famoso pelos vitrais azuis que criam um ambiente luminoso singular.
+**Arquitetura religiosa:** Catedral (anjos suspensos), Santuário Dom Bosco (vitrais azuis)
 
 ---
 
-# Brasilia visto de cima
+## Brasília visto de cima
 
-![ ](image/Atividade02/brcima1.jpeg)
-
-![ ](image/Atividade02/brcima2.jpeg)
-
-![ ](image/Atividade02/brcima3.jpeg)
+[Imagens de Brasília do interior da cidade]
 
 ---
 
-# O Aeroporto Internacional de Brasília
+## O Aeroporto Internacional de Brasília
 
-O Aeroporto Internacional de Brasília – Presidente Juscelino Kubitschek constitui um dos principais hubs aeroportuários da América Latina.
-
-## Conectividade
-
-O aeroporto funciona como ponto estratégico de conexão para passageiros que se deslocam entre:
-
-- Norte e Nordeste
-- Sul e Sudeste
-
-## Estrutura
-
-O complexo possui infraestrutura ampliada, incluindo o **Aeroporto Square**, espaço com cinema, lojas e restaurantes utilizado tanto por passageiros quanto por moradores da cidade.
+- Principal hub aeroportuário da América Latina
+- Conecta Norte/Nordeste ↔ Sul/Sudeste
+- Infraestrutura: Aeroporto Square (cinema, lojas, restaurantes)
 
 ---
 
-# Mobilidade e trânsito
+## Mobilidade e trânsito
 
-Brasília foi planejada originalmente para priorizar o transporte automotivo. Esse modelo gera grande pressão sobre o sistema viário, especialmente nos deslocamentos entre o Plano Piloto e as Regiões Administrativas.
+**Planejamento original:** prioridade ao transporte automotivo → pressão viária em Plano Piloto ↔ Regiões Administrativas
 
-## Modais de transporte
+**Modais:**
 
-### Ônibus e BRT
+- **BRT:** Santa Maria, Gama (corredor Eixo Oeste)
+- **Metrô:** formato Y → Ceilândia, Samambaia (via Asa Sul, Guará, Águas Claras)
+- **Rodovias:** Eixão, L4, EPTG, EPIA
 
-O BRT Sul conecta regiões como:
+**Congestionamento:**
 
-- Santa Maria
-- Gama
-
-O corredor Eixo Oeste, pela EPTG, passa por expansão para melhorar o fluxo de Taguatinga.
-
-### Metrô
-
-O sistema possui formato de Y, conectando:
-
-- Rodoviária do Plano Piloto
-- Ceilândia
-- Samambaia
-
-O trajeto inclui:
-
-- Asa Sul
-- Guará
-- Águas Claras
-
-### Rodovias urbanas
-
-Principais eixos de circulação:
-
-- Eixão (Eixo Rodoviário)
-- L4
-- EPTG
-- EPIA
-
-## Horários de pico
-
-Os maiores congestionamentos ocorrem nos deslocamentos pendulares entre periferia e centro.
-
-- **Manhã:** 06:30 – 09:00
-- **Tarde / noite:** 17:30 – 19:45
-
-## Eixão do Lazer
-
-Aos domingos e feriados o Eixão é fechado para veículos e aberto ao uso recreativo da população.
-
-- **Horário:** 06:00 – 18:00
+- Manhã: 06:30 – 09:00
+- Noite: 17:30 – 19:45
+- Eixão do Lazer (domingos/feriados, 06:00–18:00)
 
 ---
 
-# Perfil socioeconômico e renda
+## Perfil socioeconômico e renda
 
 Brasília apresenta grande desigualdade espacial de renda. Embora o Distrito Federal tenha a maior renda per capita do Brasil, superior a aproximadamente **R$5.400 mensais em média em 2026**, as diferenças entre regiões são significativas.
 
-| Região                    | Perfil de renda                                                      |
-| -------------------------- | -------------------------------------------------------------------- |
-| Lago Sul / Lago Norte      | Áreas de altíssima renda, com renda domiciliar superior a R$30.000 |
-| Plano Piloto / Sudoeste    | Alta renda, concentrando servidores públicos federais               |
-| Águas Claras              | Classe média alta, forte verticalização                           |
-| Sol Nascente / Pôr do Sol | Regiões com maior vulnerabilidade social                            |
+| Região | Perfil de renda |
+| --- | --- |
+| Lago Sul / Lago Norte | Áreas de altíssima renda, com renda domiciliar superior a R$30.000 |
+| Plano Piloto / Sudoeste | Alta renda, concentrando servidores públicos federais |
+| Águas Claras | Classe média alta, forte verticalização |
+| Sol Nascente / Pôr do Sol | Regiões com maior vulnerabilidade social |
 
 ---
 
-# Custo de vida em 2026
+## Custo de vida em 2026
 
-Dados de fevereiro de 2026 indicam que o gasto médio mensal de um morador do Distrito Federal gira em torno de **R$4.920**.
+**Gasto médio mensal:** ~R$4.920
 
-Quatro fatores principais determinam esse custo.
+- **Moradia:** principal componente, varia significativamente por região
+- **Alimentação:** custos elevados (supermercados e restaurantes)
+- **Transporte:** deslocamentos longos ampliam despesas
+- **Serviços/Lazer:** entre os mais altos do Brasil
 
-## Moradia
+## Diferenças regionais no custo de vida
 
-Principal componente do orçamento. O valor varia significativamente entre regiões.
+**Plano Piloto:**
 
-## Alimentação
+- Custo imobiliário muito elevado, proximidade de serviços
+- Perfil: servidores públicos, diplomatas, executivos
 
-Custos elevados tanto em supermercados quanto em restaurantes.
+**Regiões de classe média (Águas Claras, Guará):**
 
-## Transporte
+- Custo intermediário, forte verticalização, acesso a metrô
+- Desafio: deslocamentos diários
 
-Deslocamentos longos aumentam despesas com combustível ou aplicativos de transporte.
+**Regiões administrativas periféricas (Ceilândia, Santa Maria, Sol Nascente):**
 
-## Serviços e lazer
+- Menor custo, maior dependência de transporte público
+- Problema: longos deslocamentos
 
-Brasília apresenta um dos custos mais altos do país nesse segmento.
+## Planejamento financeiro no DF
 
----
-
-# Diferenças regionais no custo de vida
-
-## Plano Piloto
-
-Regiões:
-
-- Asa Sul
-- Asa Norte
-- Sudoeste
-- Noroeste
-
-Características:
-
-- Custo imobiliário muito elevado
-- Proximidade de serviços
-- Redução do tempo de deslocamento
-
-Perfil predominante:
-
-- servidores públicos de alto escalão
-- diplomatas
-- executivos
-
----
-
-## Regiões de classe média
-
-Principais áreas:
-
-- Águas Claras
-- Guará
-
-Características:
-
-- custo intermediário
-- forte verticalização
-- acesso ao metrô
-
-Desafio principal: deslocamentos diários.
-
----
-
-## Regiões administrativas periféricas
-
-Exemplos:
-
-- Ceilândia
-- Santa Maria
-- Sol Nascente
-
-Características:
-
-- menor custo de moradia
-- maior dependência de transporte público
-- grandes tempos de deslocamento.
-
----
-
-# Planejamento financeiro no DF
-
-## Armadilha do deslocamento
-
-Morar longe do centro pode reduzir o aluguel, mas aumenta custos indiretos:
-
-- combustível
-- tempo perdido no trânsito
-- desgaste logístico diário
-
-## Orçamento familiar
-
-Uma família de quatro pessoas pode ultrapassar **R$13.000 mensais**, considerando:
-
-- educação
-- saúde
-- transporte
+- **Armadilha do deslocamento:** morar longe reduz aluguel mas aumenta custos indiretos (combustível, tempo, logística)
+- **Orçamento familiar (4 pessoas):** pode ultrapassar R$13.000/mês (educação, saúde, transporte)
 - lazer
 
 ---
 
-# Vertiportos e mobilidade aérea urbana
+## Vertiportos e mobilidade aérea urbana
 
 A implantação de vertiportos em Brasília representa uma possível solução estrutural para os desafios de mobilidade da capital.
 
@@ -541,7 +294,7 @@ Vertiportos são infraestruturas dedicadas à operação de aeronaves elétricas
 
 ---
 
-# Estrutura potencial da rede aérea urbana
+## Estrutura potencial da rede aérea urbana
 
 Um modelo inicial pode ser estruturado em um triângulo logístico conectando:
 
@@ -551,13 +304,13 @@ Um modelo inicial pode ser estruturado em um triângulo logístico conectando:
 
 ---
 
-# Distâncias e tempos estimados
+## Distâncias e tempos estimados
 
-| Rota                          | Distância aproximada | Tempo eVTOL | Tempo carro (pico) |
-| ----------------------------- | --------------------- | ----------- | ------------------ |
-| Aeroporto → Plano Piloto     | ~10 km                | 6–8 min    | 25–45 min         |
-| Aeroporto → Águas Claras    | ~12 km                | 7–9 min    | 35–60 min         |
-| Plano Piloto → Águas Claras | ~15 km                | 8–10 min   | 40–70 min         |
+| Rota | Distância aproximada | Tempo eVTOL | Tempo carro (pico) |
+| --- | --- | --- | --- |
+| Aeroporto → Plano Piloto | ~10 km | 6–8 min | 25–45 min |
+| Aeroporto → Águas Claras | ~12 km | 7–9 min | 35–60 min |
+| Plano Piloto → Águas Claras | ~15 km | 8–10 min | 40–70 min |
 
 ## Ilustração das rotas (mapas)
 
@@ -589,102 +342,53 @@ Um modelo inicial pode ser estruturado em um triângulo logístico conectando:
 
 ---
 
-# Integração multimodal
+### Vertiporto Plano Piloto
 
-A viabilidade do sistema depende da conexão com os modais existentes.
+Integrado ao Setor Comercial Sul + eixos de ônibus/metrô
 
-### Plano Piloto
+### Vertiporto Águas Claras
 
-Vertiporto integrado ao Setor Comercial Sul e aos eixos de ônibus e metrô.
-
-### Águas Claras
-
-Vertiporto próximo à estação de metrô, permitindo conexão imediata com o sistema ferroviário urbano.
+Próximo à estação de metrô + conexão com sistema ferroviário urbano
 
 ---
 
-# Corredores de voo
+## Corredores de voo
 
-Os eVTOLs operariam em baixa altitude, abaixo de aproximadamente **1.000 pés**.
-
-Em Brasília, grandes vias como o **Eixão** podem funcionar como corredores naturais de navegação aérea, reduzindo impacto acústico sobre áreas residenciais.
-
----
-
-# Desafios institucionais
-
-## Tombamento do Plano Piloto
-
-A proteção urbanística limita novas construções. Vertiportos precisariam utilizar:
-
-- topos de edifícios
-- estacionamentos existentes
-- estruturas já urbanizadas.
-
-## Escalabilidade
-
-A viabilidade econômica exige alta frequência de voos e sistemas digitais avançados de gestão de tráfego aéreo.
+- Operação de eVTOLs: baixa altitude (~1.000 pés)
+- Eixão como corredor natural → reduz impacto acústico  em áreas residenciais
 
 ---
 
-# Justificativa estratégica para Brasília
+## Desafios institucionais
 
-Três fatores tornam a capital um local adequado para implementação inicial dessa tecnologia.
-
-## Geografia urbana espraiada
-
-A estrutura da cidade cria gargalos viários entre o Plano Piloto e as regiões administrativas.
-
-## Hub aeroportuário nacional
-
-Conectar rapidamente o Aeroporto JK aos centros administrativos e hoteleiros aumenta a eficiência logística.
-
-## Perfil governamental e diplomático
-
-Autoridades, executivos e diplomatas demandam deslocamentos rápidos e previsíveis.
+- **Tombamento do Plano Piloto:** restringe novas construções → vertiportos em topos de edifícios, estacionamentos, estruturas existentes
+- **Escalabilidade:** requer alta frequência de voos e sistemas digitais avançados de gestão de tráfego
 
 ---
 
-# Impactos econômicos potenciais
+## Justificativa estratégica para Brasília
 
-## Geração de empregos qualificados
+- **Geografia urbana espraiada:** gargalos viários entre Plano Piloto e regiões administrativas
+- **Hub aeroportuário nacional:** Aeroporto JK para centros administrativos/hoteleiros
+- **Perfil governamental/diplomático:** demanda por deslocamentos rápidos e previsíveis
 
-A infraestrutura de vertiportos demanda profissionais em áreas como:
+## Impactos econômicos potenciais
 
-- engenharia aeronáutica
-- manutenção elétrica
-- gestão de tráfego aéreo urbano
-- tecnologia da informação
-
----
-
-## Valorização imobiliária
-
-A proximidade de vertiportos tende a atrair:
-
-- hotéis
-- centros comerciais
-- polos empresariais
+- **Empregos:** engenharia aeronáutica, manutenção elétrica, gestão aéreo-urbana, TI
+- **Valorização imobiliária:** hotéis, centros comerciais, polos empresariais próximos a vertiportos
+- **Produtividade:** redução 90 min → 10 min de deslocamento = tempo liberado para profissionais/empresas
 
 ---
 
-## Aumento de produtividade
+## Desafios de equidade
 
-Reduzir deslocamentos de 90 minutos para cerca de 10 minutos gera ganhos econômicos significativos, liberando tempo produtivo para profissionais e empresas.
-
----
-
-# Desafios de equidade
-
-Inicialmente o serviço deve operar como modalidade premium.
-
-Entretanto, o aumento da escala de produção e operação pode reduzir gradualmente o custo por passageiro, aproximando o preço de serviços de transporte por aplicativo de categoria superior.
-
-A integração com transporte público será determinante para evitar que a tecnologia se torne um sistema isolado.
+- Operação inicial como serviço premium
+- Escalabilidade pode reduzir custos gradualmente
+- **Crítico:** integração com transporte público para evitar sistema isolado
 
 ---
 
-# Fontes de dados e instituições relevantes
+## Fontes de dados e instituições relevantes
 
 ## Estatísticas e economia
 
