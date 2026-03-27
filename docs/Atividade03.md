@@ -53,14 +53,8 @@ Essa configuração final de cinco sítios + um em desenvolvimento forma uma red
 ### Sítio D — Águas Claras (eixo rodoviário)
 ![Águas Claras - Eixo Rodoviário](image/Atividade03/sitio-d-aguas-claras-rodoviario.jpg)
 
-### Sítio E — Lagoa (versão simples)
-![Lagoa - Versão Simples](image/Atividade03/sitio-e-lagoa-2.png)
-
 ### Sítio E — Lagoa (com vertiporto)
 ![Lagoa - Com Vertiporto](image/Atividade03/sitio-e-lagoa-2-vertiporto.jpeg)
-
-### Sítio F — Sarah (versão simples)
-![Sarah - Versão Simples](image/Atividade03/sitio-f-sarah-vertiporto.png)
 
 ### Sítio F — Sarah (com vertiporto)
 ![Sarah - Com Vertiporto](image/Atividade03/sitio-f-sarah-vertiporto-vertiporto.jpeg)
