@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AHP - Selecao de Vertiportos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #eef4f8;
+      --panel: #ffffff;
+      --ink: #1d2a3a;
+      --muted: #5b6b7c;
+      --line: #d6e0ea;
+      --accent: #ff7a1a;
+      --accent-2: #0e7490;
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(17,38,65,0.12);
+      --tab-active: #0f2742;
+      --tab-bg: #dce8f2;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Barlow", system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(14,116,144,0.12), transparent 30%),
+        radial-gradient(circle at 90% 20%, rgba(255,122,26,0.12), transparent 28%),
+        var(--bg);
+      min-height: 100vh;
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 22px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .hero {
+      border-radius: var(--radius);
+      color: #fff;
+      background:
+        linear-gradient(120deg, rgba(9,36,66,0.95), rgba(14,116,144,0.9)),
+        linear-gradient(45deg, rgba(255,122,26,0.2), transparent);
+      padding: 22px 24px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .hero h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.2rem, 2.2vw, 1.75rem);
+      letter-spacing: 0.01em;
+      margin-bottom: 6px;
+    }
+    .hero p { opacity: 0.9; font-size: 0.97rem; }
+    .hero-badge {
+      background: rgba(255,122,26,0.25);
+      border: 1px solid rgba(255,122,26,0.5);
+      color: #ffd6a5;
+      border-radius: 8px;
+      padding: 6px 14px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      white-space: nowrap;
+      align-self: flex-start;
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(130px, 1fr));
+      gap: 10px;
+    }
+    .kpi {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 13px 14px;
+      box-shadow: 0 3px 10px rgba(20,50,80,0.08);
+    }
+    .kpi .label { color: var(--muted); font-size: 0.8rem; }
+    .kpi .value {
+      margin-top: 3px;
+      font-weight: 700;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.3rem;
+    }
+    .kpi .value.ok { color: #059669; }
+    .kpi .value.warn { color: #d97706; }
+    .kpi .value.bad { color: #dc2626; }
+
+    .tab-bar {
+      display: flex;
+      gap: 0;
+      border-radius: 12px 12px 0 0;
+      overflow: hidden;
+      background: var(--tab-bg);
+      border: 1px solid var(--line);
+      border-bottom: none;
+    }
+    .tab-btn {
+      flex: 1;
+      padding: 11px 14px;
+      border: none;
+      background: transparent;
+      font-family: "Barlow", sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.2s;
+      border-right: 1px solid var(--line);
+      white-space: nowrap;
+    }
+    .tab-btn:last-child { border-right: none; }
+    .tab-btn:hover { background: rgba(15,39,66,0.06); color: var(--ink); }
+    .tab-btn.active {
+      background: var(--tab-active);
+      color: #fff;
+    }
+
+    .tab-panel {
+      display: none;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 0 0 var(--radius) var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+    }
+    .tab-panel.active { display: block; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 7px 9px;
+      text-align: center;
+    }
+    td:first-child, td:nth-child(2) { text-align: left; }
+    th {
+      background: #0f2742;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.82rem;
+    }
+    tr:nth-child(even) td { background: #f5f9fc; }
+    td.diag { background: #e2eaf2; font-weight: 700; color: #0f2742; }
+    td.recip { background: #fef3e2; color: #92400e; font-size: 0.8rem; }
+    td.input-cell { background: #fef9c3; }
+    td.calc-cell { background: #ecfdf5; color: #065f46; font-weight: 600; }
+    td.rank-cell { background: #eff6ff; color: #1d4ed8; font-weight: 700; }
+
+    input[type="number"], input[type="text"] {
+      width: 100%;
+      border: 1px solid #93c5fd;
+      border-radius: 5px;
+      padding: 4px 6px;
+      font-size: 0.85rem;
+      font-family: "Barlow", sans-serif;
+      background: #fefce8;
+      text-align: center;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    input[type="number"]:focus, input[type="text"]:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 2px rgba(59,130,246,0.2);
+    }
+    input[type="text"].sitio-name {
+      background: #f0fdf4;
+      border-color: #86efac;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .section-title {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f2742;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--line);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-title .tag {
+      font-size: 0.72rem;
+      background: var(--accent-2);
+      color: #fff;
+      border-radius: 5px;
+      padding: 2px 7px;
+      font-weight: 600;
+    }
+
+    .info-box {
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 0.88rem;
+      color: #0c4a6e;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .rc-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      font-family: "Space Grotesk", sans-serif;
+    }
+    .rc-badge.ok { background: #d1fae5; color: #065f46; border: 1.5px solid #6ee7b7; }
+    .rc-badge.warn { background: #fef3c7; color: #92400e; border: 1.5px solid #fcd34d; }
+    .rc-badge.bad { background: #fee2e2; color: #991b1b; border: 1.5px solid #fca5a5; }
+
+    .rc-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+
+    .bar-chart-wrap {
+      margin-top: 20px;
+    }
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .bar-label {
+      width: 170px;
+      font-size: 0.82rem;
+      text-align: right;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+    .bar-track {
+      flex: 1;
+      height: 18px;
+      background: #e5eef7;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      background: linear-gradient(90deg, #0e7490, #0369a1);
+      transition: width 0.5s ease;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 5px;
+    }
+    .bar-pct {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    .step-list { list-style: none; padding: 0; }
+    .step-list li {
+      display: flex;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .step-list li:last-child { border-bottom: none; }
+    .step-num {
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      background: #0f2742;
+      color: #fff;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .step-body strong { display: block; margin-bottom: 2px; color: #0f2742; }
+    .step-body span { font-size: 0.88rem; color: var(--muted); line-height: 1.5; }
+
+    .legend-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .legend-item {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.85rem; color: var(--muted);
+    }
+    .legend-swatch {
+      width: 20px; height: 14px;
+      border-radius: 3px;
+      border: 1px solid rgba(0,0,0,0.1);
+      flex-shrink: 0;
+    }
+
+    .saaty-table th { background: #374151; }
+    .saaty-table td:first-child { font-weight: 600; text-align: center; }
+
+    .score-bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .score-bar-label { width: 180px; font-size: 0.82rem; color: var(--muted); text-align: right; flex-shrink: 0; font-weight: 600; }
+    .score-bar-track { flex: 1; height: 22px; background: #e5eef7; border-radius: 5px; overflow: hidden; position: relative; }
+    .score-bar-fill {
+      height: 100%; border-radius: 5px;
+      background: linear-gradient(90deg, #059669, #10b981);
+      display: flex; align-items: center; justify-content: flex-end;
+      padding-right: 6px; transition: width 0.6s ease;
+    }
+    .score-bar-fill.rank1 { background: linear-gradient(90deg, #d97706, #f59e0b); }
+    .score-bar-val { font-size: 0.75rem; font-weight: 700; color: #fff; white-space: nowrap; }
+
+    @media (max-width: 900px) {
+      .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+      .tab-btn { font-size: 0.78rem; padding: 9px 8px; }
+      .legend-grid { grid-template-columns: 1fr; }
+      .score-bar-label { width: 120px; }
+    }
+  </style>
+</head>
+<body>
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <h1>AHP - Selecao de Vertiportos · Brasilia</h1>
+      <p>Analytic Hierarchy Process (Saaty, 1980) · Matriz de comparacao pareada · 8 criterios · ate 8 sitios</p>
+    </div>
+    <span class="hero-badge">IT-214 · ITA</span>
+  </section>
+
+  <section class="kpi-grid" aria-label="Indicadores">
+    <article class="kpi">
+      <div class="label">Criterios</div>
+      <div class="value" id="kpi-n">8</div>
+    </article>
+    <article class="kpi">
+      <div class="label">Sitios avaliados</div>
+      <div class="value" id="kpi-s">8</div>
+    </article>
+    <article class="kpi">
+      <div class="label">Razao de Consistencia (RC)</div>
+      <div class="value ok" id="kpi-rc">0.0956</div>
+    </article>
+    <article class="kpi">
+      <div class="label">Sitio preferencial</div>
+      <div class="value" id="kpi-best" style="font-size:1rem">-</div>
+    </article>
+  </section>
+
+  <div>
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn" role="tab" data-tab="sitios" onclick="switchTab('sitios')">Avaliacao dos Sitios</button>
+      <button class="tab-btn" role="tab" data-tab="ahp" onclick="switchTab('ahp')">Pesos AHP</button>
+      <button class="tab-btn" role="tab" data-tab="roteiro" onclick="switchTab('roteiro')">Roteiro de Uso</button>
+    </div>
+
+    <div class="tab-panel" id="tab-sitios">
+      <p class="section-title">Pontuacoes por Criterio <span class="tag">EDITAVEL</span></p>
+      <div class="info-box">
+        Atribua notas de <strong>1 a 9</strong> para cada sitio em cada criterio. A pontuacao final <em>S_i = Σ w_j × v_ij</em> e calculada automaticamente com base nos pesos da aba AHP.<br>
+        Clique nos nomes dos sitios (linha verde) para renomea-los.
+      </div>
+
+      <div style="overflow-x:auto;">
+        <table id="tbl-sitios">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Criterio</th>
+              <th>Peso</th>
+              <th id="th-s0"><input type="text" class="sitio-name" value="Aguas Claras (Metroviario)" onchange="calcSitios()" /></th>
+              <th id="th-s1"><input type="text" class="sitio-name" value="Aeroporto BSB" onchange="calcSitios()" /></th>
+              <th id="th-s2"><input type="text" class="sitio-name" value="Asa Norte" onchange="calcSitios()" /></th>
+              <th id="th-s3"><input type="text" class="sitio-name" value="Aguas Claras (Rodoviario)" onchange="calcSitios()" /></th>
+              <th id="th-s4"><input type="text" class="sitio-name" value="Lagoa" onchange="calcSitios()" /></th>
+              <th id="th-s5"><input type="text" class="sitio-name" value="Sarah" onchange="calcSitios()" /></th>
+              <th id="th-s6"><input type="text" class="sitio-name" value="CBAAER" onchange="calcSitios()" /></th>
+              <th id="th-s7"><input type="text" class="sitio-name" value="Sitio H (Reserva)" onchange="calcSitios()" /></th>
+            </tr>
+          </thead>
+          <tbody id="sitios-body"></tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3" style="font-weight:700; background:#0f2742; color:#fff; text-align:right; font-size:0.82rem;">Pontuacao Final S_i</td>
+              <td class="calc-cell" id="sf-0">-</td>
+              <td class="calc-cell" id="sf-1">-</td>
+              <td class="calc-cell" id="sf-2">-</td>
+              <td class="calc-cell" id="sf-3">-</td>
+              <td class="calc-cell" id="sf-4">-</td>
+              <td class="calc-cell" id="sf-5">-</td>
+              <td class="calc-cell" id="sf-6">-</td>
+              <td class="calc-cell" id="sf-7">-</td>
+            </tr>
+            <tr>
+              <td colspan="3" style="font-weight:700; background:#0f2742; color:#fff; text-align:right; font-size:0.82rem;">Ranking (1 = melhor)</td>
+              <td class="rank-cell" id="rk-0">-</td>
+              <td class="rank-cell" id="rk-1">-</td>
+              <td class="rank-cell" id="rk-2">-</td>
+              <td class="rank-cell" id="rk-3">-</td>
+              <td class="rank-cell" id="rk-4">-</td>
+              <td class="rank-cell" id="rk-5">-</td>
+              <td class="rank-cell" id="rk-6">-</td>
+              <td class="rank-cell" id="rk-7">-</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <div class="bar-chart-wrap" id="sitios-chart-wrap" style="margin-top:24px;">
+        <p class="section-title" style="margin-bottom:14px;">Pontuacao Final por Sitio</p>
+        <div id="sitios-bars"></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-ahp">
+      <p class="section-title">Matriz de Comparacao Pareada <span class="tag">EDITAVEL</span></p>
+      <div class="info-box">
+        Preencha <strong>apenas o triangulo superior</strong> (celulas amarelas). A diagonal e fixa (= 1) e o triangulo inferior e reciproco automatico.<br>
+        Leitura: <em>linha i vs coluna j</em> - quanto <strong>mais importante</strong> e o criterio da linha em relacao ao da coluna?
+      </div>
+
+      <div style="overflow-x:auto; margin-bottom:20px;">
+        <table id="tbl-ahp"></table>
+      </div>
+
+      <div class="rc-row">
+        <div>
+          <div style="font-size:0.82rem; color:var(--muted); margin-bottom:4px;">Razao de Consistencia (RC)</div>
+          <div class="rc-badge ok" id="rc-badge">RC = 0.0956 Consistente</div>
+        </div>
+        <div style="font-size:0.82rem; color:var(--muted); max-width:340px;">
+          RC <= 0,10: consistente · RC <= 0,20: aceitavel · RC > 0,20: revisar julgamentos
+        </div>
+      </div>
+
+      <div class="bar-chart-wrap" style="margin-top:24px;">
+        <p class="section-title" style="margin-bottom:14px;">Pesos dos Criterios (%)</p>
+        <div id="peso-bars"></div>
+      </div>
+
+      <div style="margin-top:24px;">
+        <p class="section-title" style="margin-bottom:12px;">Tabela de Pesos</p>
+        <table id="tbl-pesos" style="max-width:500px;">
+          <thead>
+            <tr><th>Rank</th><th>Criterio</th><th>Peso</th><th>Peso (%)</th></tr>
+          </thead>
+          <tbody id="pesos-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-roteiro">
+      <p class="section-title">Roteiro de Uso - Passo a Passo</p>
+
+      <ul class="step-list">
+        <li>
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <strong>Matriz de comparacao (aba Pesos AHP)</strong>
+            <span>Preencha o triangulo superior (celulas amarelas) com valores de 1 a 9 conforme a tabela de Saaty. A diagonal e sempre 1 e o triangulo inferior e calculado automaticamente como o reciproco.</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <strong>Verifique a consistencia</strong>
+            <span>A Razao de Consistencia (RC) e exibida no topo e na aba AHP. RC <= 0,10 indica consistencia aceitavel. Se RC > 0,10, revise os julgamentos da matriz.</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <strong>Nomeie os sitios (aba Avaliacao dos Sitios)</strong>
+            <span>Clique nos campos verdes do cabecalho da tabela de avaliacao e substitua os nomes pelos locais candidatos.</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <strong>Atribua notas 1-9 por criterio</strong>
+            <span>Nas celulas amarelas da tabela de avaliacao, insira a nota de cada sitio para cada criterio (1 = pior, 9 = melhor).</span>
+          </div>
+        </li>
+        <li>
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <strong>Leia o resultado</strong>
+            <span>A pontuacao final S_i = Σ w_j × v_ij e o ranking sao calculados automaticamente. O sitio de maior pontuacao e o preferencial.</span>
+          </div>
+        </li>
+      </ul>
+
+      <div style="margin-top:24px;">
+        <p class="section-title" style="margin-bottom:12px;">Tabela de Importancia Relativa (Saaty)</p>
+        <table class="saaty-table" style="max-width:680px;">
+          <thead>
+            <tr><th>Valor</th><th>Descricao</th><th>Reciproco</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Igual importancia</td><td>1</td></tr>
+            <tr><td>3</td><td>Moderadamente mais importante</td><td>1/3</td></tr>
+            <tr><td>5</td><td>Mais importante</td><td>1/5</td></tr>
+            <tr><td>7</td><td>Fortemente mais importante</td><td>1/7</td></tr>
+            <tr><td>9</td><td>Extremamente mais importante</td><td>1/9</td></tr>
+            <tr><td>2, 4, 6, 8</td><td>Valores intermediarios entre dois niveis adjacentes</td><td>1/2, 1/4, 1/6, 1/8</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+const CRITERIOS = [
+  "Infraestrutura disponivel",
+  "Ruido",
+  "Acessibilidade",
+  "Privacidade",
+  "Eficiencia",
+  "Horas de Operacao",
+  "Impacto Ambiental",
+  "Seguranca"
+];
+const N = 8;
+
+const matrizUpper = [
+  [1,   0.2,   0.17,  5,    4,    7,    1,    0.2],
+  [null,1,     2,     6,    5,    8,    4,    0.5],
+  [null,null,  1,     3,    4,    7,    3,    0.5],
+  [null,null,  null,  1,    1,    3,    0.14, 0.2],
+  [null,null,  null,  null, 1,    1,    0.5,  0.25],
+  [null,null,  null,  null, null, 1,    0.13, 0.11],
+  [null,null,  null,  null, null, null, 1,    0.33],
+  [null,null,  null,  null, null, null, null, 1]
+];
+
+const scoresInit = Array.from({length:8}, ()=>Array(8).fill(5));
+const RI = [0,0,0,0.58,0.90,1.12,1.24,1.32,1.41];
+
+let matrix = buildFullMatrix(matrizUpper);
+let scores = scoresInit.map(r=>[...r]);
+
+function buildFullMatrix(upper) {
+  const m = Array.from({length:N}, ()=>Array(N).fill(0));
+  for (let i=0;i<N;i++) for (let j=0;j<N;j++) {
+    if (i===j) { m[i][j]=1; continue; }
+    if (upper[i][j]!==null) { m[i][j]=upper[i][j]; m[j][i]=1/upper[i][j]; }
+  }
+  return m;
+}
+
+function calcAHP(m) {
+  const colSums = Array(N).fill(0);
+  for (let j=0;j<N;j++) for (let i=0;i<N;i++) colSums[j]+=m[i][j];
+  const norm = Array.from({length:N},()=>Array(N).fill(0));
+  for (let i=0;i<N;i++) for (let j=0;j<N;j++) norm[i][j]=m[i][j]/colSums[j];
+  const w = Array(N).fill(0);
+  for (let i=0;i<N;i++) { for (let j=0;j<N;j++) w[i]+=norm[i][j]; w[i]/=N; }
+  const mw = Array(N).fill(0);
+  for (let i=0;i<N;i++) for (let j=0;j<N;j++) mw[i]+=m[i][j]*w[j];
+  const lambdaMax = mw.reduce((s,v,i)=>s+v/w[i],0)/N;
+  const CI=(lambdaMax-N)/(N-1);
+  const RC=CI/(RI[N]||1.41);
+  return {w,RC,lambdaMax};
+}
+
+function renderAHP() {
+  const {w,RC} = calcAHP(matrix);
+  const tbl = document.getElementById('tbl-ahp');
+  let html='<thead><tr><th>i x j</th>';
+  for(let j=0;j<N;j++) html+=`<th>${j+1}</th>`;
+  html+='</tr></thead><tbody>';
+  for(let i=0;i<N;i++){
+    html+=`<tr><td style="text-align:left;font-size:0.8rem;background:#f8fafc;font-weight:600;">${i+1}. ${CRITERIOS[i]}</td>`;
+    for(let j=0;j<N;j++){
+      if(i===j){
+        html+='<td class="diag">1</td>';
+      } else if(j>i){
+        const v=matrix[i][j];
+        html+=`<td class="input-cell"><input type="number" min="0.1" max="9" step="0.01" value="${v.toFixed(2)}" onchange="updateMatrix(${i},${j},this.value)" style="width:68px;"/></td>`;
+      } else {
+        const v=matrix[i][j];
+        html+=`<td class="recip">${formatMatVal(v)}</td>`;
+      }
+    }
+    html+='</tr>';
+  }
+  html+='</tbody>';
+  tbl.innerHTML=html;
+  renderRC(RC);
+  renderPesos(w);
+}
+
+function formatMatVal(v){
+  if(Math.abs(v-1)<0.001) return '1';
+  if(v<1){ const inv=Math.round(1/v); return `1/${inv}`; }
+  return v%1===0?v.toFixed(0):v.toFixed(2);
+}
+
+function updateMatrix(i,j,val){
+  const v=parseFloat(val);
+  if(isNaN(v)||v<=0) return;
+  matrix[i][j]=v; matrix[j][i]=1/v;
+  renderAHP();
+  calcSitios();
+}
+
+function renderRC(RC){
+  const el=document.getElementById('rc-badge');
+  const kpiEl=document.getElementById('kpi-rc');
+  kpiEl.textContent=RC.toFixed(4);
+  if(RC<=0.10){
+    el.className='rc-badge ok';
+    el.textContent=`RC = ${RC.toFixed(4)} Consistente`;
+    kpiEl.className='value ok';
+  } else if(RC<=0.20){
+    el.className='rc-badge warn';
+    el.textContent=`RC = ${RC.toFixed(4)} Aceitavel`;
+    kpiEl.className='value warn';
+  } else {
+    el.className='rc-badge bad';
+    el.textContent=`RC = ${RC.toFixed(4)} Inconsistente - revise`; 
+    kpiEl.className='value bad';
+  }
+}
+
+function renderPesos(w){
+  const sorted=[...w.map((v,i)=>({i,v}))].sort((a,b)=>b.v-a.v);
+  const barsDiv=document.getElementById('peso-bars');
+  barsDiv.innerHTML='';
+  sorted.forEach(({i,v})=>{
+    const pct=(v*100).toFixed(1);
+    barsDiv.innerHTML+=`<div class="bar-row">
+      <div class="bar-label">${CRITERIOS[i]}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:${pct*2.2}%"><span class="bar-pct">${pct}%</span></div></div>
+    </div>`;
+  });
+  const tbody=document.getElementById('pesos-body');
+  tbody.innerHTML='';
+  sorted.forEach(({i,v},rank)=>{
+    tbody.innerHTML+=`<tr>
+      <td class="rank-cell">${rank+1}</td>
+      <td style="text-align:left">${CRITERIOS[i]}</td>
+      <td class="calc-cell">${v.toFixed(6)}</td>
+      <td class="calc-cell">${(v*100).toFixed(2)}%</td>
+    </tr>`;
+  });
+}
+
+function renderSitiosBody(){
+  const {w}=calcAHP(matrix);
+  const tbody=document.getElementById('sitios-body');
+  tbody.innerHTML='';
+  for(let c=0;c<N;c++){
+    let row=`<tr>
+      <td>${c+1}</td>
+      <td style="text-align:left;font-weight:500">${CRITERIOS[c]}</td>
+      <td class="calc-cell">${(w[c]*100).toFixed(1)}%</td>`;
+    for(let s=0;s<8;s++){
+      row+=`<td class="input-cell"><input type="number" min="1" max="9" step="1" value="${scores[s][c]}" onchange="updateScore(${s},${c},this.value)" style="width:54px;"/></td>`;
+    }
+    row+='</tr>';
+    tbody.innerHTML+=row;
+  }
+}
+
+function updateScore(s,c,val){
+  const v=Math.max(1,Math.min(9,parseInt(val)||1));
+  scores[s][c]=v;
+  calcSitios();
+}
+
+function calcSitios(){
+  const {w}=calcAHP(matrix);
+  const finals=Array(8).fill(0);
+  for(let s=0;s<8;s++) for(let c=0;c<N;c++) finals[s]+=w[c]*scores[s][c];
+  const sorted=[...finals.map((v,i)=>({v,i}))].sort((a,b)=>b.v-a.v);
+  const ranks=Array(8);
+  sorted.forEach(({i},rank)=>ranks[i]=rank+1);
+  for(let s=0;s<8;s++){
+    document.getElementById(`sf-${s}`).textContent=finals[s].toFixed(4);
+    document.getElementById(`rk-${s}`).textContent=`#${ranks[s]}`;
+  }
+  const bestIdx=sorted[0].i;
+  const bestName=document.querySelector(`#th-s${bestIdx} input`)?.value||`Sitio ${String.fromCharCode(65+bestIdx)}`;
+  document.getElementById('kpi-best').textContent=`${bestName} (#1)`;
+  renderSitiosChart(finals, ranks);
+}
+
+function renderSitiosChart(finals, ranks){
+  const wrap=document.getElementById('sitios-bars');
+  const maxV=Math.max(...finals);
+  const sorted=[...finals.map((v,i)=>({v,i,r:ranks[i]}))].sort((a,b)=>a.r-b.r);
+  wrap.innerHTML='';
+  sorted.forEach(({v,i,r})=>{
+    const pct=((v/maxV)*100).toFixed(1);
+    const name=document.querySelector(`#th-s${i} input`)?.value||`Sitio ${String.fromCharCode(65+i)}`;
+    wrap.innerHTML+=`<div class="score-bar-row">
+      <div class="score-bar-label">${name}</div>
+      <div class="score-bar-track"><div class="score-bar-fill ${r===1?'rank1':''}" style="width:${pct}%"><span class="score-bar-val">${v.toFixed(3)}</span></div></div>
+      <div style="font-size:0.78rem;color:var(--muted);width:30px">#${r}</div>
+    </div>`;
+  });
+}
+
+function switchTab(id){
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  document.querySelector(`[data-tab="${id}"]`).classList.add('active');
+  if(id==='ahp') renderAHP();
+  if(id==='sitios') { renderSitiosBody(); calcSitios(); }
+}
+
+window.addEventListener('DOMContentLoaded',()=>{
+  switchTab('sitios');
+});
+</script>
+</body>
+</html>

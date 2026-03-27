@@ -17,7 +17,16 @@
 <iframe
 	src="atv03-sitios.html"
 	title="Atividade 03 - Sítios UAM Brasília"
-	style="width:100%; height:2080px; border:1px solid #dde3ec; border-radius:12px; background:#fff;"
+	style="width:100%; height:2200px; border:1px solid #dde3ec; border-radius:12px; background:#fff;"
+	loading="lazy"
+></iframe>
+
+## Painel da Matriz AHP
+
+<iframe
+	src="atv03-ahp.html"
+	title="Atividade 03 - Matriz AHP"
+	style="width:100%; height:2400px; border:1px solid #dde3ec; border-radius:12px; background:#fff;"
 	loading="lazy"
 ></iframe>
 
