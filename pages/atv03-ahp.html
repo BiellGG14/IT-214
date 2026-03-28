@@ -347,9 +347,8 @@
   <section class="hero">
     <div>
       <h1>AHP - Selecao de Vertiportos · Brasilia</h1>
-      <p>Analytic Hierarchy Process (Saaty, 1980) · Matriz de comparacao pareada · 8 criterios · ate 8 sitios</p>
+      <p>Analytic Hierarchy Process (Saaty, 1980) · Matriz de comparacao pareada · 8 criterios · 6 sitios avaliados</p>
     </div>
-    <span class="hero-badge">IT-214 · ITA</span>
   </section>
 
   <section class="kpi-grid" aria-label="Indicadores">
@@ -359,7 +358,7 @@
     </article>
     <article class="kpi">
       <div class="label">Sitios avaliados</div>
-      <div class="value" id="kpi-s">8</div>
+      <div class="value" id="kpi-s">6</div>
     </article>
     <article class="kpi">
       <div class="label">Razao de Consistencia (RC)</div>
@@ -392,14 +391,12 @@
               <th>No</th>
               <th>Criterio</th>
               <th>Peso</th>
-              <th id="th-s0"><input type="text" class="sitio-name" value="A - Asa Norte" onchange="calcSitios()" /></th>
-              <th id="th-s1"><input type="text" class="sitio-name" value="B - Terminal SBBR" onchange="calcSitios()" /></th>
-              <th id="th-s2"><input type="text" class="sitio-name" value="C - CBAAER" onchange="calcSitios()" /></th>
-              <th id="th-s3"><input type="text" class="sitio-name" value="D - Aguas Claras" onchange="calcSitios()" /></th>
-              <th id="th-s4"><input type="text" class="sitio-name" value="E - LAGOA 2" onchange="calcSitios()" /></th>
-              <th id="th-s5"><input type="text" class="sitio-name" value="F - Sarah" onchange="calcSitios()" /></th>
-              <th id="th-s6" style="display:none;"><input type="text" class="sitio-name" value="Sitio G" onchange="calcSitios()" /></th>
-              <th id="th-s7" style="display:none;"><input type="text" class="sitio-name" value="Sitio H" onchange="calcSitios()" /></th>
+              <th id="th-s0"><input type="text" class="sitio-name" value="Sitio A - Asa Norte / Autodromo Internacional" onchange="calcSitios()" /></th>
+              <th id="th-s1"><input type="text" class="sitio-name" value="Sitio B - Terminal SBBR (landside controlado)" onchange="calcSitios()" /></th>
+              <th id="th-s2"><input type="text" class="sitio-name" value="Sitio C - CBAAER" onchange="calcSitios()" /></th>
+              <th id="th-s3"><input type="text" class="sitio-name" value="Sitio D - Aguas Claras (eixo rodoviario)" onchange="calcSitios()" /></th>
+              <th id="th-s4"><input type="text" class="sitio-name" value="Sitio E - LAGOA 2" onchange="calcSitios()" /></th>
+              <th id="th-s5"><input type="text" class="sitio-name" value="Sitio F - Sarah" onchange="calcSitios()" /></th>
             </tr>
           </thead>
           <tbody id="sitios-body"></tbody>
@@ -412,8 +409,6 @@
               <td class="calc-cell" id="sf-3">-</td>
               <td class="calc-cell" id="sf-4">-</td>
               <td class="calc-cell" id="sf-5">-</td>
-              <td class="calc-cell" id="sf-6">-</td>
-              <td class="calc-cell" id="sf-7">-</td>
             </tr>
             <tr>
               <td colspan="3" style="font-weight:700; background:#0f2742; color:#fff; text-align:right; font-size:0.82rem;">Ranking (1 = melhor)</td>
@@ -423,8 +418,6 @@
               <td class="rank-cell" id="rk-3">-</td>
               <td class="rank-cell" id="rk-4">-</td>
               <td class="rank-cell" id="rk-5">-</td>
-              <td class="rank-cell" id="rk-6">-</td>
-              <td class="rank-cell" id="rk-7">-</td>
             </tr>
           </tfoot>
         </table>
@@ -546,6 +539,7 @@ const CRITERIOS = [
   "Seguranca"
 ];
 const N = 8;
+const S = 6;
 
 const matrizUpper = [
   [1,   0.2,   0.17,  5,    4,    7,    1,    0.2],
@@ -558,7 +552,7 @@ const matrizUpper = [
   [null,null,  null,  null, null, null, null, 1]
 ];
 
-const scoresInit = Array.from({length:8}, ()=>Array(8).fill(5));
+const scoresInit = Array.from({length:S}, ()=>Array(N).fill(5));
 const RI = [0,0,0,0.58,0.90,1.12,1.24,1.32,1.41];
 
 let matrix = buildFullMatrix(matrizUpper);
@@ -680,7 +674,7 @@ function renderSitiosBody(){
       <td>${c+1}</td>
       <td style="text-align:left;font-weight:500">${CRITERIOS[c]}</td>
       <td class="calc-cell">${(w[c]*100).toFixed(1)}%</td>`;
-    for(let s=0;s<8;s++){
+    for(let s=0;s<S;s++){
       row+=`<td class="input-cell"><input type="number" min="1" max="9" step="1" value="${scores[s][c]}" onchange="updateScore(${s},${c},this.value)" style="width:54px;"/></td>`;
     }
     row+='</tr>';
@@ -696,12 +690,12 @@ function updateScore(s,c,val){
 
 function calcSitios(){
   const {w}=calcAHP(matrix);
-  const finals=Array(8).fill(0);
-  for(let s=0;s<8;s++) for(let c=0;c<N;c++) finals[s]+=w[c]*scores[s][c];
+  const finals=Array(S).fill(0);
+  for(let s=0;s<S;s++) for(let c=0;c<N;c++) finals[s]+=w[c]*scores[s][c];
   const sorted=[...finals.map((v,i)=>({v,i}))].sort((a,b)=>b.v-a.v);
-  const ranks=Array(8);
+  const ranks=Array(S);
   sorted.forEach(({i},rank)=>ranks[i]=rank+1);
-  for(let s=0;s<8;s++){
+  for(let s=0;s<S;s++){
     document.getElementById(`sf-${s}`).textContent=finals[s].toFixed(4);
     document.getElementById(`rk-${s}`).textContent=`#${ranks[s]}`;
   }

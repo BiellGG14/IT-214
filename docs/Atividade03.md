@@ -32,14 +32,17 @@
 
 ## Síntese da seleção 
 
-Foram avaliados **seis sítios** por complementaridade operacional na malha inicial de UAM em Brasília, consolidados através de análise técnica preliminar de favorabilidade locacional:
+Foram avaliados **sete sítios** por complementaridade operacional na malha inicial de UAM em Brasília. A seleção final considera **cinco sítios selecionados** (mais **1 em desenvolvimento**):
 
-- **Sítio A — Asa Norte / Autódromo Internacional:** alta densidade de destinos administrativos, corporativos e hoteleiros com boa demanda potencial.
-- **Sítio B — Terminal SBBR (landside controlado):** concentração de demanda aeroportuária e conexão nacional com infraestrutura superior.
-- **Sítio C — CBAAER:** interessante por trajetória proposta sobre espelho d'água com vantagem acústica e confirmação cartográfica em andamento.
-- **Sítio D — Águas Claras (eixo rodoviário):** alternativa complementar com bom perfil de acesso terrestre e distribuição de demanda local.
-- **Sítio E — LAGOA 2:** mais robusto e favorável por equilíbrio entre segurança institucional, organização da rede e potencial de implantação.
-- **Sítio F — Sarah:** funcional para missões de saúde e serviços executivos com complexidade de governança operacional moderada.
+**Sítios com vertiportos definidos:**
+- **Sítio B — Aeroporto Internacional de Brasília (BSB):** concentração de demanda aeroportuária e conexão nacional.
+- **Sítio C — Asa Norte (Autódromo):** alta densidade de destinos administrativos, corporativos e hoteleiros.
+- **Sítio D — Águas Claras (eixo rodoviário):** alternativa complementar de acesso terrestre e distribuição de demanda local.
+- **Sítio E — Lagoa:** conectividade urbana com vertiporto já dimensionado.
+- **Sítio F — Sarah:** localização estratégica de complementaridade com vertiporto definido.
+
+**Em desenvolvimento:**
+- **Sítio G — CBAAER:** avaliação em andamento para potencial futuro.
 
 O **Águas Claras (eixo metroviário)** foi um sítio inicial de estudo, mas foi **substituído** pelo **Águas Claras (eixo rodoviário)** por apresentar melhor afastamento das áreas próximas a escolas e hospitais na análise com buffer de 400 m.
 
@@ -47,41 +50,41 @@ Essa configuração final de cinco sítios + um em desenvolvimento forma uma red
 
 ## Galeria dos locais específicos 
 
-### Sítio A — Asa Norte / Autódromo Internacional
-![Asa Norte](image/Atividade03/sitio-b-plano-piloto.jpg)
+### Alternativa inicial — Águas Claras (eixo metroviário)
+![Águas Claras - Eixo Metroviário](image/Atividade03/sitio-c-aguas-claras.jpg)
 
-### Sítio B — Terminal SBBR (landside controlado)
+### Sítio B — Aeroporto Internacional de Brasília (BSB)
 ![Aeroporto de Brasília](image/Atividade03/sitio-a-aeroporto.jpg)
 
-### Sítio C — CBAAER
-![CBAAER](image/Atividade03/sitio-g-cbaaer.png)
+### Sítio C — Asa Norte (Autódromo)
+![Asa Norte](image/Atividade03/sitio-b-plano-piloto.jpg)
 
 ### Sítio D — Águas Claras (eixo rodoviário)
 ![Águas Claras - Eixo Rodoviário](image/Atividade03/sitio-d-aguas-claras-rodoviario.jpg)
 
-### Sítio E — LAGOA 2 (com vertiporto)
-![Lagoa 2 - Com Vertiporto](image/Atividade03/sitio-e-lagoa-2-vertiporto.jpeg)
+### Sítio E — Lagoa (com vertiporto)
+![Lagoa - Com Vertiporto](image/Atividade03/sitio-e-lagoa-2-vertiporto.jpeg)
 
 ### Sítio F — Sarah (com vertiporto)
 ![Sarah - Com Vertiporto](image/Atividade03/sitio-f-sarah-vertiporto-vertiporto.jpeg)
 
-## Síntese comparativa dos seis sítios vertiportuários
+### Sítio G — CBAAER (em desenvolvimento)
+![CBAAER - Em Desenvolvimento](image/Atividade03/sitio-g-cbaaer.png)
 
-| Critério | A: Asa Norte | B: Terminal SBBR | C: CBAAER | D: Águas Claras | E: LAGOA 2 | F: Sarah |
+## Síntese comparativa dos cinco sítios vertiportuários selecionados
+
+| Critério | Sítio A - Asa Norte / Autódromo | Sítio B - Terminal SBBR | Sítio C - CBAAER | Sítio D - Águas Claras | Sítio E - Lagoa | Sítio F - Sarah |
 |---|---|---|---|---|---|---|
-| Inserção no espaço aéreo / clearance | Bom funcionamento, compatível com a organização urbana. | Funciona, mas sensível à proximidade com o núcleo central protegido. | Muito forte como nó de organização de fluxos fora das zonas proibidas; cruzamento BRAVO/CHARLIE. | Intermediário, exige cautela com áreas sensíveis. | Mais robusto e claro para começar, lógica nodal clara na carta e rede REA. | Funciona de forma organizada para segregação operacional. |
-| Segurança institucional | Boa capacidade de desenho com menor fricção institucional. | Mais delicado por proximidade com área central e serviços sensíveis. | Melhor que Sarah, mas exige cautela por proximidade com Lago Sul (área sensível). | Intermediário, com restrições moderadas. | Mais defensável; afastado do centro político-simbólico, narrativa robusta de controle. | Proximidade com área central aumenta complexidade de governança. |
-| Infraestrutura e implantação | Boa disponibilidade de utilidades em área urbanizada. | Infraestrutura aeronáutica superior, mas com dependência operador aeroportuário. | Pode ser inovador e qualificado, mas depende de georreferenciamento preciso. | Boa infraestrutura urbana, mas com menor folga espacial. | Melhor perfil para implantação em solo com lógica limpa de acesso e controle. | Funcional para missão específica, bom potencial de acesso e integração. |
-| Acessibilidade e função de rede | Melhor equilíbrio urbano; centralidade e aderência porta a porta da UAM. | Boa regional, menos eficiente para destino urbano final. | Forte para conexão residencial e integração leste-sul, menos hub que LAGOA 2. | Boa local com demanda potencial, menos capacidade de fluxos dedicados. | Muito forte como distribuidor de rede e nó organizador de fluxos de Sobradinho/Águas Lindas. | Muito forte para saúde e executivo central; demanda específica. |
-| Ruído | Menos sensível que Sarah, com melhor margem para gestão. | Associado à atividade aeronáutica, melhor tolerância ao ruído adicional. | Melhor argumento acústico; trajetória sobre espelho d'água reduz exposição sonora. | Mais sensível por proximidade com residencial denso. | Intermediário, mais controlável que Sarah e menos crítico que centro. | Mais sensível em área urbana consolidada com potencial de conflito. |
-| Privacidade / exposição de terceiros | Mais controlável sem complexidade aeroportuária. | Maior afastamento, melhor controle physical do acesso. | Intermediário; melhora no sobrevoo sobre água, mas ligado a residencial. | Maior exposição de terceiros, fachadas residenciais. | Melhor equilíbrio; afastamento relativo e gestão robusta do sítio. | Mais crítico por proximidade com áreas urbanas intensas e usuários sensíveis. |
-| Horas de operação / flexibilidade | Maior flexibilidade sem dependência de regime aeroportuário. | Pode enfrentar condicionantes de área controlada e rotinas aeroportuárias. | Flexibilidade moderada, dependerá do ponto exato e sensibilidade residencial. | Mais restrito por sensibilidade do entorno residencial denso. | Mais favorável; leitura de segurança permite maior flexibilidade operacional. | Mais restrito por complexidade de defesa perto do centro sensível. |
-| Impacto ambiental / urbano | Área modificada, boa possibilidade de inserção sem ampliar pressões ambientais. | Intensamente transformada, condicionantes institucionais complexos. | Argumento ambiental/acústico interessante sobre água; cuidado com licenciamento. | Urbano denso, maior potencial para percepção negativa quanto a ruído. | Melhor equilíbrio entre operação e impacto; nó sem ficar próximo ao centro protegido. | Impacto urbano mais sensível por aproximação com tecido consolidado. |
-| Robustez cartográfica / confiança do ponto | Conceito claro e robusto na carta da cidade. | Conceito claro, mas proximidade com áreas sensíveis torna erro crítico. | Mais precisa confirmação cartográfica fina, referência perto da JK (não Costa e Silva). | Robusto, mas exige cuidado com proximidade de áreas sensíveis. | Mais robusto para começar; lógica nodal clara na carta REA. | Conceito claro, mas proximidade com sensíveis torna qualquer erro crítico. |
+| Infraestrutura disponível | Área já urbanizada, boa disponibilidade de utilidades e implantação mais demonstrável fora do lado ar controlado. | Infraestrutura aeronáutica superior, porém com maior dependência do operador aeroportuário, acesso à rampa e compatibilização regulatória. | Solução tecnicamente interessante com potencial inovador, mas com maior dependência de georreferenciamento preciso, definição de solução de acesso e tratamento adequado do entorno imediato. | Boa infraestrutura urbana, mas com menor folga espacial e maior sensibilidade do entorno edificado. | Vertiporto já dimensionado com infraestrutura compatível com operação UAM, perfil de implantação com lógica mais limpa de acesso, controle e expansão operacional. | Vertiporto pré-planejado com infraestrutura compatível, porém a compatibilização com o entorno urbano imediato e a proximidade com funções sensíveis tendem a exigir ajustes operacionais mais delicados. |
+| Ruído | Entorno urbano central, porém menos sensível que Águas Claras e com melhor margem para gestão operacional. | Ambiente já associado à atividade aeronáutica, com melhor tolerância relativa ao ruído adicional. | Melhor argumento acústico entre os sítios, pela trajetória proposta sobre o espelho d'água, que reduz a exposição sonora direta à população lindeira. | Maior sensibilidade acústica pela proximidade de uso residencial denso e permanência de terceiros. | Sensibilidade intermediária, tendencialmente mais controlável que sítios em área urbana consolidada, com boa margem para gestão operacional e buffers de proteção. | Maior sensibilidade acústica pelo posicionamento em área urbana consolidada e com maior potencial de conflito no interior do tecido central da cidade. |
+| Acessibilidade | Melhor equilíbrio urbano. Centralidade, conexão viária e aderência à lógica porta a porta da UAM. | Boa acessibilidade regional, mas menos eficiente para o destino urbano final. | Forte para conexão residencial e integração leste-sul da rede, porém menos estruturante como hub metropolitano distribuidor de fluxos em comparação ao Sítio E. | Boa acessibilidade local e demanda potencial, porém com menor capacidade de organizar fluxos de acesso dedicados. | Forte como nó distribuidor da rede metropolitana, com boa conectividade multimodal potencial e capacidade de organizar fluxos vindos de Sobradinho e Águas Lindas. | Excelente conectividade urbana e localização estratégica para integração modal, sobretudo para missões de saúde e atendimento executivo central. |
+| Privacidade | Entorno mais controlável que Águas Claras e sem a complexidade de áreas restritas aeroportuárias. | Maior afastamento de terceiros e melhor controle físico do acesso, embora sob regras aeroportuárias mais rígidas. | Intermediário: melhora na exposição pela operação sobre água, mas permanece ligado a área residencial qualificada e sensível, exigindo cautela na gestão de fluxos. | Maior exposição de terceiros, fachadas residenciais e conflitos com o uso cotidiano do entorno. | Melhor equilíbrio entre operação e exposição de terceiros, com maior afastamento relativo do centro e melhor capacidade de gestão e segregação operacional do sítio. | Mais crítico entre os sítios analisados, pela maior proximidade com áreas urbanas intensas, usuários sensíveis e funções institucionais de alto valor. |
+| Eficiência | Melhor coerência para referência acadêmica de UAM urbana, por combinar centralidade e viabilidade de acesso. | Muito forte como nó operacional, mas menos aderente à demonstração de mobilidade urbana central. | Qualificado para operação integrada à rede UAM com argumento acústico diferenciador, mas a eficiência plena depende da confirmação cartográfica do ponto e da viabilidade do trajeto. | Capta demanda urbana, porém com maior custo de mitigação operacional e social. | Muito forte como nó estruturante da rede UAM, com alta capacidade de captura de demanda urbana e narrativa de implantação mais robusta para missões metropolitanas. | Muito forte para missões específicas de saúde e serviços executivos centrais, embora menos aderente a uma lógica de rede distribuidora de fluxos metropolitanos. |
+| Horas de operação | Maior flexibilidade conceitual para discutir operação urbana sem depender diretamente do regime do aeroporto. | Pode enfrentar condicionantes de área controlada, coordenação operacional e rotinas aeroportuárias. | Flexibilidade operacional moderada, condicionada ao ponto exato de implantação e à sensibilidade residencial do entorno, com potencial de restrições horárias em função do Lago Sul. | Tende a demandar mais restrições horárias por sensibilidade do entorno residencial. | Mais favorável entre os sítios analisados; o afastamento do núcleo político-simbólico e a leitura mais controlável de segurança permitem imaginar maior flexibilidade operacional. | Tende a ser mais restritivo; qualquer ampliação de operação próxima ao núcleo central sensível é mais difícil de defender institucionalmente e operacionalmente. |
+| Impacto ambiental | Área já modificada pela ação humana, com boa possibilidade de inserção conceitual sem ampliar pressões ambientais críticas. | Área também intensamente transformada, mas com condicionantes institucionais e operacionais mais complexos. | Argumento ambiental e acústico interessante pela trajetória sobre água, mas exige cuidado redobrado com licenciamento ambiental, sensibilidade da paisagem local e percepção da comunidade. | Inserção em área urbana densa, com maior potencial de percepção negativa quanto a ruído e qualidade ambiental local. | Melhor equilíbrio entre operação e impacto urbano, funcionando como nó de articulação sem proximidade direta com tecido histórico ou funções sensíveis do centro. | Impacto urbano mais sensível pela aproximação com tecido consolidado e funções institucionais, exigindo maior cuidado com percepção pública e gestão do entorno. |
+| Segurança | Boa capacidade de desenho conceitual com separação de fluxos, menor fricção institucional e melhor narrativa de implantação. | Muito forte em segurança operacional, mas condicionado a requisitos aeroportuários, acesso restrito e governança complexa. | Tecnicamente viável, porém com maior dependência da confirmação da leitura correta do corredor sudeste e da viabilidade do trajeto sobre a ponte, ainda pendente de validação cartográfica. | Mais crítico em conflitos pedestre–aeronave, exposição de terceiros e gestão do entorno. | Mais defensável institucionalmente, com menor fricção com áreas de alto controle e melhor narrativa de segregação de fluxos e controle operacional. | Mais delicado dos sítios avaliados; a proximidade funcional com a área central e com serviços sensíveis aumenta o peso das exigências de segurança e governança operacional. |
 
-**Síntese Executiva:** Sem aplicação ainda da matriz AHP, a análise técnica preliminar indica o **LAGOA 2 (Sítio E)** como mais favorável por apresentar melhor equilíbrio entre segurança institucional, organização da rede REA, robustez cartográfica e potencial de implantação. O **CBAAER (Sítio C)** surge como segunda alternativa pela vantagem acústica sobre água, mas depende de confirmação cartográfica precisa. Os **Sítios A (Asa Norte)** e **B (Terminal SBBR)** complementam a análise com demanda específica. Os **Sítios D** e **F** oferecem alternativas com maior complexidade operacional. A matriz AHP refinar esses pesos conforme julgamentos técnicos do grupo.
-
-**Fonte**. Análise preliminar com base no Quadro Analítico Preliminar dos Três Sítios e critérios da disciplina IT-214.
+**Fonte**. Elaboração própria com base nos critérios da disciplina e na comparação técnica de todos os sítios (B, C, D, E, F) e em avaliação de G.
 
 ## Critério de ruído e proteção de receptores sensíveis
 
