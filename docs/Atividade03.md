@@ -32,21 +32,22 @@
 
 ## Síntese da seleção 
 
-Foram avaliados **sete sítios** por complementaridade operacional na malha inicial de UAM em Brasília. A seleção final considera **cinco sítios selecionados** (mais **1 em desenvolvimento**):
+Foram avaliados **sete sítios** por complementaridade operacional na malha inicial de UAM em Brasília. A seleção final considera **seis sítios** com nomenclatura de **Sítio A** a **Sítio F**:
 
-**Sítios com vertiportos definidos:**
-- **Sítio B — Aeroporto Internacional de Brasília (BSB):** concentração de demanda aeroportuária e conexão nacional.
-- **Sítio C — Asa Norte (Autódromo):** alta densidade de destinos administrativos, corporativos e hoteleiros.
+**Seleção final (A-F):**
+- **Sítio A — Asa Norte / Autódromo Internacional:** centralidade urbana e alta densidade de destinos administrativos e corporativos.
+- **Sítio B — Terminal SBBR (landside controlado):** concentração de demanda aeroportuária e conexão nacional.
+- **Sítio C — CBAAER:** alternativa estratégica incorporada à seleção final por complementaridade operacional da rede.
 - **Sítio D — Águas Claras (eixo rodoviário):** alternativa complementar de acesso terrestre e distribuição de demanda local.
-- **Sítio E — Lagoa:** conectividade urbana com vertiporto já dimensionado.
+- **Sítio E — LAGOA 2:** conectividade urbana com vertiporto já dimensionado.
 - **Sítio F — Sarah:** localização estratégica de complementaridade com vertiporto definido.
 
-**Em desenvolvimento:**
-- **Sítio G — CBAAER:** avaliação em andamento para potencial futuro.
+**Sítio fora da seleção final (referência histórica):**
+- **Alternativa inicial — Águas Claras (eixo metroviário):** sítio inicial de estudo, posteriormente substituído na etapa final.
 
 O **Águas Claras (eixo metroviário)** foi um sítio inicial de estudo, mas foi **substituído** pelo **Águas Claras (eixo rodoviário)** por apresentar melhor afastamento das áreas próximas a escolas e hospitais na análise com buffer de 400 m.
 
-Essa configuração final de cinco sítios + um em desenvolvimento forma uma rede logística de curta/média distância com estruturas de vertiportos já dimensionadas, oferecendo alto potencial de ganho de tempo em horários de pico.
+Essa configuração final de seis sítios forma uma rede logística de curta/média distância com estruturas de vertiportos já dimensionadas, oferecendo alto potencial de ganho de tempo em horários de pico.
 
 ## Galeria dos locais específicos 
 
@@ -71,7 +72,9 @@ Essa configuração final de cinco sítios + um em desenvolvimento forma uma red
 ### Sítio G — CBAAER (em desenvolvimento)
 ![CBAAER - Em Desenvolvimento](image/Atividade03/sitio-g-cbaaer.png)
 
-## Síntese comparativa dos cinco sítios vertiportuários selecionados
+## Síntese comparativa dos seis sítios vertiportuários selecionados
+
+<div style="overflow-x:auto; width:100%;">
 
 | Critério | Sítio A - Asa Norte / Autódromo | Sítio B - Terminal SBBR | Sítio C - CBAAER | Sítio D - Águas Claras | Sítio E - Lagoa | Sítio F - Sarah |
 |---|---|---|---|---|---|---|
@@ -84,7 +87,9 @@ Essa configuração final de cinco sítios + um em desenvolvimento forma uma red
 | Impacto ambiental | Área já modificada pela ação humana, com boa possibilidade de inserção conceitual sem ampliar pressões ambientais críticas. | Área também intensamente transformada, mas com condicionantes institucionais e operacionais mais complexos. | Argumento ambiental e acústico interessante pela trajetória sobre água, mas exige cuidado redobrado com licenciamento ambiental, sensibilidade da paisagem local e percepção da comunidade. | Inserção em área urbana densa, com maior potencial de percepção negativa quanto a ruído e qualidade ambiental local. | Melhor equilíbrio entre operação e impacto urbano, funcionando como nó de articulação sem proximidade direta com tecido histórico ou funções sensíveis do centro. | Impacto urbano mais sensível pela aproximação com tecido consolidado e funções institucionais, exigindo maior cuidado com percepção pública e gestão do entorno. |
 | Segurança | Boa capacidade de desenho conceitual com separação de fluxos, menor fricção institucional e melhor narrativa de implantação. | Muito forte em segurança operacional, mas condicionado a requisitos aeroportuários, acesso restrito e governança complexa. | Tecnicamente viável, porém com maior dependência da confirmação da leitura correta do corredor sudeste e da viabilidade do trajeto sobre a ponte, ainda pendente de validação cartográfica. | Mais crítico em conflitos pedestre–aeronave, exposição de terceiros e gestão do entorno. | Mais defensável institucionalmente, com menor fricção com áreas de alto controle e melhor narrativa de segregação de fluxos e controle operacional. | Mais delicado dos sítios avaliados; a proximidade funcional com a área central e com serviços sensíveis aumenta o peso das exigências de segurança e governança operacional. |
 
-**Fonte**. Elaboração própria com base nos critérios da disciplina e na comparação técnica de todos os sítios (B, C, D, E, F) e em avaliação de G.
+</div>
+
+**Fonte**. Elaboração própria com base nos critérios da disciplina e na comparação técnica dos sítios da seleção final (A, B, C, D, E, F).
 
 ## Critério de ruído e proteção de receptores sensíveis
 
