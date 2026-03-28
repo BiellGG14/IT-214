@@ -32,9 +32,9 @@
 
 ## Síntese da seleção 
 
-Foram avaliados **sete sítios** por complementaridade operacional na malha inicial de UAM em Brasília. A seleção final considera **seis sítios** com nomenclatura de **Sítio A** a **Sítio F**:
+Foram avaliados **sete sítios** por complementaridade operacional na malha inicial de UAM em Brasília. A seleção final considera **seis sítios**:
 
-**Seleção final (A-F):**
+**Sítios definidos:**
 - **Sítio A — Asa Norte / Autódromo Internacional:** centralidade urbana e alta densidade de destinos administrativos e corporativos.
 - **Sítio B — Terminal SBBR (landside controlado):** concentração de demanda aeroportuária e conexão nacional.
 - **Sítio C — CBAAER:** alternativa estratégica incorporada à seleção final por complementaridade operacional da rede.
@@ -51,14 +51,14 @@ Essa configuração final de seis sítios forma uma rede logística de curta/mé
 
 ## Galeria dos locais específicos 
 
-### Alternativa inicial — Águas Claras (eixo metroviário)
-![Águas Claras - Eixo Metroviário](image/Atividade03/sitio-c-aguas-claras.jpg)
+### Sítio A — Asa Norte / Autódromo Internacional
+![Asa Norte](image/Atividade03/sitio-b-plano-piloto.jpg)
 
 ### Sítio B — Aeroporto Internacional de Brasília (BSB)
 ![Aeroporto de Brasília](image/Atividade03/sitio-a-aeroporto.jpg)
 
-### Sítio C — Asa Norte (Autódromo)
-![Asa Norte](image/Atividade03/sitio-b-plano-piloto.jpg)
+### Sítio C — CBAAER
+![CBAAER - Em Desenvolvimento](image/Atividade03/sitio-g-cbaaer.png)
 
 ### Sítio D — Águas Claras (eixo rodoviário)
 ![Águas Claras - Eixo Rodoviário](image/Atividade03/sitio-d-aguas-claras-rodoviario.jpg)
@@ -69,8 +69,8 @@ Essa configuração final de seis sítios forma uma rede logística de curta/mé
 ### Sítio F — Sarah (com vertiporto)
 ![Sarah - Com Vertiporto](image/Atividade03/sitio-f-sarah-vertiporto-vertiporto.jpeg)
 
-### Sítio G — CBAAER (em desenvolvimento)
-![CBAAER - Em Desenvolvimento](image/Atividade03/sitio-g-cbaaer.png)
+### Alternativa inicial — Águas Claras (eixo metroviário)
+![Águas Claras - Eixo Metroviário](image/Atividade03/sitio-c-aguas-claras.jpg)
 
 ## Síntese comparativa dos seis sítios vertiportuários selecionados
 
