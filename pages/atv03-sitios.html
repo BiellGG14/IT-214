@@ -235,7 +235,7 @@
     <section class="kpi-grid" aria-label="Indicadores-chave">
       <article class="kpi"><div class="label">Sítios avaliados</div><div class="value" id="kpi-kml">-</div></article>
       <article class="kpi"><div class="label">Escolas/Hospitais</div><div class="value" id="kpi-critical">-</div></article>
-      <article class="kpi"><div class="label">Seleção final</div><div class="value">3 sítios</div></article>
+      <article class="kpi"><div class="label">Seleção final</div><div class="value">6 sítios</div></article>
     </section>
 
     <section class="panel">
@@ -244,10 +244,13 @@
         Os sítios selecionados estão destacados no mapa. Escolas e hospitais foram considerados com base no artigo de impacto acústico em UAM, aplicando buffers de 400 m e 600 m.
       </p>
       <div class="map-actions">
-        <button id="btn-zoom-sitio-1" class="btn-map" type="button" disabled>Alternativa inicial - Águas Claras (eixo metroviário)</button>
-        <button id="btn-zoom-sitio-2" class="btn-map" type="button" disabled>Sítio B - Aeroporto Internacional de Brasília (BSB)</button>
-        <button id="btn-zoom-sitio-3" class="btn-map" type="button" disabled>Sítio C - Asa Norte (Autódromo)</button>
-        <button id="btn-zoom-sitio-4" class="btn-map" type="button" disabled>Sítio D - Águas Claras (eixo rodoviário)</button>
+        <button id="btn-zoom-sitio-1" class="btn-map" type="button" data-sitio-index="2" disabled>Sítio A - Asa Norte / Autódromo Internacional</button>
+        <button id="btn-zoom-sitio-2" class="btn-map" type="button" data-sitio-index="1" disabled>Sítio B - Terminal SBBR (landside controlado)</button>
+        <button id="btn-zoom-sitio-3" class="btn-map" type="button" data-sitio-index="6" disabled>Sítio C - CBAAER</button>
+        <button id="btn-zoom-sitio-4" class="btn-map" type="button" data-sitio-index="3" disabled>Sítio D - Águas Claras (eixo rodoviário)</button>
+        <button id="btn-zoom-sitio-5" class="btn-map" type="button" data-sitio-index="4" disabled>Sítio E - LAGOA 2</button>
+        <button id="btn-zoom-sitio-6" class="btn-map" type="button" data-sitio-index="5" disabled>Sítio F - Sarah</button>
+        <button id="btn-zoom-sitio-7" class="btn-map" type="button" data-sitio-index="0" disabled>Alternativa inicial - Águas Claras (eixo metroviário)</button>
       </div>
       <div id="map" role="img" aria-label="Mapa com os quatro sitios de Brasilia e buffers de ruido"></div>
       <div class="legend">
@@ -259,7 +262,7 @@
     </section>
 
     <section class="panel">
-      <h2>Tabela resumida dos sítios selecionados</h2>
+      <h2>Tabela resumida dos sítios analisados</h2>
       <table>
         <thead>
           <tr>
@@ -270,24 +273,39 @@
         </thead>
         <tbody>
           <tr>
-            <td>Alternativa inicial - Águas Claras (eixo metroviário)</td>
-            <td>Google Earth (projeto do grupo)</td>
-            <td>Substituído por maior proximidade de escolas e hospitais</td>
-          </tr>
-          <tr>
-            <td>Sítio B - Aeroporto Internacional de Brasília (BSB)</td>
+            <td>Sítio A - Asa Norte / Autódromo Internacional</td>
             <td>Google Earth (projeto do grupo)</td>
             <td>Verificação de proximidade com escolas e hospitais via buffers 400 m / 600 m</td>
           </tr>
           <tr>
-            <td>Sítio C - Asa Norte (SCS/Eixo Central)</td>
+            <td>Sítio B - Terminal SBBR (landside controlado)</td>
             <td>Google Earth (projeto do grupo)</td>
             <td>Verificação de proximidade com escolas e hospitais via buffers 400 m / 600 m</td>
+          </tr>
+          <tr>
+            <td>Sítio C - CBAAER</td>
+            <td>Google Earth (projeto do grupo)</td>
+            <td>Sítio em produção - avaliação completa</td>
           </tr>
           <tr>
             <td>Sítio D - Águas Claras (eixo rodoviário)</td>
             <td>Google Earth (projeto do grupo)</td>
             <td>Verificação de proximidade com escolas e hospitais via buffers 400 m / 600 m</td>
+          </tr>
+          <tr>
+            <td>Sítio E - LAGOA 2</td>
+            <td>Google Earth (projeto do grupo)</td>
+            <td>Sítio com vertiporto definido - selecionado</td>
+          </tr>
+          <tr>
+            <td>Sítio F - Sarah</td>
+            <td>Google Earth (projeto do grupo)</td>
+            <td>Sítio com vertiporto definido - selecionado</td>
+          </tr>
+          <tr>
+            <td>Alternativa inicial - Águas Claras (eixo metroviário)</td>
+            <td>Google Earth (projeto do grupo)</td>
+            <td>Mantido apenas como referência histórica de avaliação preliminar</td>
           </tr>
         </tbody>
       </table>
@@ -297,20 +315,32 @@
       <h2>Galeria dos locais especificos</h2>
       <div class="gallery">
         <figure class="shot">
-          <img data-file="sitio-a-aguas-claras-metrovia.jpg.png" src="../docs/image/Atividade03/sitio-a-aguas-claras-metrovia.jpg.png" alt="Sitio A - Águas Claras Metrovia" loading="lazy" />
-          <figcaption>Águas Claras (eixo metroviário) - alternativa inicial (substituída).</figcaption>
+          <img data-file="sitio-c-asa-norte.jpg.png" src="../docs/image/Atividade03/sitio-c-asa-norte.jpg.png" alt="Sítio A - Asa Norte" loading="lazy" />
+          <figcaption>Sítio A - Asa Norte / Autódromo Internacional.</figcaption>
         </figure>
         <figure class="shot">
-          <img data-file="sitio-b-aeroporto-bsb.jpg.png" src="../docs/image/Atividade03/sitio-b-aeroporto-bsb.jpg.png" alt="Sitio B - Aeroporto BSB" loading="lazy" />
-          <figcaption>Aeroporto Internacional de Brasília (BSB) - sítio B.</figcaption>
+          <img data-file="sitio-b-aeroporto-bsb.jpg.png" src="../docs/image/Atividade03/sitio-b-aeroporto-bsb.jpg.png" alt="Sítio B - Aeroporto BSB" loading="lazy" />
+          <figcaption>Sítio B - Terminal SBBR (Aeroporto Internacional de Brasília).</figcaption>
         </figure>
         <figure class="shot">
-          <img data-file="sitio-c-asa-norte.jpg.png" src="../docs/image/Atividade03/sitio-c-asa-norte.jpg.png" alt="Sitio C - Asa Norte" loading="lazy" />
-          <figcaption>Asa Norte (Autódromo) - sítio C.</figcaption>
+          <img data-file="sitio-g-cbaaer.png" src="../docs/image/Atividade03/sitio-g-cbaaer.png" alt="Sítio C - CBAAER" loading="lazy" />
+          <figcaption>Sítio C - CBAAER.</figcaption>
         </figure>
         <figure class="shot">
-          <img data-file="sitio-d-aguas-claras-rodoviario.jpg.png" src="../docs/image/Atividade03/sitio-d-aguas-claras-rodoviario.jpg.png" alt="Sitio D - Aguas Claras Rodoviario" loading="lazy" />
-          <figcaption>Águas Claras (eixo rodoviário) - sítio D (selecionado).</figcaption>
+          <img data-file="sitio-d-aguas-claras-rodoviario.jpg.png" src="../docs/image/Atividade03/sitio-d-aguas-claras-rodoviario.jpg.png" alt="Sítio D - Aguas Claras Rodoviario" loading="lazy" />
+          <figcaption>Sítio D - Águas Claras (eixo rodoviário).</figcaption>
+        </figure>
+        <figure class="shot">
+          <img data-file="sitio-e-lagoa-2.png" src="../docs/image/Atividade03/sitio-e-lagoa-2.png" alt="Sítio E - Lagoa 2" loading="lazy" />
+          <figcaption>Sítio E - LAGOA 2.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img data-file="sitio-f-sarah-vertiporto.png" src="../docs/image/Atividade03/sitio-f-sarah-vertiporto.png" alt="Sítio F - Sarah" loading="lazy" />
+          <figcaption>Sítio F - Sarah.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img data-file="sitio-a-aguas-claras-metrovia.jpg.png" src="../docs/image/Atividade03/sitio-a-aguas-claras-metrovia.jpg.png" alt="Alternativa inicial - Águas Claras (eixo metroviário)" loading="lazy" />
+          <figcaption>Alternativa inicial - Águas Claras (eixo metroviário).</figcaption>
         </figure>
       </div>
     </section>
@@ -342,21 +372,30 @@
       document.getElementById("btn-zoom-sitio-1"),
       document.getElementById("btn-zoom-sitio-2"),
       document.getElementById("btn-zoom-sitio-3"),
-      document.getElementById("btn-zoom-sitio-4")
+      document.getElementById("btn-zoom-sitio-4"),
+      document.getElementById("btn-zoom-sitio-5"),
+      document.getElementById("btn-zoom-sitio-6"),
+      document.getElementById("btn-zoom-sitio-7")
     ];
 
     const siteNames = [
-      "Sítio A - Águas Claras (eixo metroviário)",
-      "Sítio B - Aeroporto Internacional de Brasília (BSB)",
-      "Sítio C - Asa Norte (Autódromo)",
-      "Sítio D - Águas Claras (eixo rodoviário)"
+      "Alternativa inicial - Águas Claras (eixo metroviário)",
+      "Sítio B - Terminal SBBR (landside controlado)",
+      "Sítio A - Asa Norte / Autódromo Internacional",
+      "Sítio D - Águas Claras (eixo rodoviário)",
+      "Sítio E - LAGOA 2",
+      "Sítio F - Sarah",
+      "Sítio C - CBAAER"
     ];
 
     const siteColors = [
-      { borderColor: "#d62828", fillColor: "#ef4444", label: "Alternativa inicial" },
-      { borderColor: "#1d4ed8", fillColor: "#3b82f6", label: "Sítio B" },
-      { borderColor: "#a855f7", fillColor: "#c084fc", label: "Sítio C" },
-      { borderColor: "#f59e0b", fillColor: "#fbbf24", label: "Sítio D" }
+      { borderColor: "#d62828", fillColor: "#ef4444", label: "Inicial" },
+      { borderColor: "#1d4ed8", fillColor: "#3b82f6", label: "B" },
+      { borderColor: "#a855f7", fillColor: "#c084fc", label: "A" },
+      { borderColor: "#f59e0b", fillColor: "#fbbf24", label: "D" },
+      { borderColor: "#059669", fillColor: "#10b981", label: "E" },
+      { borderColor: "#7c3aed", fillColor: "#a78bfa", label: "F" },
+      { borderColor: "#64748b", fillColor: "#94a3b8", label: "C" }
     ];
 
     const sitios = [];
@@ -510,18 +549,20 @@
           map.fitBounds(kmlLayer.getBounds().pad(0.15));
           
           // Habilitar botões de zoom
-          btnZoomSitio.forEach((btn, idx) => {
-            if (idx < sitios.length) {
+          btnZoomSitio.forEach((btn) => {
+            const mappedIndex = Number(btn.dataset.sitioIndex);
+            if (Number.isInteger(mappedIndex) && mappedIndex >= 0 && mappedIndex < sitios.length) {
               btn.disabled = false;
             }
           });
           
           // Adicionar listeners aos botões
-          btnZoomSitio.forEach((btn, idx) => {
+          btnZoomSitio.forEach((btn) => {
             btn.addEventListener("click", () => {
-              if (idx < sitios.length) {
+              const mappedIndex = Number(btn.dataset.sitioIndex);
+              if (Number.isInteger(mappedIndex) && mappedIndex >= 0 && mappedIndex < sitios.length) {
                 const sitioBounds = L.latLngBounds([]);
-                const layer = sitios[idx];
+                const layer = sitios[mappedIndex];
                 
                 if (layer.getBounds) {
                   sitioBounds.extend(layer.getBounds());
