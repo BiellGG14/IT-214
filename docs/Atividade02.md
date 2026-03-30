@@ -201,6 +201,8 @@ UAM é tecnicamente promissora condicionada por:
 
 **Eixo Monumental:** Congresso, Palácio do Planalto, STF, Palácio Itamaraty
 
+![Eixo Monumental - Brasília](image/Atividade02/eixomonumental.png)
+
 **Museus principais:** Museu da República, Memorial JK, CCBB Brasília
 
 **Arquitetura religiosa:** Catedral (anjos suspensos), Santuário Dom Bosco (vitrais azuis)
